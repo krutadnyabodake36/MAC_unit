@@ -1,0 +1,10 @@
+variant,design_select,total_patches,total_mismatches,measured_wall_cycles,speedup_vs_baseline,coverage_pct,confidence,xml_dynamic_power_mw,delta_dynamic_power_pct,xml_static_power_mw,energy_per_patch_nj,delta_energy_per_patch_pct,text_core_dynamic_power_mw
+baseline,0,44032,0,572416,1.0000,94,High,2.061,0.00,16.383,0.5359,0.00,2.0
+cg,2,44032,0,572416,1.0000,93,High,2.024,-1.80,16.383,0.5262,-1.80,2.0
+oi,1,44032,0,572416,1.0000,94,High,2.380,15.48,16.383,0.6188,15.48,2.0
+zs,3,44032,0,435432,1.3146,93,High,2.475,20.09,16.383,0.4895,-8.65,2.0
+zs_oi,5,44032,0,435432,1.3146,93,High,2.495,21.06,16.383,0.4935,-7.91,2.0
+zs_cg,6,44032,0,435432,1.3146,93,High,2.503,21.45,16.383,0.4950,-7.62,2.0
+static_sobel,8,44032,0,440320,1.3000,93,High,1.834,-11.01,16.383,0.3668,-31.55,2.0
+oi_cg,7,44032,0,572416,1.0000,93,High,2.024,-1.80,16.383,0.5262,-1.80,2.0
+combined,4,44032,0,435432,1.3146,93,High,2.503,21.45,16.383,0.4950,-7.62,2.0

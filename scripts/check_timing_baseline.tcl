@@ -1,0 +1,4 @@
+open_checkpoint results/final_run_20261030_1056/netlists_v2/baseline/baseline_routed.dcp
+report_timing_summary -file results/final_run_20261030_1056/netlists_v2/baseline/timing_summary.txt
+exit
+

@@ -1,0 +1,8 @@
+Run ID: final_run_20261030_1056
+Run Timestamp (ISO): 2026-10-30T10:58:40.413695
+Python Executable: C:\Users\Krutadnye\AppData\Local\Programs\Python\Python310\python.exe
+Python Version: 3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)]
+Vivado Version: vivado v2026.1 (64-bit)
+Host OS: win32
+Project Root: C:\Users\Krutadnye\Downloads\Projects\MAC
+Backup Archive: C:\Users\Krutadnye\Downloads\Projects\MAC_backup_20261030_1056.zip (39,795,995 bytes)

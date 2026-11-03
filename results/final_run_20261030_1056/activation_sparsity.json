@@ -1,0 +1,128 @@
+[
+  {
+    "label": "image1.jpg",
+    "raw_dim": "257x360",
+    "proc_dim": "91x128",
+    "total_pixels": 11648,
+    "zero_pixels": 6215,
+    "sparsity": 53.35679945054945,
+    "max_relu_val": 655
+  },
+  {
+    "label": "image2.jpg",
+    "raw_dim": "259x194",
+    "proc_dim": "128x96",
+    "total_pixels": 12288,
+    "zero_pixels": 6697,
+    "sparsity": 54.500325520833336,
+    "max_relu_val": 569
+  },
+  {
+    "label": "image3.jpg",
+    "raw_dim": "738x414",
+    "proc_dim": "128x72",
+    "total_pixels": 9216,
+    "zero_pixels": 5046,
+    "sparsity": 54.752604166666664,
+    "max_relu_val": 987
+  },
+  {
+    "label": "image4.jpg",
+    "raw_dim": "364x549",
+    "proc_dim": "85x128",
+    "total_pixels": 10880,
+    "zero_pixels": 9661,
+    "sparsity": 88.79595588235294,
+    "max_relu_val": 721
+  },
+  {
+    "label": "extra_images (1).jpg",
+    "raw_dim": "680x451",
+    "proc_dim": "128x85",
+    "total_pixels": 10880,
+    "zero_pixels": 5231,
+    "sparsity": 48.07904411764706,
+    "max_relu_val": 721
+  },
+  {
+    "label": "extra_images (2).jpg",
+    "raw_dim": "580x528",
+    "proc_dim": "128x117",
+    "total_pixels": 14976,
+    "zero_pixels": 8023,
+    "sparsity": 53.57238247863248,
+    "max_relu_val": 419
+  },
+  {
+    "label": "extra_images (3).jpg",
+    "raw_dim": "452x678",
+    "proc_dim": "85x128",
+    "total_pixels": 10880,
+    "zero_pixels": 6004,
+    "sparsity": 55.18382352941177,
+    "max_relu_val": 418
+  },
+  {
+    "label": "extra_images (4).jpg",
+    "raw_dim": "415x739",
+    "proc_dim": "72x128",
+    "total_pixels": 9216,
+    "zero_pixels": 5666,
+    "sparsity": 61.48003472222222,
+    "max_relu_val": 617
+  },
+  {
+    "label": "extra_images (5).jpg",
+    "raw_dim": "452x678",
+    "proc_dim": "85x128",
+    "total_pixels": 10880,
+    "zero_pixels": 5682,
+    "sparsity": 52.22426470588235,
+    "max_relu_val": 482
+  },
+  {
+    "label": "extra_images (6).jpg",
+    "raw_dim": "447x447",
+    "proc_dim": "128x128",
+    "total_pixels": 16384,
+    "zero_pixels": 9620,
+    "sparsity": 58.7158203125,
+    "max_relu_val": 833
+  },
+  {
+    "label": "extra_images (7).jpg",
+    "raw_dim": "678x452",
+    "proc_dim": "128x85",
+    "total_pixels": 10880,
+    "zero_pixels": 5607,
+    "sparsity": 51.53492647058824,
+    "max_relu_val": 930
+  },
+  {
+    "label": "extra_images (8).jpg",
+    "raw_dim": "452x678",
+    "proc_dim": "85x128",
+    "total_pixels": 10880,
+    "zero_pixels": 5495,
+    "sparsity": 50.50551470588235,
+    "max_relu_val": 599
+  },
+  {
+    "label": "extra_images.jpg",
+    "raw_dim": "516x594",
+    "proc_dim": "111x128",
+    "total_pixels": 14208,
+    "zero_pixels": 9606,
+    "sparsity": 67.6097972972973,
+    "max_relu_val": 350
+  },
+  {
+    "label": "extra_images1.jpg",
+    "raw_dim": "452x678",
+    "proc_dim": "85x128",
+    "total_pixels": 10880,
+    "zero_pixels": 6864,
+    "sparsity": 63.088235294117645,
+    "max_relu_val": 874
+  }
+]

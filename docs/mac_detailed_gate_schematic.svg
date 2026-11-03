@@ -1,0 +1,345 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 920" width="100%" height="100%" style="background-color: #ffffff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="2" dy="3" stdDeviation="3" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+    <marker id="arr" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#2563eb" />
+    </marker>
+    <marker id="arr-red" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#dc2626" />
+    </marker>
+    <marker id="arr-grn" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#16a34a" />
+    </marker>
+  </defs>
+
+  <!-- Title & Metadata Header -->
+  <rect x="20" y="15" width="1360" height="55" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="40" y="42" font-size="20" font-weight="800" fill="#0f172a" letter-spacing="0.5">COMPLETE GATE-LEVEL SCHEMATIC: LOW-POWER ZERO-SKIPPING MAC UNIT</text>
+  <text x="40" y="58" font-size="12" font-weight="600" fill="#64748b">Pure Hardware Topology — Showing Every Gate, Reduction Tree, Multiplier Stage, Adder Cell, and Flip-Flop</text>
+  <text x="1350" y="47" text-anchor="end" font-size="12" font-weight="700" fill="#2563eb">Target: SystemVerilog IEEE 1800</text>
+
+  <!-- ===================================================================== -->
+  <!-- 1. ACTIVITY DETECTOR (OR TREE + INVERTERS + OR GATE)                   -->
+  <!-- ===================================================================== -->
+  <rect x="20" y="85" width="670" height="370" rx="10" fill="#f0fdf4" stroke="#86efac" stroke-width="2"/>
+  <rect x="20" y="85" width="670" height="32" rx="8" fill="#dcfce7"/>
+  <text x="35" y="106" font-size="13" font-weight="800" fill="#166534">1. ACTIVITY DETECTOR: 8-BIT NOR REDUCTION TREES (~|in_a | ~|in_b)</text>
+
+  <!-- Input A label -->
+  <text x="35" y="145" font-size="12" font-weight="700" fill="#0f172a">in_a [7:0]</text>
+  <!-- 8 Input lines for in_a -->
+  <g font-size="9" fill="#475569" font-family="monospace">
+    <text x="95" y="138">in_a[7]</text><line x1="140" y1="135" x2="170" y2="135" stroke="#2563eb" stroke-width="1.5"/>
+    <text x="95" y="158">in_a[6]</text><line x1="140" y1="155" x2="170" y2="155" stroke="#2563eb" stroke-width="1.5"/>
+    <text x="95" y="178">in_a[5]</text><line x1="140" y1="175" x2="170" y2="175" stroke="#2563eb" stroke-width="1.5"/>
+    <text x="95" y="198">in_a[4]</text><line x1="140" y1="195" x2="170" y2="195" stroke="#2563eb" stroke-width="1.5"/>
+    <text x="95" y="218">in_a[3]</text><line x1="140" y1="215" x2="170" y2="215" stroke="#2563eb" stroke-width="1.5"/>
+    <text x="95" y="238">in_a[2]</text><line x1="140" y1="235" x2="170" y2="235" stroke="#2563eb" stroke-width="1.5"/>
+    <text x="95" y="258">in_a[1]</text><line x1="140" y1="255" x2="170" y2="255" stroke="#2563eb" stroke-width="1.5"/>
+    <text x="95" y="278">in_a[0]</text><line x1="140" y1="275" x2="170" y2="275" stroke="#2563eb" stroke-width="1.5"/>
+  </g>
+
+  <!-- Level 1 OR Gates (4 gates) -->
+  <g transform="translate(170, 125)">
+    <!-- OR1 -->
+    <path d="M 0,0 C 8,5 8,15 0,20 C 15,20 28,15 35,10 C 28,5 15,0 0,0 Z" fill="#ffffff" stroke="#1e293b" stroke-width="1.5"/>
+    <line x1="35" y1="10" x2="65" y2="10" stroke="#1e293b" stroke-width="1.5"/>
+    <!-- OR2 -->
+    <path d="M 0,40 C 8,45 8,55 0,60 C 15,60 28,55 35,50 C 28,45 15,40 0,40 Z" fill="#ffffff" stroke="#1e293b" stroke-width="1.5"/>
+    <line x1="35" y1="50" x2="65" y2="50" stroke="#1e293b" stroke-width="1.5"/>
+    <!-- OR3 -->
+    <path d="M 0,80 C 8,85 8,95 0,100 C 15,100 28,95 35,90 C 28,85 15,80 0,80 Z" fill="#ffffff" stroke="#1e293b" stroke-width="1.5"/>
+    <line x1="35" y1="90" x2="65" y2="90" stroke="#1e293b" stroke-width="1.5"/>
+    <!-- OR4 -->
+    <path d="M 0,120 C 8,125 8,135 0,140 C 15,140 28,135 35,130 C 28,125 15,120 0,120 Z" fill="#ffffff" stroke="#1e293b" stroke-width="1.5"/>
+    <line x1="35" y1="130" x2="65" y2="130" stroke="#1e293b" stroke-width="1.5"/>
+  </g>
+
+  <!-- Level 2 OR Gates (2 gates) -->
+  <path d="M 235 135 L 250 135 L 250 150 L 265 150" fill="none" stroke="#1e293b" stroke-width="1.5"/>
+  <path d="M 235 175 L 250 175 L 250 160 L 265 160" fill="none" stroke="#1e293b" stroke-width="1.5"/>
+  <g transform="translate(265, 145)">
+    <path d="M 0,0 C 8,5 8,15 0,20 C 15,20 28,15 35,10 C 28,5 15,0 0,0 Z" fill="#ffffff" stroke="#1e293b" stroke-width="1.5"/>
+    <line x1="35" y1="10" x2="65" y2="10" stroke="#1e293b" stroke-width="1.5"/>
+  </g>
+
+  <path d="M 235 215 L 250 215 L 250 230 L 265 230" fill="none" stroke="#1e293b" stroke-width="1.5"/>
+  <path d="M 235 255 L 250 255 L 250 240 L 265 240" fill="none" stroke="#1e293b" stroke-width="1.5"/>
+  <g transform="translate(265, 225)">
+    <path d="M 0,0 C 8,5 8,15 0,20 C 15,20 28,15 35,10 C 28,5 15,0 0,0 Z" fill="#ffffff" stroke="#1e293b" stroke-width="1.5"/>
+    <line x1="35" y1="10" x2="65" y2="10" stroke="#1e293b" stroke-width="1.5"/>
+  </g>
+
+  <!-- Level 3 OR Gate (1 gate) -->
+  <path d="M 330 155 L 345 155 L 345 185 L 360 185" fill="none" stroke="#1e293b" stroke-width="1.5"/>
+  <path d="M 330 235 L 345 235 L 345 205 L 360 205" fill="none" stroke="#1e293b" stroke-width="1.5"/>
+  <g transform="translate(360, 185)">
+    <path d="M 0,0 C 8,5 8,15 0,20 C 15,20 28,15 35,10 C 28,5 15,0 0,0 Z" fill="#ffffff" stroke="#1e293b" stroke-width="1.5"/>
+    <line x1="35" y1="10" x2="55" y2="10" stroke="#1e293b" stroke-width="1.5"/>
+  </g>
+
+  <!-- Inverter A (NOT gate for NOR reduction) -->
+  <g transform="translate(415, 185)">
+    <polygon points="0,0 20,10 0,20" fill="#ffffff" stroke="#1e293b" stroke-width="1.5"/>
+    <circle cx="24" cy="10" r="4" fill="#ffffff" stroke="#1e293b" stroke-width="1.5"/>
+    <line x1="28" y1="10" x2="80" y2="10" stroke="#166534" stroke-width="2"/>
+    <text x="35" y="5" font-size="10" font-weight="700" fill="#166534">a_is_zero</text>
+  </g>
+
+  <!-- Reduction for B box representation -->
+  <g transform="translate(95, 310)">
+    <rect x="0" y="0" width="310" height="90" rx="6" fill="#ffffff" stroke="#1e293b" stroke-dasharray="3 3"/>
+    <text x="15" y="25" font-size="11" font-weight="700" fill="#0f172a">in_b [7:0] Identical 8-bit NOR Tree</text>
+    <text x="15" y="45" font-size="10" fill="#64748b">• 4x Level-1 OR gates + 2x Level-2 OR gates</text>
+    <text x="15" y="62" font-size="10" fill="#64748b">• 1x Level-3 OR gate + 1x Inverter</text>
+    <text x="15" y="78" font-size="10" font-weight="600" fill="#166534">Computes: b_is_zero = ~|in_b</text>
+    <line x1="310" y1="45" x2="400" y2="45" stroke="#166534" stroke-width="2"/>
+  </g>
+  <text x="410" y="350" font-size="10" font-weight="700" fill="#166534">b_is_zero</text>
+
+  <!-- Final 2-input OR Gate producing is_zero -->
+  <path d="M 495 195 L 530 195 L 530 255 L 550 255" fill="none" stroke="#166534" stroke-width="2"/>
+  <path d="M 470 355 L 530 355 L 530 275 L 550 275" fill="none" stroke="#166534" stroke-width="2"/>
+  <g transform="translate(550, 255)">
+    <path d="M 0,0 C 10,8 10,22 0,30 C 20,30 38,22 48,15 C 38,8 20,0 0,0 Z" fill="#ffffff" stroke="#dc2626" stroke-width="2" filter="url(#shadow)"/>
+    <text x="15" y="20" font-size="11" font-weight="800" fill="#dc2626">OR</text>
+    <line x1="48" y1="15" x2="110" y2="15" stroke="#dc2626" stroke-width="3" marker-end="url(#arr-red)"/>
+  </g>
+  <text x="605" y="250" font-size="13" font-weight="800" fill="#dc2626">is_zero = a_is_zero | b_is_zero</text>
+
+
+  <!-- ===================================================================== -->
+  <!-- 2. OPERAND ISOLATION (16x 2-INPUT AND GATES)                           -->
+  <!-- ===================================================================== -->
+  <rect x="710" y="85" width="670" height="370" rx="10" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+  <rect x="710" y="85" width="670" height="32" rx="8" fill="#dbeafe"/>
+  <text x="725" y="106" font-size="13" font-weight="800" fill="#1e40af">2. OPERAND ISOLATION: 16x 2-INPUT AND GATES (CLAMPS MULTIPLIER INPUTS TO 0)</text>
+
+  <!-- Inverter for !is_zero (Enable line) -->
+  <g transform="translate(735, 140)">
+    <text x="0" y="-10" font-size="11" font-weight="700" fill="#dc2626">is_zero</text>
+    <line x1="0" y1="0" x2="30" y2="0" stroke="#dc2626" stroke-width="2"/>
+    <polygon points="30,-10 50,0 30,10" fill="#ffffff" stroke="#1e293b" stroke-width="1.5"/>
+    <circle cx="54" cy="0" r="4" fill="#ffffff" stroke="#1e293b" stroke-width="1.5"/>
+    <line x1="58" y1="0" x2="100" y2="0" stroke="#16a34a" stroke-width="2.5"/>
+    <text x="65" y="-8" font-size="11" font-weight="700" fill="#16a34a">en = !is_zero</text>
+  </g>
+
+  <!-- 8-bit Bank for in_a -->
+  <g transform="translate(850, 140)">
+    <rect x="0" y="0" width="230" height="130" rx="6" fill="#ffffff" stroke="#1e293b" filter="url(#shadow)"/>
+    <text x="15" y="25" font-size="12" font-weight="700" fill="#1e293b">8x 2-Input AND Gates (A-Bus)</text>
+    <g font-size="10" fill="#334155" font-family="monospace">
+      <text x="15" y="50">iso_a[7] = in_a[7] &amp; en;</text>
+      <text x="15" y="68">iso_a[6] = in_a[6] &amp; en;</text>
+      <text x="15" y="86">  ...      ...      ... </text>
+      <text x="15" y="104">iso_a[0] = in_a[0] &amp; en;</text>
+    </g>
+    <!-- Gate visual -->
+    <path d="M 180,45 C 195,45 205,55 205,65 C 205,75 195,85 180,85 Z" fill="#ffffff" stroke="#1e293b" stroke-width="1.5"/>
+    <line x1="170" y1="55" x2="180" y2="55" stroke="#1e293b"/>
+    <line x1="170" y1="75" x2="180" y2="75" stroke="#1e293b"/>
+    <line x1="205" y1="65" x2="245" y2="65" stroke="#2563eb" stroke-width="2" marker-end="url(#arr)"/>
+  </g>
+  <text x="1105" y="210" font-size="12" font-weight="700" fill="#2563eb">iso_a [7:0]</text>
+
+  <!-- 8-bit Bank for in_b -->
+  <g transform="translate(850, 290)">
+    <rect x="0" y="0" width="230" height="130" rx="6" fill="#ffffff" stroke="#1e293b" filter="url(#shadow)"/>
+    <text x="15" y="25" font-size="12" font-weight="700" fill="#1e293b">8x 2-Input AND Gates (B-Bus)</text>
+    <g font-size="10" fill="#334155" font-family="monospace">
+      <text x="15" y="50">iso_b[7] = in_b[7] &amp; en;</text>
+      <text x="15" y="68">iso_b[6] = in_b[6] &amp; en;</text>
+      <text x="15" y="86">  ...      ...      ... </text>
+      <text x="15" y="104">iso_b[0] = in_b[0] &amp; en;</text>
+    </g>
+    <!-- Gate visual -->
+    <path d="M 180,45 C 195,45 205,55 205,65 C 205,75 195,85 180,85 Z" fill="#ffffff" stroke="#1e293b" stroke-width="1.5"/>
+    <line x1="170" y1="55" x2="180" y2="55" stroke="#1e293b"/>
+    <line x1="170" y1="75" x2="180" y2="75" stroke="#1e293b"/>
+    <line x1="205" y1="65" x2="245" y2="65" stroke="#2563eb" stroke-width="2" marker-end="url(#arr)"/>
+  </g>
+  <text x="1105" y="360" font-size="12" font-weight="700" fill="#2563eb">iso_b [7:0]</text>
+
+  <text x="1110" y="440" font-size="11" font-weight="700" fill="#059669">When is_zero=1: All 16 AND outputs force-clamped to 0 (0 Volts)</text>
+
+
+  <!-- ===================================================================== -->
+  <!-- 3. 8x8 SIGNED MULTIPLIER ARRAY (PARTIAL PRODUCTS & CSA TREE)          -->
+  <!-- ===================================================================== -->
+  <rect x="20" y="475" width="460" height="425" rx="10" fill="#faf5ff" stroke="#d8b4fe" stroke-width="2"/>
+  <rect x="20" y="475" width="460" height="32" rx="8" fill="#f3e8ff"/>
+  <text x="35" y="496" font-size="13" font-weight="800" fill="#7e22ce">3. 8×8 SIGNED MULTIPLIER (64 AND/NAND GATES + CSA ARRAY)</text>
+
+  <!-- Partial Product Matrix Representation -->
+  <g transform="translate(35, 520)">
+    <rect x="0" y="0" width="430" height="85" rx="6" fill="#ffffff" stroke="#1e293b" filter="url(#shadow)"/>
+    <text x="15" y="22" font-size="11" font-weight="700" fill="#0f172a">STAGE 1: 64 Partial Product Generators (Baugh-Wooley Form)</text>
+    <text x="15" y="42" font-size="10" fill="#64748b">• 49 standard AND gates: pp[i][j] = iso_a[i] &amp; iso_b[j] (for i,j &lt; 7)</text>
+    <text x="15" y="58" font-size="10" fill="#64748b">• 14 NAND gates: Sign-extension product inversion for MSBs</text>
+    <text x="15" y="74" font-size="10" fill="#64748b">• 1 AND gate at MSB intersection: pp[7][7] = iso_a[7] &amp; iso_b[7]</text>
+  </g>
+
+  <!-- Carry-Save Adder Reduction Stages -->
+  <g transform="translate(35, 620)">
+    <rect x="0" y="0" width="430" height="150" rx="6" fill="#ffffff" stroke="#1e293b" filter="url(#shadow)"/>
+    <text x="15" y="22" font-size="11" font-weight="700" fill="#0f172a">STAGE 2: Carry-Save Adder (CSA) Reduction Tree</text>
+    
+    <!-- FA / HA boxes -->
+    <g transform="translate(15, 35)">
+      <rect x="0" y="0" width="85" height="45" rx="4" fill="#f8fafc" stroke="#1e293b"/>
+      <text x="10" y="18" font-size="10" font-weight="700" fill="#0f172a">Full Adder (FA)</text>
+      <text x="10" y="32" font-size="8" fill="#64748b">2x XOR, 2x AND, 1x OR</text>
+
+      <rect x="95" y="0" width="85" height="45" rx="4" fill="#f8fafc" stroke="#1e293b"/>
+      <text x="10" y="18" font-size="10" font-weight="700" fill="#0f172a" transform="translate(95,0)">Half Adder (HA)</text>
+      <text x="10" y="32" font-size="8" fill="#64748b" transform="translate(95,0)">1x XOR, 1x AND</text>
+
+      <rect x="190" y="0" width="205" height="45" rx="4" fill="#f8fafc" stroke="#1e293b"/>
+      <text x="10" y="18" font-size="10" font-weight="700" fill="#0f172a" transform="translate(190,0)">Tree Topology</text>
+      <text x="10" y="32" font-size="8" fill="#64748b" transform="translate(190,0)">Reduces 8 partial-product rows to 2 rows</text>
+    </g>
+
+    <text x="15" y="105" font-size="11" font-weight="700" fill="#0f172a">STAGE 3: Vector-Merge Adder (Fast Carry-Lookahead)</text>
+    <text x="15" y="125" font-size="10" fill="#64748b">Adds Sum-Vector and Carry-Vector $\implies$ Generates prod[15:0]</text>
+    <text x="15" y="140" font-size="10" font-weight="700" fill="#7e22ce">Net LUTs: 93 LUTs (FROZEN TO ZERO TOGGLES WHEN IS_ZERO=1)</text>
+  </g>
+
+  <!-- Output Product Line -->
+  <line x1="250" y1="785" x2="250" y2="830" stroke="#2563eb" stroke-width="3"/>
+  <line x1="250" y1="830" x2="500" y2="830" stroke="#2563eb" stroke-width="3" marker-end="url(#arr)"/>
+  <text x="260" y="820" font-size="12" font-weight="700" fill="#2563eb">prod [15:0] (Signed Two's Complement Product)</text>
+
+
+  <!-- ===================================================================== -->
+  <!-- 4. 32-BIT ADDER & SIGN EXTENDER                                       -->
+  <!-- ===================================================================== -->
+  <rect x="500" y="475" width="420" height="425" rx="10" fill="#fffbeb" stroke="#fcd34d" stroke-width="2"/>
+  <rect x="500" y="475" width="420" height="32" rx="8" fill="#fef3c7"/>
+  <text x="515" y="496" font-size="13" font-weight="800" fill="#b45309">4. SIGN EXTENDER &amp; 32-BIT ADDER CORE</text>
+
+  <!-- Sign extension box -->
+  <g transform="translate(515, 520)">
+    <rect x="0" y="0" width="390" height="75" rx="6" fill="#ffffff" stroke="#1e293b" filter="url(#shadow)"/>
+    <text x="15" y="22" font-size="11" font-weight="700" fill="#0f172a">Sign Extension Unit: { {16{prod[15]}}, prod[15:0] }</text>
+    <text x="15" y="42" font-size="10" fill="#64748b">• Bit prod[15] (Sign bit) is replicated 16 times into bits [31:16]</text>
+    <text x="15" y="58" font-size="10" fill="#64748b">• Bits [15:0] pass directly through $\implies$ 32-bit signed operand</text>
+  </g>
+
+  <!-- 32-bit Carry-Propagate Adder -->
+  <g transform="translate(515, 610)">
+    <rect x="0" y="0" width="390" height="200" rx="6" fill="#ffffff" stroke="#1e293b" filter="url(#shadow)"/>
+    <text x="15" y="22" font-size="11" font-weight="700" fill="#0f172a">32-bit Carry Chain Adder (32 Full Adder Bit-Slices)</text>
+    
+    <!-- 4 FA visual slices -->
+    <g transform="translate(15, 40)">
+      <!-- FA 0 -->
+      <rect x="0" y="0" width="70" height="90" rx="4" fill="#f8fafc" stroke="#1e293b"/>
+      <text x="12" y="20" font-size="10" font-weight="800" fill="#0f172a">FA[0]</text>
+      <text x="8" y="40" font-size="8" fill="#475569">A: ext[0]</text>
+      <text x="8" y="55" font-size="8" fill="#475569">B: acc[0]</text>
+      <text x="8" y="70" font-size="8" fill="#475569">Cin = 0</text>
+      <text x="8" y="85" font-size="9" font-weight="700" fill="#2563eb">S: sum[0]</text>
+
+      <!-- Carry wire 0 -> 1 -->
+      <line x1="70" y1="45" x2="90" y2="45" stroke="#dc2626" stroke-width="1.5" marker-end="url(#arr-red)"/>
+
+      <!-- FA 1 -->
+      <rect x="90" y="0" width="70" height="90" rx="4" fill="#f8fafc" stroke="#1e293b"/>
+      <text x="12" y="20" font-size="10" font-weight="800" fill="#0f172a">FA[1]</text>
+      <text x="8" y="40" font-size="8" fill="#475569">A: ext[1]</text>
+      <text x="8" y="55" font-size="8" fill="#475569">B: acc[1]</text>
+      <text x="8" y="70" font-size="8" fill="#dc2626">Cin = C0</text>
+      <text x="8" y="85" font-size="9" font-weight="700" fill="#2563eb">S: sum[1]</text>
+
+      <text x="175" y="50" font-size="16" font-weight="800" fill="#64748b">...</text>
+
+      <!-- FA 31 -->
+      <rect x="220" y="0" width="70" height="90" rx="4" fill="#f8fafc" stroke="#1e293b"/>
+      <text x="12" y="20" font-size="10" font-weight="800" fill="#0f172a">FA[31]</text>
+      <text x="8" y="40" font-size="8" fill="#475569">A: ext[31]</text>
+      <text x="8" y="55" font-size="8" fill="#475569">B: acc[31]</text>
+      <text x="8" y="70" font-size="8" fill="#dc2626">Cin = C30</text>
+      <text x="8" y="85" font-size="9" font-weight="700" fill="#2563eb">S: sum[31]</text>
+    </g>
+
+    <text x="15" y="160" font-size="10" fill="#64748b">• Full Adder Logic: Sum = A ^ B ^ Cin; Cout = (A&amp;B) | (Cin&amp;(A^B))</text>
+    <text x="15" y="180" font-size="10" font-weight="700" fill="#b45309">• In Silicon: Maps directly to 8x 4-bit Fast Dedicated CARRY4 Blocks</text>
+  </g>
+
+  <!-- Output Sum Line -->
+  <line x1="905" y1="710" x2="940" y2="710" stroke="#2563eb" stroke-width="3" marker-end="url(#arr)"/>
+  <text x="900" y="695" font-size="12" font-weight="700" fill="#2563eb">sum [31:0]</text>
+
+
+  <!-- ===================================================================== -->
+  <!-- 5. 32-BIT ACCUMULATOR REGISTER BANK WITH CLOCK ENABLE                 -->
+  <!-- ===================================================================== -->
+  <rect x="940" y="475" width="440" height="425" rx="10" fill="#f0fdf4" stroke="#86efac" stroke-width="2"/>
+  <rect x="940" y="475" width="440" height="32" rx="8" fill="#dcfce7"/>
+  <text x="955" y="496" font-size="13" font-weight="800" fill="#166534">5. 32-BIT ACCUMULATOR REGISTER BANK (32x DFF WITH CE)</text>
+
+  <!-- 32-DFF Internal Box -->
+  <g transform="translate(955, 520)">
+    <rect x="0" y="0" width="410" height="290" rx="6" fill="#ffffff" stroke="#1e293b" filter="url(#shadow)"/>
+    <text x="15" y="22" font-size="11" font-weight="700" fill="#0f172a">Bank of 32 Parallel D-Type Flip-Flops</text>
+
+    <!-- Visual DFF 0 -->
+    <g transform="translate(20, 45)">
+      <rect x="0" y="0" width="80" height="120" rx="4" fill="#f8fafc" stroke="#1e293b" stroke-width="1.5"/>
+      <text x="15" y="20" font-size="10" font-weight="800" fill="#0f172a">DFF [0]</text>
+      <text x="10" y="45" font-size="9" font-weight="700" fill="#2563eb">D0</text>
+      <text x="55" y="45" font-size="9" font-weight="700" fill="#0f172a">Q0</text>
+      <polygon points="0,65 10,70 0,75" fill="none" stroke="#1e293b"/>
+      <text x="15" y="73" font-size="8" fill="#475569">CLK</text>
+      <text x="10" y="95" font-size="8" font-weight="600" fill="#dc2626">CLR</text>
+      <text x="10" y="112" font-size="9" font-weight="800" fill="#16a34a">CE</text>
+    </g>
+
+    <!-- Visual DFF 1 -->
+    <g transform="translate(120, 45)">
+      <rect x="0" y="0" width="80" height="120" rx="4" fill="#f8fafc" stroke="#1e293b" stroke-width="1.5"/>
+      <text x="15" y="20" font-size="10" font-weight="800" fill="#0f172a">DFF [1]</text>
+      <text x="10" y="45" font-size="9" font-weight="700" fill="#2563eb">D1</text>
+      <text x="55" y="45" font-size="9" font-weight="700" fill="#0f172a">Q1</text>
+      <polygon points="0,65 10,70 0,75" fill="none" stroke="#1e293b"/>
+      <text x="15" y="73" font-size="8" fill="#475569">CLK</text>
+      <text x="10" y="95" font-size="8" font-weight="600" fill="#dc2626">CLR</text>
+      <text x="10" y="112" font-size="9" font-weight="800" fill="#16a34a">CE</text>
+    </g>
+
+    <text x="220" y="110" font-size="18" font-weight="800" fill="#64748b">...</text>
+
+    <!-- Visual DFF 31 -->
+    <g transform="translate(260, 45)">
+      <rect x="0" y="0" width="80" height="120" rx="4" fill="#f8fafc" stroke="#1e293b" stroke-width="1.5"/>
+      <text x="12" y="20" font-size="10" font-weight="800" fill="#0f172a">DFF [31]</text>
+      <text x="10" y="45" font-size="9" font-weight="700" fill="#2563eb">D31</text>
+      <text x="50" y="45" font-size="9" font-weight="700" fill="#0f172a">Q31</text>
+      <polygon points="0,65 10,70 0,75" fill="none" stroke="#1e293b"/>
+      <text x="15" y="73" font-size="8" fill="#475569">CLK</text>
+      <text x="10" y="95" font-size="8" font-weight="600" fill="#dc2626">CLR</text>
+      <text x="10" y="112" font-size="9" font-weight="800" fill="#16a34a">CE</text>
+    </g>
+
+    <!-- CE line bus -->
+    <line x1="15" y1="185" x2="350" y2="185" stroke="#16a34a" stroke-width="2.5"/>
+    <text x="15" y="205" font-size="11" font-weight="800" fill="#16a34a">COMMON CLOCK-ENABLE BUS: accum_ce = !is_zero</text>
+    <text x="15" y="222" font-size="10" fill="#64748b">• When is_zero=1: CE deasserts LOW $\implies$ Master-slave latches disconnect</text>
+    <text x="15" y="238" font-size="10" fill="#64748b">• Eliminates 100% of clock-tree &amp; register dynamic toggling for all 32 bits</text>
+    <text x="15" y="255" font-size="10" fill="#475569">• Global inputs: clk (100 MHz oscillator) and clr (Synchronous channel reset)</text>
+    <text x="15" y="275" font-size="11" font-weight="700" fill="#166534">Total Registers: Exactly 32 Flip-Flops (0% FF area overhead)</text>
+  </g>
+
+  <!-- Primary Final Output -->
+  <line x1="1305" y1="610" x2="1360" y2="610" stroke="#2563eb" stroke-width="4" marker-end="url(#arr)"/>
+  <text x="1275" y="595" font-size="13" font-weight="800" fill="#0f172a">out_mac [31:0]</text>
+  <text x="1275" y="635" font-size="10" fill="#64748b">(Final Output)</text>
+
+  <!-- Feedback Line to Adder -->
+  <path d="M 1320 610 L 1320 860 L 730 860 L 730 815" fill="none" stroke="#2563eb" stroke-width="2.5" stroke-dasharray="6 3" marker-end="url(#arr)"/>
+  <text x="960" y="850" font-size="11" font-weight="700" fill="#2563eb">32-BIT ACCUMULATOR FEEDBACK LOOP (acc[31:0] to Adder Port B)</text>
+
+</svg>

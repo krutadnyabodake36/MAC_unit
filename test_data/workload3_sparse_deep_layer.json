@@ -1,0 +1,2810 @@
+{
+  "workload_name": "Workload 3: Deep / Highly-Pruned Sparse CNN",
+  "description": "Represents deep or magnitude-pruned neural networks with 65% weight sparsity and 78% activation sparsity, testing the peak efficiency boundary of zero-skipping.",
+  "num_patches": 100,
+  "total_operations": 900,
+  "zero_products": 838,
+  "sparsity_percentage": 93.11,
+  "patches": [
+    {
+      "patch_id": 0,
+      "weights": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        58
+      ],
+      "pixels": [
+        50,
+        0,
+        0,
+        102,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected_accum": 0,
+      "zero_skips": 9,
+      "active_terms": 0
+    },
+    {
+      "patch_id": 1,
+      "weights": [
+        0,
+        0,
+        -72,
+        -65,
+        0,
+        74,
+        0,
+        0,
+        0
+      ],
+      "pixels": [
+        0,
+        0,
+        0,
+        75,
+        27,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected_accum": -4875,
+      "zero_skips": 8,
+      "active_terms": 1
+    },
+    {
+      "patch_id": 2,
+      "weights": [
+        56,
+        0,
+        0,
+        -85,
+        0,
+        0,
+        0,
+        53,
+        69
+      ],
+      "pixels": [
+        63,
+        0,
+        0,
+        36,
+        0,
+        68,
+        0,
+        0,
+        24
+      ],
+      "expected_accum": 2124,
+      "zero_skips": 6,
+      "active_terms": 3
+    },
+    {
+      "patch_id": 3,
+      "weights": [
+        0,
+        0,
+        0,
+        89,
+        0,
+        0,
+        0,
+        87,
+        0
+      ],
+      "pixels": [
+        0,
+        0,
+        31,
+        0,
+        0,
+        104,
+        0,
+        0,
+        0
+      ],
+      "expected_accum": 0,
+      "zero_skips": 9,
+      "active_terms": 0
+    },
+    {
+      "patch_id": 4,
+      "weights": [
+        0,
+        82,
+        0,
+        -25,
+        0,
+        0,
+        51,
+        0,
+        28
+      ],
+      "pixels": [
+        0,
+        18,
+        0,
+        0,
+        75,
+        0,
+        49,
+        0,
+        0
+      ],
+      "expected_accum": 3975,
+      "zero_skips": 7,
+      "active_terms": 2
+    },
+    {
+      "patch_id": 5,
+      "weights": [
+        -87,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixels": [
+        0,
+        71,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected_accum": 0,
+      "zero_skips": 9,
+      "active_terms": 0
+    },
+    {
+      "patch_id": 6,
+      "weights": [
+        0,
+        0,
+        73,
+        0,
+        88,
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixels": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected_accum": 0,
+      "zero_skips": 9,
+      "active_terms": 0
+    },
+    {
+      "patch_id": 7,
+      "weights": [
+        48,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixels": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        17,
+        0,
+        0,
+        0
+      ],
+      "expected_accum": 0,
+      "zero_skips": 9,
+      "active_terms": 0
+    },
+    {
+      "patch_id": 8,
+      "weights": [
+        -41,
+        0,
+        0,
+        0,
+        0,
+        59,
+        0,
+        22,
+        -19
+      ],
+      "pixels": [
+        0,
+        0,
+        0,
+        0,
+        47,
+        16,
+        0,
+        0,
+        0
+      ],
+      "expected_accum": 944,
+      "zero_skips": 8,
+      "active_terms": 1
+    },
+    {
+      "patch_id": 9,
+      "weights": [
+        43,
+        -37,
+        0,
+        -72,
+        0,
+        32,
+        0,
+        0,
+        -44
+      ],
+      "pixels": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        45,
+        0,
+        0,
+        0
+      ],
+      "expected_accum": 1440,
+      "zero_skips": 8,
+      "active_terms": 1
+    },
+    {
+      "patch_id": 10,
+      "weights": [
+        0,
+        0,
+        -17,
+        0,
+        -59,
+        -32,
+        0,
+        19,
+        0
+      ],
+      "pixels": [
+        0,
+        0,
+        31,
+        0,
+        0,
+        0,
+        0,
+        0,
+        108
+      ],
+      "expected_accum": -527,
+      "zero_skips": 8,
+      "active_terms": 1
+    },
+    {
+      "patch_id": 11,
+      "weights": [
+        0,
+        29,
+        0,
+        0,
+        81,
+        -84,
+        0,
+        0,
+        88
+      ],
+      "pixels": [
+        85,
+        0,
+        0,
+        0,
+        84,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected_accum": 6804,
+      "zero_skips": 8,
+      "active_terms": 1
+    },
+    {
+      "patch_id": 12,
+      "weights": [
+        0,
+        0,
+        -53,
+        36,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixels": [
+        0,
+        0,
+        0,
+        0,
+        31,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected_accum": 0,
+      "zero_skips": 9,
+      "active_terms": 0
+    },
+    {
+      "patch_id": 13,
+      "weights": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -38
+      ],
+      "pixels": [
+        0,
+        25,
+        0,
+        0,
+        0,
+        0,
+        120,
+        0,
+        0
+      ],
+      "expected_accum": 0,
+      "zero_skips": 9,
+      "active_terms": 0
+    },
+    {
+      "patch_id": 14,
+      "weights": [
+        79,
+        0,
+        0,
+        0,
+        -24,
+        36,
+        0,
+        -83,
+        25
+      ],
+      "pixels": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        85,
+        0,
+        0
+      ],
+      "expected_accum": 0,
+      "zero_skips": 9,
+      "active_terms": 0
+    },
+    {
+      "patch_id": 15,
+      "weights": [
+        0,
+        57,
+        59,
+        0,
+        0,
+        89,
+        0,
+        0,
+        0
+      ],
+      "pixels": [
+        0,
+        0,
+        0,
+        0,
+        15,
+        0,
+        91,
+        0,
+        0
+      ],
+      "expected_accum": 0,
+      "zero_skips": 9,
+      "active_terms": 0
+    },
+    {
+      "patch_id": 16,
+      "weights": [
+        -50,
+        -52,
+        0,
+        82,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixels": [
+        0,
+        0,
+        46,
+        0,
+        26,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected_accum": 0,
+      "zero_skips": 9,
+      "active_terms": 0
+    },
+    {
+      "patch_id": 17,
+      "weights": [
+        0,
+        0,
+        0,
+        -88,
+        0,
+        0,
+        22,
+        56,
+        65
+      ],
+      "pixels": [
+        30,
+        44,
+        0,
+        16,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected_accum": -1408,
+      "zero_skips": 8,
+      "active_terms": 1
+    },
+    {
+      "patch_id": 18,
+      "weights": [
+        0,
+        0,
+        -18,
+        69,
+        -40,
+        0,
+        -28,
+        0,
+        0
+      ],
+      "pixels": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected_accum": 0,
+      "zero_skips": 9,
+      "active_terms": 0
+    },
+    {
+      "patch_id": 19,
+      "weights": [
+        0,
+        0,
+        0,
+        -43,
+        0,
+        85,
+        0,
+        58,
+        0
+      ],
+      "pixels": [
+        0,
+        0,
+        0,
+        0,
+        93,
+        117,
+        0,
+        0,
+        0
+      ],
+      "expected_accum": 9945,
+      "zero_skips": 8,
+      "active_terms": 1
+    },
+    {
+      "patch_id": 20,
+      "weights": [
+        -59,
+        0,
+        -26,
+        -30,
+        13,
+        0,
+        69,
+        0,
+        0
+      ],
+      "pixels": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        103,
+        0,
+        0
+      ],
+      "expected_accum": 7107,
+      "zero_skips": 8,
+      "active_terms": 1
+    },
+    {
+      "patch_id": 21,
+      "weights": [
+        0,
+        -44,
+        0,
+        0,
+        18,
+        0,
+        -61,
+        25,
+        0
+      ],
+      "pixels": [
+        98,
+        0,
+        80,
+        27,
+        77,
+        83,
+        0,
+        0,
+        86
+      ],
+      "expected_accum": 1386,
+      "zero_skips": 8,
+      "active_terms": 1
+    },
+    {
+      "patch_id": 22,
+      "weights": [
+        -17,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixels": [
+        0,
+        79,
+        0,
+        0,
+        0,
+        0,
+        18,
+        50,
+        0
+      ],
+      "expected_accum": 0,
+      "zero_skips": 9,
+      "active_terms": 0
+    },
+    {
+      "patch_id": 23,
+      "weights": [
+        0,
+        0,
+        0,
+        -65,
+        0,
+        0,
+        69,
+        0,
+        0
+      ],
+      "pixels": [
+        0,
+        0,
+        32,
+        0,
+        0,
+        0,
+        0,
+        113,
+        0
+      ],
+      "expected_accum": 0,
+      "zero_skips": 9,
+      "active_terms": 0
+    },
+    {
+      "patch_id": 24,
+      "weights": [
+        -52,
+        0,
+        0,
+        -52,
+        -15,
+        64,
+        0,
+        31,
+        -28
+      ],
+      "pixels": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected_accum": 0,
+      "zero_skips": 9,
+      "active_terms": 0
+    },
+    {
+      "patch_id": 25,
+      "weights": [
+        29,
+        0,
+        0,
+        35,
+        72,
+        0,
+        0,
+        0,
+        -46
+      ],
+      "pixels": [
+        43,
+        0,
+        111,
+        0,
+        0,
+        71,
+        77,
+        0,
+        46
+      ],
+      "expected_accum": -869,
+      "zero_skips": 7,
+      "active_terms": 2
+    },
+    {
+      "patch_id": 26,
+      "weights": [
+        0,
+        52,
+        0,
+        -78,
+        0,
+        0,
+        -78,
+        0,
+        -83
+      ],
+      "pixels": [
+        0,
+        0,
+        39,
+        0,
+        0,
+        0,
+        74,
+        0,
+        0
+      ],
+      "expected_accum": -5772,
+      "zero_skips": 8,
+      "active_terms": 1
+    },
+    {
+      "patch_id": 27,
+      "weights": [
+        -71,
+        23,
+        -35,
+        -62,
+        0,
+        0,
+        0,
+        0,
+        -70
+      ],
+      "pixels": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected_accum": 0,
+      "zero_skips": 9,
+      "active_terms": 0
+    },
+    {
+      "patch_id": 28,
+      "weights": [
+        0,
+        -60,
+        0,
+        0,
+        0,
+        0,
+        -32,
+        -18,
+        0
+      ],
+      "pixels": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected_accum": 0,
+      "zero_skips": 9,
+      "active_terms": 0
+    },
+    {
+      "patch_id": 29,
+      "weights": [
+        0,
+        -89,
+        -39,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixels": [
+        0,
+        0,
+        0,
+        21,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected_accum": 0,
+      "zero_skips": 9,
+      "active_terms": 0
+    },
+    {
+      "patch_id": 30,
+      "weights": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        -48,
+        0,
+        -70,
+        16
+      ],
+      "pixels": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected_accum": 0,
+      "zero_skips": 9,
+      "active_terms": 0
+    },
+    {
+      "patch_id": 31,
+      "weights": [
+        54,
+        0,
+        0,
+        -25,
+        0,
+        -73,
+        66,
+        0,
+        0
+      ],
+      "pixels": [
+        0,
+        60,
+        93,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected_accum": 0,
+      "zero_skips": 9,
+      "active_terms": 0
+    },
+    {
+      "patch_id": 32,
+      "weights": [
+        -12,
+        0,
+        0,
+        -90,
+        17,
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixels": [
+        0,
+        0,
+        54,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected_accum": 0,
+      "zero_skips": 9,
+      "active_terms": 0
+    },
+    {
+      "patch_id": 33,
+      "weights": [
+        0,
+        -36,
+        0,
+        0,
+        16,
+        0,
+        0,
+        0,
+        71
+      ],
+      "pixels": [
+        67,
+        22,
+        53,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected_accum": -792,
+      "zero_skips": 8,
+      "active_terms": 1
+    },
+    {
+      "patch_id": 34,
+      "weights": [
+        20,
+        15,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixels": [
+        54,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        42
+      ],
+      "expected_accum": 1080,
+      "zero_skips": 8,
+      "active_terms": 1
+    },
+    {
+      "patch_id": 35,
+      "weights": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -36,
+        0
+      ],
+      "pixels": [
+        0,
+        54,
+        0,
+        0,
+        120,
+        81,
+        0,
+        0,
+        0
+      ],
+      "expected_accum": 0,
+      "zero_skips": 9,
+      "active_terms": 0
+    },
+    {
+      "patch_id": 36,
+      "weights": [
+        0,
+        -12,
+        0,
+        0,
+        -54,
+        0,
+        0,
+        0,
+        14
+      ],
+      "pixels": [
+        0,
+        0,
+        56,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected_accum": 0,
+      "zero_skips": 9,
+      "active_terms": 0
+    },
+    {
+      "patch_id": 37,
+      "weights": [
+        0,
+        0,
+        -38,
+        0,
+        0,
+        0,
+        85,
+        0,
+        0
+      ],
+      "pixels": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected_accum": 0,
+      "zero_skips": 9,
+      "active_terms": 0
+    },
+    {
+      "patch_id": 38,
+      "weights": [
+        0,
+        0,
+        0,
+        90,
+        0,
+        0,
+        0,
+        -71,
+        0
+      ],
+      "pixels": [
+        0,
+        104,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected_accum": 0,
+      "zero_skips": 9,
+      "active_terms": 0
+    },
+    {
+      "patch_id": 39,
+      "weights": [
+        58,
+        0,
+        53,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixels": [
+        0,
+        0,
+        0,
+        0,
+        116,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected_accum": 0,
+      "zero_skips": 9,
+      "active_terms": 0
+    },
+    {
+      "patch_id": 40,
+      "weights": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        67
+      ],
+      "pixels": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        29,
+        0
+      ],
+      "expected_accum": 0,
+      "zero_skips": 9,
+      "active_terms": 0
+    },
+    {
+      "patch_id": 41,
+      "weights": [
+        0,
+        0,
+        -51,
+        -88,
+        0,
+        53,
+        0,
+        -39,
+        -30
+      ],
+      "pixels": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        53,
+        0,
+        53
+      ],
+      "expected_accum": -1590,
+      "zero_skips": 8,
+      "active_terms": 1
+    },
+    {
+      "patch_id": 42,
+      "weights": [
+        56,
+        -90,
+        28,
+        -59,
+        -12,
+        26,
+        -42,
+        0,
+        0
+      ],
+      "pixels": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        61
+      ],
+      "expected_accum": 0,
+      "zero_skips": 9,
+      "active_terms": 0
+    },
+    {
+      "patch_id": 43,
+      "weights": [
+        -48,
+        -29,
+        0,
+        0,
+        0,
+        29,
+        0,
+        0,
+        0
+      ],
+      "pixels": [
+        0,
+        92,
+        94,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected_accum": -2668,
+      "zero_skips": 8,
+      "active_terms": 1
+    },
+    {
+      "patch_id": 44,
+      "weights": [
+        0,
+        0,
+        -76,
+        0,
+        16,
+        59,
+        0,
+        0,
+        -79
+      ],
+      "pixels": [
+        111,
+        0,
+        0,
+        0,
+        26,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected_accum": 416,
+      "zero_skips": 8,
+      "active_terms": 1
+    },
+    {
+      "patch_id": 45,
+      "weights": [
+        90,
+        0,
+        0,
+        70,
+        0,
+        0,
+        57,
+        49,
+        0
+      ],
+      "pixels": [
+        0,
+        0,
+        0,
+        48,
+        0,
+        0,
+        0,
+        0,
+        118
+      ],
+      "expected_accum": 3360,
+      "zero_skips": 8,
+      "active_terms": 1
+    },
+    {
+      "patch_id": 46,
+      "weights": [
+        -48,
+        0,
+        0,
+        0,
+        28,
+        0,
+        0,
+        0,
+        -87
+      ],
+      "pixels": [
+        0,
+        0,
+        0,
+        0,
+        45,
+        0,
+        19,
+        0,
+        0
+      ],
+      "expected_accum": 1260,
+      "zero_skips": 8,
+      "active_terms": 1
+    },
+    {
+      "patch_id": 47,
+      "weights": [
+        0,
+        -75,
+        61,
+        0,
+        0,
+        0,
+        0,
+        18,
+        0
+      ],
+      "pixels": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected_accum": 0,
+      "zero_skips": 9,
+      "active_terms": 0
+    },
+    {
+      "patch_id": 48,
+      "weights": [
+        45,
+        0,
+        -48,
+        60,
+        -24,
+        67,
+        0,
+        54,
+        0
+      ],
+      "pixels": [
+        47,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected_accum": 2115,
+      "zero_skips": 8,
+      "active_terms": 1
+    },
+    {
+      "patch_id": 49,
+      "weights": [
+        -52,
+        0,
+        -13,
+        0,
+        0,
+        40,
+        36,
+        0,
+        0
+      ],
+      "pixels": [
+        0,
+        0,
+        42,
+        96,
+        0,
+        26,
+        31,
+        0,
+        0
+      ],
+      "expected_accum": 1610,
+      "zero_skips": 6,
+      "active_terms": 3
+    },
+    {
+      "patch_id": 50,
+      "weights": [
+        0,
+        -26,
+        49,
+        0,
+        47,
+        44,
+        0,
+        0,
+        61
+      ],
+      "pixels": [
+        0,
+        0,
+        48,
+        0,
+        0,
+        40,
+        0,
+        0,
+        0
+      ],
+      "expected_accum": 4112,
+      "zero_skips": 7,
+      "active_terms": 2
+    },
+    {
+      "patch_id": 51,
+      "weights": [
+        0,
+        -90,
+        0,
+        25,
+        0,
+        0,
+        14,
+        -12,
+        46
+      ],
+      "pixels": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected_accum": 0,
+      "zero_skips": 9,
+      "active_terms": 0
+    },
+    {
+      "patch_id": 52,
+      "weights": [
+        -81,
+        0,
+        0,
+        27,
+        0,
+        54,
+        19,
+        0,
+        -58
+      ],
+      "pixels": [
+        0,
+        25,
+        112,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected_accum": 0,
+      "zero_skips": 9,
+      "active_terms": 0
+    },
+    {
+      "patch_id": 53,
+      "weights": [
+        -57,
+        0,
+        36,
+        0,
+        0,
+        -74,
+        0,
+        75,
+        0
+      ],
+      "pixels": [
+        72,
+        17,
+        0,
+        0,
+        20,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected_accum": -4104,
+      "zero_skips": 8,
+      "active_terms": 1
+    },
+    {
+      "patch_id": 54,
+      "weights": [
+        -86,
+        0,
+        0,
+        14,
+        0,
+        -43,
+        -13,
+        0,
+        0
+      ],
+      "pixels": [
+        0,
+        73,
+        0,
+        23,
+        28,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected_accum": 322,
+      "zero_skips": 8,
+      "active_terms": 1
+    },
+    {
+      "patch_id": 55,
+      "weights": [
+        0,
+        0,
+        53,
+        0,
+        -53,
+        -17,
+        0,
+        0,
+        0
+      ],
+      "pixels": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        20,
+        0,
+        95,
+        0
+      ],
+      "expected_accum": -340,
+      "zero_skips": 8,
+      "active_terms": 1
+    },
+    {
+      "patch_id": 56,
+      "weights": [
+        -74,
+        0,
+        0,
+        65,
+        28,
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixels": [
+        93,
+        0,
+        0,
+        0,
+        0,
+        0,
+        53,
+        0,
+        0
+      ],
+      "expected_accum": -6882,
+      "zero_skips": 8,
+      "active_terms": 1
+    },
+    {
+      "patch_id": 57,
+      "weights": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        -71,
+        -47,
+        0,
+        0
+      ],
+      "pixels": [
+        0,
+        75,
+        0,
+        0,
+        21,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected_accum": 0,
+      "zero_skips": 9,
+      "active_terms": 0
+    },
+    {
+      "patch_id": 58,
+      "weights": [
+        17,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixels": [
+        0,
+        0,
+        0,
+        0,
+        44,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected_accum": 0,
+      "zero_skips": 9,
+      "active_terms": 0
+    },
+    {
+      "patch_id": 59,
+      "weights": [
+        40,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixels": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected_accum": 0,
+      "zero_skips": 9,
+      "active_terms": 0
+    },
+    {
+      "patch_id": 60,
+      "weights": [
+        0,
+        0,
+        -49,
+        0,
+        -85,
+        -23,
+        0,
+        0,
+        -87
+      ],
+      "pixels": [
+        0,
+        0,
+        0,
+        0,
+        46,
+        0,
+        0,
+        90,
+        88
+      ],
+      "expected_accum": -11566,
+      "zero_skips": 7,
+      "active_terms": 2
+    },
+    {
+      "patch_id": 61,
+      "weights": [
+        17,
+        0,
+        0,
+        -66,
+        0,
+        0,
+        -69,
+        0,
+        0
+      ],
+      "pixels": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        17,
+        0,
+        0
+      ],
+      "expected_accum": -1173,
+      "zero_skips": 8,
+      "active_terms": 1
+    },
+    {
+      "patch_id": 62,
+      "weights": [
+        -70,
+        0,
+        0,
+        -59,
+        0,
+        -21,
+        0,
+        -49,
+        0
+      ],
+      "pixels": [
+        0,
+        84,
+        0,
+        0,
+        0,
+        0,
+        0,
+        80,
+        101
+      ],
+      "expected_accum": -3920,
+      "zero_skips": 8,
+      "active_terms": 1
+    },
+    {
+      "patch_id": 63,
+      "weights": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -29,
+        -81
+      ],
+      "pixels": [
+        0,
+        0,
+        89,
+        104,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected_accum": 0,
+      "zero_skips": 9,
+      "active_terms": 0
+    },
+    {
+      "patch_id": 64,
+      "weights": [
+        18,
+        0,
+        0,
+        0,
+        0,
+        0,
+        69,
+        0,
+        -36
+      ],
+      "pixels": [
+        73,
+        0,
+        0,
+        0,
+        24,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected_accum": 1314,
+      "zero_skips": 8,
+      "active_terms": 1
+    },
+    {
+      "patch_id": 65,
+      "weights": [
+        -49,
+        0,
+        -72,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -78
+      ],
+      "pixels": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        71,
+        0
+      ],
+      "expected_accum": 0,
+      "zero_skips": 9,
+      "active_terms": 0
+    },
+    {
+      "patch_id": 66,
+      "weights": [
+        0,
+        33,
+        -73,
+        0,
+        0,
+        -57,
+        0,
+        -80,
+        0
+      ],
+      "pixels": [
+        105,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected_accum": 0,
+      "zero_skips": 9,
+      "active_terms": 0
+    },
+    {
+      "patch_id": 67,
+      "weights": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixels": [
+        66,
+        113,
+        0,
+        0,
+        0,
+        0,
+        0,
+        57,
+        0
+      ],
+      "expected_accum": 0,
+      "zero_skips": 9,
+      "active_terms": 0
+    },
+    {
+      "patch_id": 68,
+      "weights": [
+        0,
+        -84,
+        55,
+        17,
+        0,
+        0,
+        0,
+        0,
+        57
+      ],
+      "pixels": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        50,
+        0,
+        0,
+        101
+      ],
+      "expected_accum": 5757,
+      "zero_skips": 8,
+      "active_terms": 1
+    },
+    {
+      "patch_id": 69,
+      "weights": [
+        -77,
+        0,
+        0,
+        0,
+        0,
+        0,
+        30,
+        59,
+        0
+      ],
+      "pixels": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        109,
+        117,
+        0
+      ],
+      "expected_accum": 10173,
+      "zero_skips": 7,
+      "active_terms": 2
+    },
+    {
+      "patch_id": 70,
+      "weights": [
+        0,
+        65,
+        0,
+        0,
+        0,
+        0,
+        0,
+        20,
+        23
+      ],
+      "pixels": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        40,
+        0,
+        0
+      ],
+      "expected_accum": 0,
+      "zero_skips": 9,
+      "active_terms": 0
+    },
+    {
+      "patch_id": 71,
+      "weights": [
+        0,
+        0,
+        75,
+        0,
+        0,
+        0,
+        0,
+        0,
+        27
+      ],
+      "pixels": [
+        0,
+        68,
+        0,
+        97,
+        0,
+        0,
+        0,
+        23,
+        0
+      ],
+      "expected_accum": 0,
+      "zero_skips": 9,
+      "active_terms": 0
+    },
+    {
+      "patch_id": 72,
+      "weights": [
+        0,
+        0,
+        0,
+        0,
+        -59,
+        0,
+        0,
+        -86,
+        0
+      ],
+      "pixels": [
+        0,
+        32,
+        0,
+        0,
+        0,
+        0,
+        21,
+        0,
+        0
+      ],
+      "expected_accum": 0,
+      "zero_skips": 9,
+      "active_terms": 0
+    },
+    {
+      "patch_id": 73,
+      "weights": [
+        -35,
+        -81,
+        0,
+        0,
+        46,
+        24,
+        0,
+        0,
+        0
+      ],
+      "pixels": [
+        0,
+        0,
+        0,
+        0,
+        35,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected_accum": 1610,
+      "zero_skips": 8,
+      "active_terms": 1
+    },
+    {
+      "patch_id": 74,
+      "weights": [
+        -65,
+        0,
+        0,
+        -73,
+        0,
+        -68,
+        34,
+        -27,
+        0
+      ],
+      "pixels": [
+        33,
+        0,
+        0,
+        0,
+        69,
+        0,
+        24,
+        0,
+        0
+      ],
+      "expected_accum": -1329,
+      "zero_skips": 7,
+      "active_terms": 2
+    },
+    {
+      "patch_id": 75,
+      "weights": [
+        0,
+        0,
+        0,
+        -72,
+        0,
+        0,
+        0,
+        -27,
+        -87
+      ],
+      "pixels": [
+        38,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        114
+      ],
+      "expected_accum": -9918,
+      "zero_skips": 8,
+      "active_terms": 1
+    },
+    {
+      "patch_id": 76,
+      "weights": [
+        -76,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -24
+      ],
+      "pixels": [
+        79,
+        75,
+        0,
+        0,
+        0,
+        38,
+        63,
+        0,
+        0
+      ],
+      "expected_accum": -6004,
+      "zero_skips": 8,
+      "active_terms": 1
+    },
+    {
+      "patch_id": 77,
+      "weights": [
+        0,
+        27,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -53,
+        0
+      ],
+      "pixels": [
+        0,
+        0,
+        0,
+        0,
+        43,
+        0,
+        0,
+        39,
+        117
+      ],
+      "expected_accum": -2067,
+      "zero_skips": 8,
+      "active_terms": 1
+    },
+    {
+      "patch_id": 78,
+      "weights": [
+        0,
+        -13,
+        25,
+        0,
+        0,
+        -30,
+        0,
+        -33,
+        0
+      ],
+      "pixels": [
+        58,
+        0,
+        66,
+        0,
+        107,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected_accum": 1650,
+      "zero_skips": 8,
+      "active_terms": 1
+    },
+    {
+      "patch_id": 79,
+      "weights": [
+        57,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -27,
+        0,
+        0
+      ],
+      "pixels": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        63,
+        0,
+        0
+      ],
+      "expected_accum": -1701,
+      "zero_skips": 8,
+      "active_terms": 1
+    },
+    {
+      "patch_id": 80,
+      "weights": [
+        0,
+        0,
+        71,
+        0,
+        76,
+        0,
+        0,
+        -16,
+        -61
+      ],
+      "pixels": [
+        0,
+        71,
+        0,
+        0,
+        0,
+        53,
+        36,
+        0,
+        0
+      ],
+      "expected_accum": 0,
+      "zero_skips": 9,
+      "active_terms": 0
+    },
+    {
+      "patch_id": 81,
+      "weights": [
+        26,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixels": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected_accum": 0,
+      "zero_skips": 9,
+      "active_terms": 0
+    },
+    {
+      "patch_id": 82,
+      "weights": [
+        0,
+        -55,
+        0,
+        0,
+        56,
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixels": [
+        0,
+        0,
+        29,
+        0,
+        0,
+        0,
+        0,
+        87,
+        0
+      ],
+      "expected_accum": 0,
+      "zero_skips": 9,
+      "active_terms": 0
+    },
+    {
+      "patch_id": 83,
+      "weights": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixels": [
+        0,
+        0,
+        0,
+        100,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected_accum": 0,
+      "zero_skips": 9,
+      "active_terms": 0
+    },
+    {
+      "patch_id": 84,
+      "weights": [
+        -80,
+        0,
+        0,
+        0,
+        0,
+        -86,
+        0,
+        0,
+        0
+      ],
+      "pixels": [
+        75,
+        0,
+        0,
+        0,
+        79,
+        70,
+        0,
+        0,
+        0
+      ],
+      "expected_accum": -12020,
+      "zero_skips": 7,
+      "active_terms": 2
+    },
+    {
+      "patch_id": 85,
+      "weights": [
+        0,
+        0,
+        -14,
+        0,
+        0,
+        0,
+        0,
+        46,
+        84
+      ],
+      "pixels": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        67,
+        0
+      ],
+      "expected_accum": 3082,
+      "zero_skips": 8,
+      "active_terms": 1
+    },
+    {
+      "patch_id": 86,
+      "weights": [
+        -38,
+        48,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixels": [
+        74,
+        0,
+        69,
+        0,
+        0,
+        0,
+        0,
+        0,
+        99
+      ],
+      "expected_accum": -2812,
+      "zero_skips": 8,
+      "active_terms": 1
+    },
+    {
+      "patch_id": 87,
+      "weights": [
+        0,
+        0,
+        0,
+        -19,
+        -52,
+        0,
+        58,
+        -62,
+        -42
+      ],
+      "pixels": [
+        0,
+        0,
+        81,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected_accum": 0,
+      "zero_skips": 9,
+      "active_terms": 0
+    },
+    {
+      "patch_id": 88,
+      "weights": [
+        0,
+        54,
+        42,
+        -30,
+        0,
+        0,
+        0,
+        0,
+        -74
+      ],
+      "pixels": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        33,
+        0
+      ],
+      "expected_accum": 0,
+      "zero_skips": 9,
+      "active_terms": 0
+    },
+    {
+      "patch_id": 89,
+      "weights": [
+        14,
+        0,
+        -18,
+        -44,
+        0,
+        0,
+        27,
+        0,
+        0
+      ],
+      "pixels": [
+        0,
+        0,
+        47,
+        0,
+        111,
+        0,
+        0,
+        71,
+        0
+      ],
+      "expected_accum": -846,
+      "zero_skips": 8,
+      "active_terms": 1
+    },
+    {
+      "patch_id": 90,
+      "weights": [
+        16,
+        0,
+        0,
+        72,
+        66,
+        -32,
+        -57,
+        0,
+        70
+      ],
+      "pixels": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected_accum": 0,
+      "zero_skips": 9,
+      "active_terms": 0
+    },
+    {
+      "patch_id": 91,
+      "weights": [
+        0,
+        0,
+        0,
+        -88,
+        69,
+        0,
+        34,
+        48,
+        0
+      ],
+      "pixels": [
+        0,
+        0,
+        88,
+        0,
+        86,
+        0,
+        0,
+        74,
+        0
+      ],
+      "expected_accum": 9486,
+      "zero_skips": 7,
+      "active_terms": 2
+    },
+    {
+      "patch_id": 92,
+      "weights": [
+        -18,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -13,
+        70,
+        27
+      ],
+      "pixels": [
+        0,
+        0,
+        119,
+        51,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected_accum": 0,
+      "zero_skips": 9,
+      "active_terms": 0
+    },
+    {
+      "patch_id": 93,
+      "weights": [
+        -65,
+        0,
+        -49,
+        -69,
+        86,
+        22,
+        0,
+        0,
+        0
+      ],
+      "pixels": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected_accum": 0,
+      "zero_skips": 9,
+      "active_terms": 0
+    },
+    {
+      "patch_id": 94,
+      "weights": [
+        0,
+        -12,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -86,
+        0
+      ],
+      "pixels": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected_accum": 0,
+      "zero_skips": 9,
+      "active_terms": 0
+    },
+    {
+      "patch_id": 95,
+      "weights": [
+        47,
+        48,
+        90,
+        78,
+        0,
+        74,
+        -83,
+        18,
+        0
+      ],
+      "pixels": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        78,
+        0,
+        0
+      ],
+      "expected_accum": -6474,
+      "zero_skips": 8,
+      "active_terms": 1
+    },
+    {
+      "patch_id": 96,
+      "weights": [
+        70,
+        0,
+        -27,
+        0,
+        0,
+        0,
+        84,
+        -86,
+        -79
+      ],
+      "pixels": [
+        0,
+        0,
+        46,
+        0,
+        0,
+        18,
+        0,
+        30,
+        0
+      ],
+      "expected_accum": -3822,
+      "zero_skips": 7,
+      "active_terms": 2
+    },
+    {
+      "patch_id": 97,
+      "weights": [
+        0,
+        31,
+        0,
+        0,
+        70,
+        0,
+        0,
+        17,
+        53
+      ],
+      "pixels": [
+        108,
+        117,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected_accum": 3627,
+      "zero_skips": 8,
+      "active_terms": 1
+    },
+    {
+      "patch_id": 98,
+      "weights": [
+        23,
+        0,
+        0,
+        23,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixels": [
+        34,
+        0,
+        0,
+        0,
+        54,
+        92,
+        0,
+        0,
+        80
+      ],
+      "expected_accum": 782,
+      "zero_skips": 8,
+      "active_terms": 1
+    },
+    {
+      "patch_id": 99,
+      "weights": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixels": [
+        0,
+        0,
+        0,
+        101,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected_accum": 0,
+      "zero_skips": 9,
+      "active_terms": 0
+    }
+  ]
+}

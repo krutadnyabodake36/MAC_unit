@@ -1,0 +1,31 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2026.1 (win64) Build 6511674 Tue Jun 16 11:02:23 MDT 2026
+| Date         : Fri Oct 30 12:56:22 2026
+| Host         : LAPTOP-NBHBH25N running 64-bit major release  (build 9200)
+| Command      : report_utilization -hierarchical -file results/final_run_20261030_1056/reports/utilization_hierarchical_zs.txt
+| Design       : conv2d_benchmark_top_ablation
+| Device       : xc7s15ftgb196-1
+| Speed File   : -1
+| Design State : Synthesized
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++-----------------------------------+------------------+------------+------------+---------+------+-----+--------+--------+------------+
+|              Instance             |      Module      | Total LUTs | Logic LUTs | LUTRAMs | SRLs | FFs | RAMB36 | RAMB18 | DSP Blocks |
++-----------------------------------+------------------+------------+------------+---------+------+-----+--------+--------+------------+
+| conv2d_benchmark_top_ablation     |            (top) |        351 |        351 |       0 |    0 | 355 |      0 |      0 |          0 |
+|   (conv2d_benchmark_top_ablation) |            (top) |         17 |         17 |       0 |    0 | 206 |      0 |      0 |          0 |
+|   gen_zs_only.u_engine            | conv2d_serial_zs |        247 |        247 |       0 |    0 |  92 |      0 |      0 |          0 |
+|   u_rx                            |          uart_rx |         61 |         61 |       0 |    0 |  33 |      0 |      0 |          0 |
++-----------------------------------+------------------+------------+------------+---------+------+-----+--------+--------+------------+
+
+

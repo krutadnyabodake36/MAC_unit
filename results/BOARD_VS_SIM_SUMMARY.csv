@@ -1,0 +1,6 @@
+session,design,status,board_patches,sim_patches,patch_match,board_cycles,sim_cycles,cycle_match,board_skips,sim_skips,skip_match,board_fps
+run_20261007_181454,baseline,FAIL,12288,44032,False,0,396288,False,0,0,True,0.0
+run_20261007_181454,proposed,UNKNOWN_DESIGN,12288,N/A,False,0,N/A,False,0,N/A,False,0.0
+run_20261007_190055,baseline,FAIL,9216,44032,False,0,396288,False,0,0,True,0.0
+run_20261007_190055,proposed,UNKNOWN_DESIGN,9216,N/A,False,0,N/A,False,0,N/A,False,0.0
+run_20261007_191353,summary,UNKNOWN_DESIGN,11648,N/A,False,0,N/A,False,0,N/A,False,0.0

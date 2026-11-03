@@ -1,0 +1,54 @@
+--- src/conv2d_benchmark_top_ablation.sv
++++ src/conv2d_benchmark_top_static.sv
+@@ -1,6 +1,6 @@
+ // =============================================================================
+ 
+-// File: conv2d_benchmark_top_ablation.sv
++// File: conv2d_benchmark_top_static.sv
+ 
+ // Target: Invent Logics EDGE Spartan-7 (XC7S15-1FTGB196C @ 50 MHz)
+ 
+@@ -48,7 +48,7 @@
+ 
+ 
+ 
+-module conv2d_benchmark_top_ablation #(
++module conv2d_benchmark_top_static #(
+ 
+     // -------------------------------------------------------------------------
+ 
+@@ -69,10 +69,11 @@
+     //   6 = ZS + CG (conv2d_serial_zs_cg, variable cycles, accumulator CG, no OI)
+ 
+     //   7 = OI + CG (conv2d_serial_oi_cg, fixed 9 cycles, OI clamped + accumulator CG)
+-
+-    // -------------------------------------------------------------------------
+-
+-    parameter int DESIGN_SELECT = 4,
++//   8 = Static Sobel-X 6-Tap (conv2d_serial_static_sobel, fixed 6 cycles, no zero detection)
++
++    // -------------------------------------------------------------------------
++
++    parameter int DESIGN_SELECT = 8,
+ 
+     parameter bit USE_PROPOSED  = 1'b1  // Backward compatibility flag
+ 
+@@ -408,6 +409,18 @@
+ 
+             );
+ 
++        end else if (EFF_DESIGN == 8) begin : gen_static_sobel
++            conv2d_serial_static_sobel u_engine (
++                .clk            (clk),
++                .rst            (rst),
++                .start          (eng_start),
++                .weights        (weights_reg),
++                .pixels         (pixels_reg),
++                .done           (eng_done),
++                .conv_out       (eng_result),
++                .compute_cycles (eng_cycles)
++            );
++            assign eng_skips = 4'd0;  // Static Sobel has fixed schedule, no dynamic skip logic
+         end else begin : gen_default
+ 
+             conv2d_serial_combined u_engine (

@@ -1,0 +1,32 @@
+==================================================================================================
+              REAL HARDWARE COMPARISON: BASELINE vs PROPOSED ON SILICON
+==================================================================================================
+Total Convolutions (Patches)      : 9,216
+Total MAC Operations              : 82,944
+Workload Sparsity (%)             : 34.47%
+Compute Clock Cycles (Baseline)   : 82,944
+Compute Clock Cycles (Proposed)   : 54,356
+Clock Cycles Eliminated           : 28,588
+Hardware Cycle Reduction          : 34.47%
+Silicon Speedup Factor            : 1.53x Faster
+Compute Latency (Baseline)        : 1.659 ms
+Compute Latency (Proposed)        : 1.087 ms
+Latency Saved                     : 0.572 ms
+Compute Throughput (Baseline)     : 50.00 MMAC/s
+Compute Throughput (Proposed)     : 76.30 MMAC/s
+--------------------------------------------------------------------------------------------------
+Dynamic Energy (Baseline)         : 0.9124 uJ (9.1238e-07 Joules)
+Dynamic Energy (Proposed)         : 0.7839 uJ (7.8385e-07 Joules)
+Dynamic Energy Saved              : 0.1285 uJ (1.2853e-07 Joules)
+Dynamic Energy Reduction          : 14.09% Saved
+Energy per 3x3 Patch              : 99.00 pJ vs 85.05 pJ
+--------------------------------------------------------------------------------------------------
+Dynamic Power (Baseline)          : 0.5500 mW (5.5000e-04 Watts)
+Dynamic Power (Proposed Norm.)    : 0.4725 mW (4.7252e-04 Watts)
+Dynamic Power Saved               : 0.0775 mW (7.7480e-05 Watts)
+Dynamic Power Reduction           : 14.09% Saved
+--------------------------------------------------------------------------------------------------
+Energy-Delay Product (Baseline)   : 1.5135e-09 J·s
+Energy-Delay Product (Proposed)   : 8.5214e-10 J·s
+Silicon EDP Improvement Factor    : 1.78x Better
+==================================================================================================

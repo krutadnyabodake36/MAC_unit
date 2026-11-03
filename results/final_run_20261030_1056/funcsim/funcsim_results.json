@@ -1,0 +1,65 @@
+[
+  {
+    "variant": "baseline",
+    "status": "PASS",
+    "patches": 44032,
+    "mismatches": 0,
+    "log_file": "C:/Users/Krutadnye/Downloads/Projects/MAC/results/final_run_20261030_1056/funcsim/baseline_funcsim_sim.log"
+  },
+  {
+    "variant": "cg",
+    "status": "PASS",
+    "patches": 44032,
+    "mismatches": 0,
+    "log_file": "C:/Users/Krutadnye/Downloads/Projects/MAC/results/final_run_20261030_1056/funcsim/cg_funcsim_sim.log"
+  },
+  {
+    "variant": "combined",
+    "status": "FAIL",
+    "patches": 44032,
+    "mismatches": 1427,
+    "log_file": "C:/Users/Krutadnye/Downloads/Projects/MAC/results/final_run_20261030_1056/funcsim/combined_funcsim_sim.log"
+  },
+  {
+    "variant": "oi",
+    "status": "PASS",
+    "patches": 44032,
+    "mismatches": 0,
+    "log_file": "C:/Users/Krutadnye/Downloads/Projects/MAC/results/final_run_20261030_1056/funcsim/oi_funcsim_sim.log"
+  },
+  {
+    "variant": "oi_cg",
+    "status": "PASS",
+    "patches": 44032,
+    "mismatches": 0,
+    "log_file": "C:/Users/Krutadnye/Downloads/Projects/MAC/results/final_run_20261030_1056/funcsim/oi_cg_funcsim_sim.log"
+  },
+  {
+    "variant": "static_sobel",
+    "status": "PASS",
+    "patches": 44032,
+    "mismatches": 0,
+    "log_file": "C:/Users/Krutadnye/Downloads/Projects/MAC/results/final_run_20261030_1056/funcsim/static_sobel_funcsim_sim.log"
+  },
+  {
+    "variant": "zs",
+    "status": "FAIL",
+    "patches": 44032,
+    "mismatches": 1427,
+    "log_file": "C:/Users/Krutadnye/Downloads/Projects/MAC/results/final_run_20261030_1056/funcsim/zs_funcsim_sim.log"
+  },
+  {
+    "variant": "zs_cg",
+    "status": "FAIL",
+    "patches": 44032,
+    "mismatches": 1427,
+    "log_file": "C:/Users/Krutadnye/Downloads/Projects/MAC/results/final_run_20261030_1056/funcsim/zs_cg_funcsim_sim.log"
+  },
+  {
+    "variant": "zs_oi",
+    "status": "FAIL",
+    "patches": 44032,
+    "mismatches": 1427,
+    "log_file": "C:/Users/Krutadnye/Downloads/Projects/MAC/results/final_run_20261030_1056/funcsim/zs_oi_funcsim_sim.log"
+  }
+]

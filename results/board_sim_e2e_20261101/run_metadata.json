@@ -1,0 +1,12 @@
+{
+  "host_os": "Windows-10-10.0.26300-SP0",
+  "python_version": "3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)]",
+  "vivado_version": "Vivado v2026.1 (64-bit)",
+  "target_board": "Invent Logics EDGE Spartan-7 (XC7S15-1FTGB196C)",
+  "com_port": "COM17",
+  "baud_rate": 115200,
+  "ftdi_latency_timer_ms": null,
+  "operator": "User Verified",
+  "sw3_position": "USB",
+  "power_supply_type": "USB-Host (5.0V regulated)"
+}

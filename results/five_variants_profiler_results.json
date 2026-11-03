@@ -1,0 +1,250 @@
+{
+  "Workload 1 (image1.jpg)": {
+    "image_path": "image1.jpg",
+    "height": 128,
+    "width": 91,
+    "total_patches": 11648,
+    "total_mac_operations": 104832,
+    "total_zero_products": 36396,
+    "total_nonzero_products": 68436,
+    "joint_sparsity_pct": 34.7184,
+    "variants": {
+      "Baseline (conv2d_serial_baseline)": {
+        "compute_cycles": 104832,
+        "cycles_per_patch": 9.0,
+        "cycle_reduction_pct": 0.0,
+        "speedup_factor": 1.0,
+        "skips_count": 0,
+        "mismatches": 0,
+        "data_source": "[FORMULA/MODEL (Python)]",
+        "hardware_telemetry_status": "NOT RUN (Requires Board)"
+      },
+      "Only Zero-Skipping (conv2d_serial_zs)": {
+        "compute_cycles": 68436,
+        "cycles_per_patch": 5.875,
+        "cycle_reduction_pct": 34.718,
+        "speedup_factor": 1.532,
+        "skips_count": 36396,
+        "mismatches": 0,
+        "data_source": "[FORMULA/MODEL (Python)]",
+        "hardware_telemetry_status": "NOT RUN (Requires Board)"
+      },
+      "Only Operand Isolation (conv2d_serial_oi)": {
+        "compute_cycles": 104832,
+        "cycles_per_patch": 9.0,
+        "cycle_reduction_pct": 0.0,
+        "speedup_factor": 1.0,
+        "skips_count": 36396,
+        "mismatches": 0,
+        "data_source": "[FORMULA/MODEL (Python)]",
+        "hardware_telemetry_status": "NOT RUN (Requires Board)"
+      },
+      "Only Clock-Enable Gating (conv2d_serial_cg)": {
+        "compute_cycles": 104832,
+        "cycles_per_patch": 9.0,
+        "cycle_reduction_pct": 0.0,
+        "speedup_factor": 1.0,
+        "skips_count": 36396,
+        "mismatches": 0,
+        "data_source": "[FORMULA/MODEL (Python)]",
+        "hardware_telemetry_status": "NOT RUN (Requires Board)"
+      },
+      "Combined Architecture (conv2d_serial_combined)": {
+        "compute_cycles": 68436,
+        "cycles_per_patch": 5.875,
+        "cycle_reduction_pct": 34.718,
+        "speedup_factor": 1.532,
+        "skips_count": 36396,
+        "mismatches": 0,
+        "data_source": "[FORMULA/MODEL (Python)]",
+        "hardware_telemetry_status": "NOT RUN (Requires Board)"
+      }
+    }
+  },
+  "Workload 2 (image2.jpg)": {
+    "image_path": "results\\run_20261007_181454\\image2.jpg",
+    "height": 96,
+    "width": 128,
+    "total_patches": 12288,
+    "total_mac_operations": 110592,
+    "total_zero_products": 38136,
+    "total_nonzero_products": 72456,
+    "joint_sparsity_pct": 34.4835,
+    "variants": {
+      "Baseline (conv2d_serial_baseline)": {
+        "compute_cycles": 110592,
+        "cycles_per_patch": 9.0,
+        "cycle_reduction_pct": 0.0,
+        "speedup_factor": 1.0,
+        "skips_count": 0,
+        "mismatches": 0,
+        "data_source": "[FORMULA/MODEL (Python)]",
+        "hardware_telemetry_status": "NOT RUN (Requires Board)"
+      },
+      "Only Zero-Skipping (conv2d_serial_zs)": {
+        "compute_cycles": 72456,
+        "cycles_per_patch": 5.896,
+        "cycle_reduction_pct": 34.484,
+        "speedup_factor": 1.526,
+        "skips_count": 38136,
+        "mismatches": 0,
+        "data_source": "[FORMULA/MODEL (Python)]",
+        "hardware_telemetry_status": "NOT RUN (Requires Board)"
+      },
+      "Only Operand Isolation (conv2d_serial_oi)": {
+        "compute_cycles": 110592,
+        "cycles_per_patch": 9.0,
+        "cycle_reduction_pct": 0.0,
+        "speedup_factor": 1.0,
+        "skips_count": 38136,
+        "mismatches": 0,
+        "data_source": "[FORMULA/MODEL (Python)]",
+        "hardware_telemetry_status": "NOT RUN (Requires Board)"
+      },
+      "Only Clock-Enable Gating (conv2d_serial_cg)": {
+        "compute_cycles": 110592,
+        "cycles_per_patch": 9.0,
+        "cycle_reduction_pct": 0.0,
+        "speedup_factor": 1.0,
+        "skips_count": 38136,
+        "mismatches": 0,
+        "data_source": "[FORMULA/MODEL (Python)]",
+        "hardware_telemetry_status": "NOT RUN (Requires Board)"
+      },
+      "Combined Architecture (conv2d_serial_combined)": {
+        "compute_cycles": 72456,
+        "cycles_per_patch": 5.896,
+        "cycle_reduction_pct": 34.484,
+        "speedup_factor": 1.526,
+        "skips_count": 38136,
+        "mismatches": 0,
+        "data_source": "[FORMULA/MODEL (Python)]",
+        "hardware_telemetry_status": "NOT RUN (Requires Board)"
+      }
+    }
+  },
+  "Workload 3 (image3.jpg)": {
+    "image_path": "image3.jpg",
+    "height": 72,
+    "width": 128,
+    "total_patches": 9216,
+    "total_mac_operations": 82944,
+    "total_zero_products": 28702,
+    "total_nonzero_products": 54242,
+    "joint_sparsity_pct": 34.6041,
+    "variants": {
+      "Baseline (conv2d_serial_baseline)": {
+        "compute_cycles": 82944,
+        "cycles_per_patch": 9.0,
+        "cycle_reduction_pct": 0.0,
+        "speedup_factor": 1.0,
+        "skips_count": 0,
+        "mismatches": 0,
+        "data_source": "[FORMULA/MODEL (Python)]",
+        "hardware_telemetry_status": "NOT RUN (Requires Board)"
+      },
+      "Only Zero-Skipping (conv2d_serial_zs)": {
+        "compute_cycles": 54242,
+        "cycles_per_patch": 5.886,
+        "cycle_reduction_pct": 34.604,
+        "speedup_factor": 1.529,
+        "skips_count": 28702,
+        "mismatches": 0,
+        "data_source": "[FORMULA/MODEL (Python)]",
+        "hardware_telemetry_status": "NOT RUN (Requires Board)"
+      },
+      "Only Operand Isolation (conv2d_serial_oi)": {
+        "compute_cycles": 82944,
+        "cycles_per_patch": 9.0,
+        "cycle_reduction_pct": 0.0,
+        "speedup_factor": 1.0,
+        "skips_count": 28702,
+        "mismatches": 0,
+        "data_source": "[FORMULA/MODEL (Python)]",
+        "hardware_telemetry_status": "NOT RUN (Requires Board)"
+      },
+      "Only Clock-Enable Gating (conv2d_serial_cg)": {
+        "compute_cycles": 82944,
+        "cycles_per_patch": 9.0,
+        "cycle_reduction_pct": 0.0,
+        "speedup_factor": 1.0,
+        "skips_count": 28702,
+        "mismatches": 0,
+        "data_source": "[FORMULA/MODEL (Python)]",
+        "hardware_telemetry_status": "NOT RUN (Requires Board)"
+      },
+      "Combined Architecture (conv2d_serial_combined)": {
+        "compute_cycles": 54242,
+        "cycles_per_patch": 5.886,
+        "cycle_reduction_pct": 34.604,
+        "speedup_factor": 1.529,
+        "skips_count": 28702,
+        "mismatches": 0,
+        "data_source": "[FORMULA/MODEL (Python)]",
+        "hardware_telemetry_status": "NOT RUN (Requires Board)"
+      }
+    }
+  },
+  "Workload 4 (image4.jpg)": {
+    "image_path": "image4.jpg",
+    "height": 128,
+    "width": 85,
+    "total_patches": 10880,
+    "total_mac_operations": 97920,
+    "total_zero_products": 33750,
+    "total_nonzero_products": 64170,
+    "joint_sparsity_pct": 34.4669,
+    "variants": {
+      "Baseline (conv2d_serial_baseline)": {
+        "compute_cycles": 97920,
+        "cycles_per_patch": 9.0,
+        "cycle_reduction_pct": 0.0,
+        "speedup_factor": 1.0,
+        "skips_count": 0,
+        "mismatches": 0,
+        "data_source": "[FORMULA/MODEL (Python)]",
+        "hardware_telemetry_status": "NOT RUN (Requires Board)"
+      },
+      "Only Zero-Skipping (conv2d_serial_zs)": {
+        "compute_cycles": 64170,
+        "cycles_per_patch": 5.898,
+        "cycle_reduction_pct": 34.467,
+        "speedup_factor": 1.526,
+        "skips_count": 33750,
+        "mismatches": 0,
+        "data_source": "[FORMULA/MODEL (Python)]",
+        "hardware_telemetry_status": "NOT RUN (Requires Board)"
+      },
+      "Only Operand Isolation (conv2d_serial_oi)": {
+        "compute_cycles": 97920,
+        "cycles_per_patch": 9.0,
+        "cycle_reduction_pct": 0.0,
+        "speedup_factor": 1.0,
+        "skips_count": 33750,
+        "mismatches": 0,
+        "data_source": "[FORMULA/MODEL (Python)]",
+        "hardware_telemetry_status": "NOT RUN (Requires Board)"
+      },
+      "Only Clock-Enable Gating (conv2d_serial_cg)": {
+        "compute_cycles": 97920,
+        "cycles_per_patch": 9.0,
+        "cycle_reduction_pct": 0.0,
+        "speedup_factor": 1.0,
+        "skips_count": 33750,
+        "mismatches": 0,
+        "data_source": "[FORMULA/MODEL (Python)]",
+        "hardware_telemetry_status": "NOT RUN (Requires Board)"
+      },
+      "Combined Architecture (conv2d_serial_combined)": {
+        "compute_cycles": 64170,
+        "cycles_per_patch": 5.898,
+        "cycle_reduction_pct": 34.467,
+        "speedup_factor": 1.526,
+        "skips_count": 33750,
+        "mismatches": 0,
+        "data_source": "[FORMULA/MODEL (Python)]",
+        "hardware_telemetry_status": "NOT RUN (Requires Board)"
+      }
+    }
+  }
+}

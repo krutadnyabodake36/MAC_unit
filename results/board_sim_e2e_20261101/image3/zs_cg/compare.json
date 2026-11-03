@@ -1,0 +1,11 @@
+{
+  "design": "zs_cg",
+  "image": "image3.jpg",
+  "patches": 9216,
+  "sum_mismatches": 0,
+  "cycle_mismatches": 0,
+  "skip_mismatches": 0,
+  "differing_pixels": 0,
+  "max_abs_diff": 0,
+  "status": "PASS"
+}

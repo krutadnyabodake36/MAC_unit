@@ -1,0 +1,16 @@
+{
+  "session_directory": "C:\\Users\\Krutadnye\\downloads\\projects\\MAC\\results\\run_20261007_181454",
+  "baseline_profile": "C:\\Users\\Krutadnye\\downloads\\projects\\MAC\\results\\run_20261007_181454\\profile_baseline.json",
+  "proposed_profile": "C:\\Users\\Krutadnye\\downloads\\projects\\MAC\\results\\run_20261007_181454\\profile_proposed.json",
+  "total_patches": 12288,
+  "total_mac_operations": 110592,
+  "workload_sparsity_pct": 34.31351273148148,
+  "baseline_clock_cycles": 110592,
+  "proposed_clock_cycles": 72644,
+  "clock_cycles_eliminated": 37948,
+  "cycle_reduction_pct": 34.31351273148148,
+  "silicon_speedup_factor": 1.5223831286823413,
+  "baseline_dynamic_energy_uj": 1.216512,
+  "proposed_dynamic_energy_uj": 1.0473744,
+  "dynamic_energy_reduction_pct": 13.903488005050505
+}

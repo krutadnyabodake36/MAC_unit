@@ -1,0 +1,13 @@
+COMPLETED
+Timestamp: 2026-11-01T08:02:59.045074
+Workload: SOBEL
+Variant: zs_oi
+Total Patches: 44032
+Total Mismatches: 0
+Measured Wall Cycles: 435432
+Window Duration: 8708640.000 ns
+SAIF Coverage: 93% (734/788)
+Confidence Level: High
+Dynamic Power (XML sum): 2.495 mW
+Static Power (XML sum): 16.383 mW
+Dynamic Energy/Patch: 0.4935 nJ (0.000493 uJ)

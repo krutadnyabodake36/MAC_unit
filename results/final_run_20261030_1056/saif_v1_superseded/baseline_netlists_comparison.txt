@@ -1,0 +1,29 @@
+=== BASELINE PILOT NETLIST CELL COUNTS ===
+Total cells: 494
+  GND: 2
+  VCC: 2
+  conv2d_serial_baseline: 1
+  FDRE: 225
+  LUT2: 81
+  LUT5: 52
+  LUT6: 61
+  CARRY4: 20
+  LUT1: 1
+  LUT3: 10
+  MUXF7: 12
+  LUT4: 27
+
+=== BASELINE RERUN NETLIST CELL COUNTS ===
+Total cells: 491
+  GND: 2
+  conv2d_serial_baseline: 1
+  FDRE: 224
+  LUT5: 52
+  LUT6: 61
+  VCC: 1
+  CARRY4: 20
+  LUT2: 80
+  LUT1: 1
+  LUT3: 10
+  MUXF7: 12
+  LUT4: 27

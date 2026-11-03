@@ -1,0 +1,41 @@
+<USER_REQUEST>
+CONTINUATION. Report accepted with corrections below. All standing rules apply: every number copied from a log/report produced in this run (path and line); no estimates or assumptions (delete any estimate you wrote, including the "~170 LUTs" figure); no edits to existing src/ or tb/ files; no tuning of designs, stimulus or settings; results reported exactly as they come out; STOP on any error, mismatch, ambiguity or required src/ edit; no hardcoded pJ constants; nothing called "SAIF-derived" unless a SAIF file from this run produced it.
+
+APPROVED: "approve static baseline".
+S1. Create src/conv2d_serial_static_sobel.sv (new file): same ports as conv2d_serial_baseline.sv, fixed 6-tap schedule over taps 0,2,3,5,6,8, no zero detection. Create a NEW top (copy of conv2d_benchmark_top_ablation.sv, do not edit the original) adding it as DESIGN_SELECT 8. Show diffs first.
+S2. It is valid only for the Sobel-X kernel. Simulate it ONLY on Sobel workloads: the cycle-measurement patches, Part B Sobel rows, and real Sobel images. State "not applicable" for dense-kernel and ReLU workloads. Report mismatches vs golden and measured wall cycles.
+S3. Build it with the same constraints and Vivado flow as the other 8; report LUTs, FFs, DSP, BRAM, WNS, estimated Fmax (labelled estimated), and the hierarchy line proving the engine.
+
+CORRECTIONS
+K1. Part C sparsity: for every image report (a) sparsity after ReLU, before rescale, and (b) sparsity after the existing max-normalized rescale. Add a second, image-independent rescale rule (a fixed right-shift with saturation; choose the shift BEFORE looking at results and state it). Report speedup under both rules per image, with min, median and max. Do not choose a rule by its outcome.
+K2. Show the Part C golden-model code and how expected outputs were generated.
+K3. For Parts B and C, produce a CSV and table covering ALL variants (baseline, oi, cg, zs, zs_oi, zs_cg, oi_cg, combined, and static where applicable): wall cycles, compute cycles, mismatches, speedup. State explicitly whether the ZS-family variants are identical to each other and the fixed-schedule variants identical to each other.
+K4. Run the Sobel real-image test on all 14 images (not only the original 4) for all variants.
+K5. Replace the CG-vs-baseline MUXF7 explanation with "cause not determined" unless you have netlist evidence; label what is measured vs inferred.
+K6. Profiler: tell me whether fpga_vision_profiler.py prints or saves energy/power values derived from the hardcoded pJ constants. If yes, make a minimal Python-only change so every such value is clearly labelled "MODEL (assumed constants, not measured)" in console and JSON, or add a flag to disable them. Show the diff. Also show how JSON filenames are built for the 8 design names, and what --compare does with them.
+K7. Create images_extra/SOURCES.csv with columns filename, source_url, licence, notes, one row per image, source/licence blank for me to fill. Do not guess sources.
+
+SAIF (Part E), pilot first
+E1. Print the full conv2d_engine_wrapper.sv, the SAIF testbench and every command in your report.
+E2. Stimulus: real zero-point-shifted Sobel patches from the real images in natural order, back-to-back, identical for every variant. Capture window from first start to last done only. Report the window in ns and cycles and confirm it equals measured wall cycles x 20 ns.
+E3. PILOT: run the baseline variant end to end (timing simulation of the routed netlist, SAIF, report_power with hierarchy). Report SAIF annotation coverage, confidence level, window check, engine-level dynamic power, whole-design dynamic power, static power, and numeric resolution of the report. If coverage is under 90%, the window check fails or the confidence level is Low, STOP and report. Otherwise continue automatically with all other variants (8 plus static) using identical method.
+E4. Noise floor: report Combined vs ZS+CG and OI+CG vs CG-only side by side. If netlist-identical designs differ in power, say so and investigate before comparing others.
+E5. Repeat with rotated image order (image2, image3, image4, image1, then the rest) and report whether the ranking holds.
+E6. Energy per variant = engine dynamic power x window duration, arithmetic shown, plus energy per patch; static energy separately. Never mix engine-level and whole-design numbers. If between-variant differences are inside the tool resolution or noise floor, say so plainly.
+
+END OF RUN
+- Update the SHA-256 manifests (new files included), re-hash all original src/ files and report any difference.
+- List what is still missing before I say "simulation complete". Do not start any board step.
+- Start with "VERIFIED / NOT VERIFIED / NOT RUN" lists and end with questions for me.
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-10-30T13:39:32+05:30.
+
+The user's current state is as follows:
+Other open documents:
+- c:\Users\Krutadnye\Downloads\Projects\MAC\results\final_run_20261030_1056\reports\utilization_benchmark_cg.txt (LANGUAGE_UNSPECIFIED)
+- c:\Users\Krutadnye\Downloads\Projects\MAC\docs\PROJECT_VIVA_PREPARATION_GUIDE.md (LANGUAGE_UNSPECIFIED)
+- c:\Users\Krutadnye\Downloads\Projects\MAC\generate_vectors.py (LANGUAGE_UNSPECIFIED)
+- c:\Users\Krutadnye\Downloads\Projects\MAC\run_hw_loop.py (LANGUAGE_UNSPECIFIED)
+- c:\Users\Krutadnye\Downloads\Projects\MAC\edge_s7_uart.xdc (LANGUAGE_UNSPECIFIED)
+</ADDITIONAL_METADATA>

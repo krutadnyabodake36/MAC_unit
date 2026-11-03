@@ -1,0 +1,164 @@
+[
+  {
+    "name": "Workload 1: Early-Layer / Dense CNN Filter",
+    "sparsity": 51.78,
+    "single_mac_baseline": {
+      "total_ops": 900,
+      "clock_cycles": 900,
+      "cycles_per_patch": 9.0,
+      "zero_detected": 0,
+      "gated_cycles": 0,
+      "isolated_cycles": 0,
+      "mismatches": 0,
+      "dynamic_energy_per_op_pj": 11.0
+    },
+    "single_mac_proposed": {
+      "total_ops": 900,
+      "clock_cycles": 900,
+      "cycles_per_patch": 9.0,
+      "zero_detected": 466,
+      "zero_percentage": 51.77777777777778,
+      "gated_cycles": 466,
+      "isolated_cycles": 466,
+      "mismatches": 0,
+      "dynamic_energy_per_op_pj": 7.165333333333334
+    },
+    "conv2d_baseline": {
+      "patches": 100,
+      "total_cycles": 900,
+      "avg_cycles": 9.0,
+      "time_per_patch_ns": 180.0,
+      "throughput_fps": 4545454.545454546,
+      "zero_skips": 0,
+      "mismatches": 0,
+      "dynamic_power_mw": 3.0,
+      "energy_per_patch_nj": 0.54,
+      "edp_pj_ns": 97200.0
+    },
+    "conv2d_proposed": {
+      "patches": 100,
+      "total_cycles": 434,
+      "avg_cycles": 4.34,
+      "time_per_patch_ns": 86.8,
+      "throughput_fps": 7886435.331230284,
+      "total_skips": 466,
+      "mismatches": 0,
+      "dynamic_power_mw": 1.0,
+      "energy_per_patch_nj": 0.0868,
+      "edp_pj_ns": 7534.24
+    },
+    "single_mac_energy_reduction_pct": 34.9,
+    "conv2d_speedup": 2.07,
+    "conv2d_cycle_reduction_pct": 51.8,
+    "conv2d_energy_reduction_pct": 83.9,
+    "conv2d_edp_improvement": 12.9
+  },
+  {
+    "name": "Workload 2: Mid-Layer / Standard Post-ReLU CNN",
+    "sparsity": 68.67,
+    "single_mac_baseline": {
+      "total_ops": 900,
+      "clock_cycles": 900,
+      "cycles_per_patch": 9.0,
+      "zero_detected": 0,
+      "gated_cycles": 0,
+      "isolated_cycles": 0,
+      "mismatches": 0,
+      "dynamic_energy_per_op_pj": 11.0
+    },
+    "single_mac_proposed": {
+      "total_ops": 900,
+      "clock_cycles": 900,
+      "cycles_per_patch": 9.0,
+      "zero_detected": 618,
+      "zero_percentage": 68.66666666666667,
+      "gated_cycles": 618,
+      "isolated_cycles": 618,
+      "mismatches": 0,
+      "dynamic_energy_per_op_pj": 4.936
+    },
+    "conv2d_baseline": {
+      "patches": 100,
+      "total_cycles": 900,
+      "avg_cycles": 9.0,
+      "time_per_patch_ns": 180.0,
+      "throughput_fps": 4545454.545454546,
+      "zero_skips": 0,
+      "mismatches": 0,
+      "dynamic_power_mw": 3.0,
+      "energy_per_patch_nj": 0.54,
+      "edp_pj_ns": 97200.0
+    },
+    "conv2d_proposed": {
+      "patches": 100,
+      "total_cycles": 285,
+      "avg_cycles": 2.85,
+      "time_per_patch_ns": 57.0,
+      "throughput_fps": 10309278.350515464,
+      "total_skips": 618,
+      "mismatches": 0,
+      "dynamic_power_mw": 1.0,
+      "energy_per_patch_nj": 0.057,
+      "edp_pj_ns": 3249.0
+    },
+    "single_mac_energy_reduction_pct": 55.1,
+    "conv2d_speedup": 3.16,
+    "conv2d_cycle_reduction_pct": 68.3,
+    "conv2d_energy_reduction_pct": 89.4,
+    "conv2d_edp_improvement": 29.92
+  },
+  {
+    "name": "Workload 3: Deep / Highly-Pruned Sparse CNN",
+    "sparsity": 93.11,
+    "single_mac_baseline": {
+      "total_ops": 900,
+      "clock_cycles": 900,
+      "cycles_per_patch": 9.0,
+      "zero_detected": 0,
+      "gated_cycles": 0,
+      "isolated_cycles": 0,
+      "mismatches": 0,
+      "dynamic_energy_per_op_pj": 11.0
+    },
+    "single_mac_proposed": {
+      "total_ops": 900,
+      "clock_cycles": 900,
+      "cycles_per_patch": 9.0,
+      "zero_detected": 838,
+      "zero_percentage": 93.11111111111111,
+      "gated_cycles": 838,
+      "isolated_cycles": 838,
+      "mismatches": 0,
+      "dynamic_energy_per_op_pj": 1.7093333333333334
+    },
+    "conv2d_baseline": {
+      "patches": 100,
+      "total_cycles": 900,
+      "avg_cycles": 9.0,
+      "time_per_patch_ns": 180.0,
+      "throughput_fps": 4545454.545454546,
+      "zero_skips": 0,
+      "mismatches": 0,
+      "dynamic_power_mw": 3.0,
+      "energy_per_patch_nj": 0.54,
+      "edp_pj_ns": 97200.0
+    },
+    "conv2d_proposed": {
+      "patches": 100,
+      "total_cycles": 113,
+      "avg_cycles": 1.13,
+      "time_per_patch_ns": 22.599999999999998,
+      "throughput_fps": 15974440.894568691,
+      "total_skips": 838,
+      "mismatches": 0,
+      "dynamic_power_mw": 1.0,
+      "energy_per_patch_nj": 0.0226,
+      "edp_pj_ns": 510.7599999999999
+    },
+    "single_mac_energy_reduction_pct": 84.5,
+    "conv2d_speedup": 7.96,
+    "conv2d_cycle_reduction_pct": 87.4,
+    "conv2d_energy_reduction_pct": 95.8,
+    "conv2d_edp_improvement": 190.3
+  }
+]

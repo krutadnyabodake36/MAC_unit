@@ -1,0 +1,11 @@
+{
+  "workload": "SOBEL",
+  "order": "NATURAL",
+  "total_patches": 44032,
+  "total_mismatches": 0,
+  "status": "  PASS",
+  "window_start_ns": 110.000,
+  "window_end_ns": 8806510.000,
+  "window_dur_ns": 8806400.000,
+  "measured_wall_cycles": 440320
+}

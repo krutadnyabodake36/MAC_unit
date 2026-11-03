@@ -1,0 +1,14 @@
+Property                 Type     Read-only  Value
+CLASS                    string   true       design
+CONSTRSET                fileset  true       constrs_1
+DCP_VERSION              string   true       Vivado v2026.1 (64-bit) SW Build 6511674 on Tue Jun 16 11:02:23 MDT 2026
+ENABLE_AIE_NETLIST_VIEW  bool     false      1
+ENABLE_NOC_NETLIST_VIEW  bool     false      1
+IS_BLOCK                 bool     true       1
+MLO_VERSION_NUMBER       string   false      2026.1_9
+NAME                     string   true       checkpoint_baseline_routed
+NEEDS_REFRESH            bool     true       0
+NEEDS_SAVE               bool     true       0
+PART                     part     true       xc7s15ftgb196-1
+SRCSET                   fileset  true       sources_1
+TOP                      string   true       conv2d_engine_wrapper

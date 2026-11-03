@@ -1,0 +1,14 @@
+run_order,design,repeat_tag,notes
+1,baseline,baseline_rep1,baseline drift anchor
+2,zs,zs_rep1,ZS repeatability repeat
+3,zs_oi,zs_oi_rep1,standard run
+4,zs,zs_rep2,ZS repeatability repeat
+5,zs_cg,zs_cg_rep1,standard run
+6,static_sobel,static_sobel_rep1,standard run
+7,baseline,baseline_rep2,baseline drift anchor
+8,oi_cg,oi_cg_rep1,standard run
+9,oi,oi_rep1,standard run
+10,combined,combined_rep1,standard run
+11,zs,zs_rep3,ZS repeatability repeat
+12,cg,cg_rep1,standard run
+13,baseline,baseline_rep3,baseline drift anchor

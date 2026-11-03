@@ -1,0 +1,11 @@
+{
+  "workload": "GAUSSIAN",
+  "order": "NATURAL",
+  "total_patches": 44032,
+  "total_mismatches": 0,
+  "status": "  PASS",
+  "window_start_ns": 110.000,
+  "window_end_ns": 6156210.000,
+  "window_dur_ns": 6156100.000,
+  "measured_wall_cycles": 307805
+}

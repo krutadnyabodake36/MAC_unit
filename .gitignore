@@ -1,0 +1,41 @@
+# ==============================================================================
+# Git Ignore Rules for FPGA Convolution Engine Project
+# ==============================================================================
+
+# Vivado / EDA Temporary Files and Directories
+.Xil/
+xsim.dir/
+*.jou
+*.log
+*.pb
+*.wdb
+*.vcd
+*.saif
+*.dcp
+*.rpt
+*.sdb
+*.rlx
+*.backup.*
+
+# Python Cache & Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.partial
+
+# Temporary Scratch, Stale, and Quarantine Directories
+scratch/
+superseded/
+interrupted_*/
+archive_stale_oct7/
+board_results_*/
+
+# Deliverable Zip Packages (Large Binary Archives)
+*.zip
+*.tar.gz
+
+# OS-Specific Metadata
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp

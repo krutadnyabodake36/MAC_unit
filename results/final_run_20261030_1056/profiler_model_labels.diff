@@ -1,0 +1,92 @@
+--- a/fpga_vision_profiler.py
++++ b/fpga_vision_profiler.py
+@@ -325,7 +325,8 @@
+             'eng_pr_time_ms': eng_pr_time_ms,
+             'eng_bl_avg_cpc': eng_bl_avg_cpc,
+             'eng_pr_avg_cpc': eng_pr_avg_cpc,
+-            # Engine Metrics - Energy (Joules & uJ)
++            'model_notice': 'MODEL (assumed constants, not measured on hardware)',
++            # Engine Metrics - Energy (Joules & uJ) [MODEL]
+             'eng_bl_energy_uj': eng_bl_energy_uj,
+             'eng_pr_energy_uj': eng_pr_energy_uj,
+             'eng_bl_energy_j': eng_bl_energy_j,
+@@ -667,7 +668,7 @@
+     eng_pr_sum_p = f"{metrics['eng_pr_power_mw']:.3f}mW ({metrics['eng_pr_power_w']:.2e}W)"
+ 
+     print("-" * 80)
+-    print(" 2. TIER 1 COMPARISON: SINGLE MAC UNITS (Baseline vs Proposed mac_combined)")
++    print(" 2. TIER 1 COMPARISON: SINGLE MAC UNITS [MODEL (assumed constants, not measured)]")
+     print("-" * 80)
+     print(f"   {'Metric':<32} | {'Baseline MAC':<18} | {'Proposed MAC (mac_combined)':<22}")
+     print(f"   {'-'*32}-+-{'-'*18}-+-{'-'*24}")
+@@ -676,10 +677,10 @@
+     print(f"   {'Latency @ 50 MHz':<32} | {metrics['mac_time_us']:<15.2f} us | {metrics['mac_time_us']:<19.2f} us")
+     print(f"   {'Operand Isolation (OI)':<32} | {'None (Always Toggle)':<18} | {f'Clamped {sparsity_val:.1f}% cycles':<22}")
+     print(f"   {'Clock Gating (CG)':<32} | {'Always Enabled':<18} | {f'CE Gated {sparsity_val:.1f}% cycles':<22}")
+-    print(f"   {'Total Dynamic Energy (uJ)':<32} | {mac_bl_e:<18} | {mac_pr_e:<22}")
+-    print(f"   {'Total Dynamic Energy (J)':<32} | {mac_bl_e_j_str:<18} | {mac_pr_e_j_str:<22}")
+-    print(f"   {'Dynamic Power (mW)':<32} | {mac_bl_p_mw_str:<18} | {mac_pr_p_mw_str:<22}")
+-    print(f"   {'Dynamic Power (Watts)':<32} | {mac_bl_p_w_str:<18} | {mac_pr_p_w_str:<22}")
++    print(f"   {'Dynamic Energy (uJ) [MODEL]':<32} | {mac_bl_e:<18} | {mac_pr_e:<22}")
++    print(f"   {'Dynamic Energy (J) [MODEL]':<32} | {mac_bl_e_j_str:<18} | {mac_pr_e_j_str:<22}")
++    print(f"   {'Dynamic Power (mW) [MODEL]':<32} | {mac_bl_p_mw_str:<18} | {mac_pr_p_mw_str:<22}")
++    print(f"   {'Dynamic Power (Watts) [MODEL]':<32} | {mac_bl_p_w_str:<18} | {mac_pr_p_w_str:<22}")
+     print(f"   {'Dynamic Energy Savings':<32} | {'0.0% (Reference)':<18} | {f'{mac_pr_save:.2f}% Energy Reduction':<22}")
+ 
+     print("-" * 80)
+@@ -698,10 +699,10 @@
+     print(f"   {'Compute Time @ 50 MHz':<32} | {eng_bl_time:<18} | {eng_pr_time:<22}")
+     print(f"   {'Average Cycles/Patch':<32} | {eng_bl_cpc_str:<18} | {eng_pr_cpc_str:<22}")
+     print(f"   {'Compute Throughput':<32} | {eng_bl_mops_str:<18} | {eng_pr_mops_str:<22}")
+-    print(f"   {'Total Dynamic Energy (uJ)':<32} | {eng_bl_e:<18} | {eng_pr_e:<22}")
+-    print(f"   {'Total Dynamic Energy (J)':<32} | {eng_bl_e_j_str:<18} | {eng_pr_e_j_str:<22}")
+-    print(f"   {'Dynamic Power (mW)':<32} | {eng_bl_p_mw_str:<18} | {eng_pr_p_mw_str:<22}")
+-    print(f"   {'Dynamic Power (Watts)':<32} | {eng_bl_p_w_str:<18} | {eng_pr_p_w_str:<22}")
++    print(f"   {'Dynamic Energy (uJ) [MODEL]':<32} | {eng_bl_e:<18} | {eng_pr_e:<22}")
++    print(f"   {'Dynamic Energy (J) [MODEL]':<32} | {eng_bl_e_j_str:<18} | {eng_pr_e_j_str:<22}")
++    print(f"   {'Dynamic Power (mW) [MODEL]':<32} | {eng_bl_p_mw_str:<18} | {eng_pr_p_mw_str:<22}")
++    print(f"   {'Dynamic Power (Watts) [MODEL]':<32} | {eng_bl_p_w_str:<18} | {eng_pr_p_w_str:<22}")
+     print(f"   {'Dynamic Energy Savings':<32} | {'0.0%':<18} | {f'{eng_esave:.2f}% Energy Reduction':<22}")
+     print(f"   {'Energy-Delay Product (EDP)':<32} | {'1.00x (Reference)':<18} | {f'{edp_imp:.2f}x Improvement':<22}")
+ 
+@@ -713,7 +714,7 @@
+         print(f"   Actual Zero-Skips on FPGA : {metrics['hw_silicon_skips']:,} skips")
+ 
+     print("-" * 80)
+-    print(" 5. CROSS-ARCHITECTURE EXECUTIVE SUMMARY")
++    print(" 5. CROSS-ARCHITECTURE EXECUTIVE SUMMARY [MODEL (assumed constants, not measured)]")
+     print("-" * 80)
+     print(f"   {'Architecture Level':<24} | {'Compute Cycles':<16} | {'Energy (uJ / J)':<24} | {'Power (mW / W)':<24}")
+     print(f"   {'-'*24}-+-{'-'*16}-+-{'-'*24}-+-{'-'*24}")
+@@ -946,20 +947,20 @@
+     print(f" {'Compute Throughput (MMAC/s)':<40} | {bl_mmacs_str:<22} | {pr_mmacs_str:<22} | {tput_gain_str:<16}")
+     print(f" {'Silicon Speedup Factor':<40} | {'1.00x (Reference)':<22} | {sp_faster_str:<22} | {sp_gain_str:<16}")
+     print(f" {'-'*40}-+-{'-'*22}-+-{'-'*22}-+-{'-'*16}")
+-    print(f" {'3. DYNAMIC ENERGY (JOULES & uJ)':<40} | {'':<22} | {'':<22} | {'':<16}")
++    print(f" {'3. DYNAMIC ENERGY [MODEL (assumed constants, not measured)]':<40} | {'':<22} | {'':<22} | {'':<16}")
+     print(f" {'Dynamic Energy (microJoules, uJ)':<40} | {bl_e_uj_str:<22} | {pr_e_uj_str:<22} | {e_saved_uj_str:<16}")
+     print(f" {'Dynamic Energy (Joules, J)':<40} | {bl_e_j_str:<22} | {pr_e_j_str:<22} | {e_saved_j_str:<16}")
+     print(f" {'Energy per 3x3 Patch':<40} | {bl_pj_patch_str:<22} | {pr_pj_patch_str:<22} | {pj_cut_str:<16}")
+     print(f" {'Dynamic Energy Reduction (%)':<40} | {'0.0% (Reference)':<22} | {e_saved_pct_str:<22} | {e_gain_str:<16}")
+     print(f" {'-'*40}-+-{'-'*22}-+-{'-'*22}-+-{'-'*16}")
+-    print(f" {'4. DYNAMIC POWER (WATTS & mW)':<40} | {'':<22} | {'':<22} | {'':<16}")
++    print(f" {'4. DYNAMIC POWER [MODEL (assumed constants, not measured)]':<40} | {'':<22} | {'':<22} | {'':<16}")
+     print(f" {'Active Dynamic Power (mW)':<40} | {bl_pmw_str:<22} | {pr_pmw_str:<22} | {'(Active compute)':<16}")
+     print(f" {'Active Dynamic Power (Watts, W)':<40} | {bl_pw_str:<22} | {pr_pw_str:<22} | {'(Active compute)':<16}")
+     print(f" {'Frame-Normalized Power (mW)':<40} | {bl_pmw_str:<22} | {pr_norm_pmw_str:<22} | {p_saved_mw_str:<16}")
+     print(f" {'Frame-Normalized Power (Watts, W)':<40} | {bl_pw_str:<22} | {pr_norm_pw_str:<22} | {p_saved_w_str:<16}")
+     print(f" {'Dynamic Power Reduction (%)':<40} | {'0.0% (Reference)':<22} | {p_saved_pct_str:<22} | {p_gain_str:<16}")
+     print(f" {'-'*40}-+-{'-'*22}-+-{'-'*22}-+-{'-'*16}")
+-    print(f" {'5. ENERGY-DELAY PRODUCT (EDP)':<40} | {'':<22} | {'':<22} | {'':<16}")
++    print(f" {'5. ENERGY-DELAY PRODUCT [MODEL (assumed constants, not measured)]':<40} | {'':<22} | {'':<22} | {'':<16}")
+     print(f" {'Energy-Delay Product (J·s)':<40} | {bl_edp_str:<22} | {pr_edp_str:<22} | {edp_cut_str:<16}")
+     print(f" {'Silicon EDP Improvement Factor':<40} | {'1.00x (Reference)':<22} | {edp_better_str:<22} | {edp_gain_str:<16}")
+     print("=" * 98)
+@@ -971,6 +972,7 @@
+     target_dir = session_dir if session_dir and os.path.isdir(session_dir) else "."
+     comp_json_path = os.path.join(target_dir, "comparison_report.json")
+     comp_data = {
++        "model_notice": "MODEL (assumed constants, not measured on hardware)",
+         "session_directory": os.path.abspath(target_dir),
+         "baseline_profile": os.path.abspath(bl_file),
+         "proposed_profile": os.path.abspath(pr_file),

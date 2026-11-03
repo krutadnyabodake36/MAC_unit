@@ -1,0 +1,13 @@
+COMPLETED
+Timestamp: 2026-11-01T08:44:58.574092
+Workload: GAUSSIAN
+Variant: zs_cg
+Total Patches: 44032
+Total Mismatches: 0
+Measured Wall Cycles: 307805
+Window Duration: 6156100.000 ns
+SAIF Coverage: 93% (733/784)
+Confidence Level: High
+Dynamic Power (XML sum): 1.391 mW
+Static Power (XML sum): 16.383 mW
+Dynamic Energy/Patch: 0.1945 nJ (0.000194 uJ)

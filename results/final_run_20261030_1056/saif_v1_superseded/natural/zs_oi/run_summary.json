@@ -1,0 +1,111 @@
+{
+  "order": "natural",
+  "variant": "zs_oi",
+  "design_select": 5,
+  "wall_cycles": 347368,
+  "capture_window_ns": 6947480,
+  "confidence": "High",
+  "coverage_pct": 93,
+  "coverage_ratio": "730/784",
+  "text_tot_onchip_power_w": 0.02,
+  "text_dynamic_power_w": 0.004,
+  "text_static_power_w": 0.016,
+  "text_core_dynamic_power_w": 0.004,
+  "xml_total_dynamic_power_w": 0.004003,
+  "xml_total_dynamic_power_mw": 4.002999999999999,
+  "xml_total_static_power_w": 0.0163844,
+  "xml_total_static_power_mw": 16.3844,
+  "total_dynamic_energy_j": 2.781076244e-05,
+  "energy_per_patch_uj": 0.0006316034347747093,
+  "energy_per_patch_nj": 0.6316034347747093,
+  "rails": [
+    {
+      "rail": "Vccint",
+      "voltage": 1.0,
+      "total_a": 0.007562,
+      "dynamic_a": 0.004003,
+      "static_a": 0.003559,
+      "dynamic_mw": 4.002999999999999
+    },
+    {
+      "rail": "Vccaux",
+      "voltage": 1.8,
+      "total_a": 0.007093,
+      "dynamic_a": 0.0,
+      "static_a": 0.007093,
+      "dynamic_mw": 0.0
+    },
+    {
+      "rail": "Vcco33",
+      "voltage": 3.3,
+      "total_a": 0.0,
+      "dynamic_a": 0.0,
+      "static_a": 0.0,
+      "dynamic_mw": 0.0
+    },
+    {
+      "rail": "Vcco25",
+      "voltage": 2.5,
+      "total_a": 0.0,
+      "dynamic_a": 0.0,
+      "static_a": 0.0,
+      "dynamic_mw": 0.0
+    },
+    {
+      "rail": "Vcco18",
+      "voltage": 1.8,
+      "total_a": 0.0,
+      "dynamic_a": 0.0,
+      "static_a": 0.0,
+      "dynamic_mw": 0.0
+    },
+    {
+      "rail": "Vcco15",
+      "voltage": 1.5,
+      "total_a": 0.0,
+      "dynamic_a": 0.0,
+      "static_a": 0.0,
+      "dynamic_mw": 0.0
+    },
+    {
+      "rail": "Vcco135",
+      "voltage": 1.35,
+      "total_a": 0.0,
+      "dynamic_a": 0.0,
+      "static_a": 0.0,
+      "dynamic_mw": 0.0
+    },
+    {
+      "rail": "Vcco12",
+      "voltage": 1.2,
+      "total_a": 0.0,
+      "dynamic_a": 0.0,
+      "static_a": 0.0,
+      "dynamic_mw": 0.0
+    },
+    {
+      "rail": "Vccaux_io",
+      "voltage": 1.8,
+      "total_a": 0.0,
+      "dynamic_a": 0.0,
+      "static_a": 0.0,
+      "dynamic_mw": 0.0
+    },
+    {
+      "rail": "Vccbram",
+      "voltage": 1.0,
+      "total_a": 5.8e-05,
+      "dynamic_a": 0.0,
+      "static_a": 5.8e-05,
+      "dynamic_mw": 0.0
+    },
+    {
+      "rail": "Vccadc",
+      "voltage": 1.8,
+      "total_a": 0.0,
+      "dynamic_a": 0.0,
+      "static_a": 0.0,
+      "dynamic_mw": 0.0
+    }
+  ]
+}

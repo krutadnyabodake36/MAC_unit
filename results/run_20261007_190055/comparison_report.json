@@ -1,0 +1,52 @@
+{
+  "session_directory": "C:\\Users\\Krutadnye\\Downloads\\projects\\MAC\\results\\run_20261007_190055",
+  "baseline_profile": "C:\\Users\\Krutadnye\\Downloads\\projects\\MAC\\results\\run_20261007_190055\\profile_baseline.json",
+  "proposed_profile": "C:\\Users\\Krutadnye\\Downloads\\projects\\MAC\\results\\run_20261007_190055\\profile_proposed.json",
+  "workload_geometry": {
+    "total_patches": 9216,
+    "total_mac_operations": 82944,
+    "workload_sparsity_pct": 34.46662808641975,
+    "zero_terms_detected": 28588
+  },
+  "timing_and_speed": {
+    "baseline_clock_cycles": 82944,
+    "proposed_clock_cycles": 54356,
+    "clock_cycles_eliminated": 28588,
+    "cycle_reduction_pct": 34.46662808641975,
+    "baseline_latency_ms": 1.65888,
+    "proposed_latency_ms": 1.08712,
+    "latency_saved_ms": 0.5717599999999998,
+    "silicon_speedup_factor": 1.5259400986091691,
+    "baseline_throughput_mmacs": 50.0,
+    "proposed_throughput_mmacs": 76.29700493045846
+  },
+  "dynamic_energy": {
+    "baseline_energy_uj": 0.912384,
+    "proposed_energy_uj": 0.7838544000000001,
+    "energy_saved_uj": 0.1285295999999999,
+    "baseline_energy_joules": 9.12384e-07,
+    "proposed_energy_joules": 7.838544e-07,
+    "energy_saved_joules": 1.2852960000000003e-07,
+    "dynamic_energy_reduction_pct": 14.087226430976422,
+    "baseline_pj_per_patch": 99.0,
+    "proposed_pj_per_patch": 85.05364583333333
+  },
+  "dynamic_power": {
+    "baseline_active_power_mw": 0.55,
+    "proposed_active_power_mw": 0.7210376039443668,
+    "baseline_active_power_watts": 0.00055,
+    "proposed_active_power_watts": 0.0007210376039443667,
+    "baseline_normalized_power_mw": 0.55,
+    "proposed_normalized_power_mw": 0.47252025462962965,
+    "power_saved_mw": 0.07747974537037039,
+    "baseline_normalized_power_watts": 0.00055,
+    "proposed_normalized_power_watts": 0.00047252025462962965,
+    "power_saved_watts": 7.747974537037039e-05,
+    "dynamic_power_reduction_pct": 14.087226430976422
+  },
+  "figure_of_merit": {
+    "baseline_edp_joule_seconds": 1.51353556992e-09,
+    "proposed_edp_joule_seconds": 8.52143795328e-10,
+    "edp_improvement_factor": 1.7761504316738266
+  }
+}

@@ -1,0 +1,15 @@
+================================================================================
+      REAL HARDWARE COMPARISON: BASELINE vs PROPOSED ON SILICON
+================================================================================
+Total Convolutions (Patches)      : 12,288
+Total MAC Operations              : 110,592
+Workload Sparsity (%)             : 34.31%
+Baseline Compute Clock Cycles     : 110,592
+Proposed Compute Clock Cycles     : 72,644
+Cycles Eliminated on Silicon      : 37,948
+Cycle Reduction Percentage        : 34.31%
+Silicon Speedup Factor            : 1.52x Faster
+Baseline Dynamic Energy           : 1.2165 uJ
+Proposed Dynamic Energy           : 1.0474 uJ
+Dynamic Energy Reduction          : 13.90% Saved
+================================================================================

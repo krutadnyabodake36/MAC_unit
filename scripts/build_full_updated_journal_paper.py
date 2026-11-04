@@ -704,7 +704,7 @@ def build_paper():
         img_path=os.path.abspath("results/paper_assets/end_to_end_pipeline.png"),
         fig_num=1,
         caption_text="End-to-end image processing, hardware acceleration, and reconstruction workflow of the Spartan-7 zero-skipping vision pipeline.",
-        width_in=5.8
+        width_in=6.2
     )
 
     add_subsection_heading(doc, "B. System Architecture & Datapath Interconnect")
@@ -722,7 +722,7 @@ def build_paper():
         img_path=os.path.abspath("results/paper_assets/baseline_mac_architecture.png"),
         fig_num=2,
         caption_text="Conventional baseline serial MAC hardware architecture: fixed 9-cycle FSM sequencing through all kernel taps with continuous multiplier and accumulator switching.",
-        width_in=5.8
+        width_in=6.2
     )
 
     add_body(doc,
@@ -739,7 +739,7 @@ def build_paper():
         img_path=os.path.abspath("results/paper_assets/proposed_mac_architecture.png"),
         fig_num=3,
         caption_text="Proposed tri-optimization MAC architecture: priority-encoded zero-skipping FSM with combinatorial zero-detection, multiplier operand isolation, and accumulator clock-enable gating.",
-        width_in=5.8
+        width_in=6.2
     )
 
     add_subsection_heading(doc, "C. Tier-1 Microarchitecture: Operand Isolation & Clock-Enable Gating")
@@ -1363,16 +1363,25 @@ def build_paper():
     out_dir = os.path.abspath("docs")
     os.makedirs(out_dir, exist_ok=True)
     target_path = os.path.join(out_dir, "Journal_Paper_Zero_Skipping_MAC.docx")
+    backup_path = os.path.join(out_dir, "Journal_Paper_Zero_Skipping_MAC_updated.docx")
 
     try:
         doc.save(target_path)
         print(f"[SUCCESS] Saved directly to primary target: {target_path}")
     except PermissionError:
-        print(f"[ERROR] '{target_path}' is currently locked by another application.")
-        raise
+        print(f"[NOTICE] '{target_path}' is currently locked. Saving to: {backup_path}")
+        doc.save(backup_path)
+        print(f"[SUCCESS] Saved to fallback target: {backup_path}")
     except Exception as e:
         print(f"[ERROR] Failed to save '{target_path}': {e}")
         raise
+
+    # Also save a copy to updated backup
+    try:
+        doc.save(backup_path)
+        print(f"[SUCCESS] Mirrored copy saved to: {backup_path}")
+    except Exception as e:
+        pass
 
 if __name__ == '__main__':
     build_paper()

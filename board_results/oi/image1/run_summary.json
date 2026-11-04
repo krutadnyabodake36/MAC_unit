@@ -1,0 +1,43 @@
+{
+  "design": "oi",
+  "DESIGN_SELECT": 1,
+  "bitstream_file": "conv2d_benchmark_oi.bit",
+  "bitstream_sha256": "55936817a35d361ca34772d34c114687be02aa1bc18934f174e9da7cee97a200",
+  "image_file": "image1.jpg",
+  "image_sha256": "9c180e81312a0bad4b534a9de29012a652407bb74f98a7002cf2b2410a98c162",
+  "patches": 11648,
+  "com_port": "COM17",
+  "baud": 115200,
+  "host_start_iso": "2026-11-03T12:44:34.557904+00:00",
+  "host_end_iso": "2026-11-03T12:47:40.916280+00:00",
+  "total_host_time_s": 186.35805960000005,
+  "patches_per_second": 62.503333770491764,
+  "per_patch_round_trip_s": {
+    "mean": 0.01574490997596175,
+    "median": 0.015768899999898167,
+    "p95": 0.016063364999945408,
+    "max": 0.023050200000170662
+  },
+  "total_compute_cycles": 104832,
+  "mean_compute_cycles_per_patch": 9.0,
+  "min_compute_cycles_per_patch": 9,
+  "max_compute_cycles_per_patch": 9,
+  "total_skip_count": 36396,
+  "mean_skip_count_per_patch": 3.1246565934065935,
+  "mismatch_counts": {
+    "sum_mismatches": 0,
+    "cycles_mismatches": 0,
+    "skips_mismatches": 0
+  },
+  "output_image_comparison": {
+    "differing_pixels": 0,
+    "max_abs_diff": 0,
+    "bit_identical": true
+  },
+  "uart_metrics": {
+    "timeouts": 0,
+    "retries": 0,
+    "partial_frames": 0
+  },
+  "ftdi_latency_timer_ms": null
+}

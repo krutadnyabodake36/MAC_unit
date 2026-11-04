@@ -1,0 +1,11 @@
+{
+  "design": "baseline",
+  "image": "image1.jpg",
+  "patches": 11648,
+  "sum_mismatches": 11648,
+  "cycle_mismatches": 11628,
+  "skip_mismatches": 9443,
+  "differing_pixels": 11396,
+  "max_abs_diff": 251,
+  "status": "FAIL"
+}

@@ -39,3 +39,6 @@ board_results_*/
 Thumbs.db
 desktop.ini
 *.tmp
+
+# Vivado Info Files
+clockInfo.txt

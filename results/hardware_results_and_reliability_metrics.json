@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "title": "Physical Hardware Measurement and Architecture Reliability Audit Dataset",
+    "title": "Physical Hardware Measurement and Architecture Reliability Audit Dataset with Power and Energy",
     "device": "AMD/Xilinx Spartan-7 XC7S15-1FTGB196C",
     "board": "Invent Logics EDGE Spartan-7 Development Board",
     "clock_mhz": 50.0,
@@ -10,7 +10,7 @@
     "total_patches_evaluated": 298368,
     "total_mac_operations": 2685312,
     "total_runtime_seconds": 4779.902658300002,
-    "generated_iso": "2026-11-05T05:53:22.797261Z",
+    "generated_iso": "2026-11-05T06:06:06.011768Z",
     "verdict": "PASS"
   },
   "workloads": {
@@ -57,7 +57,7 @@
       "sha256": "0c16afd4f50937a5089c1f6c4ff984bebe437bf23d778fb8f2fa159beee31175"
     }
   },
-  "resource_utilization": {
+  "resource_and_power_utilization": {
     "baseline": {
       "sel": 0,
       "luts": 295,
@@ -70,7 +70,11 @@
       "tier1_oi": false,
       "tier1_cg": false,
       "tier2_zs": false,
-      "desc": "Standard sequential unpruned MAC baseline"
+      "desc": "Standard sequential unpruned MAC baseline",
+      "p_stat_mw": 16.383,
+      "p_dyn_mw": 2.061,
+      "harness_energy_nj": 0.5359,
+      "saif_cov_pct": 94
     },
     "zs": {
       "sel": 3,
@@ -84,7 +88,11 @@
       "tier1_oi": false,
       "tier1_cg": false,
       "tier2_zs": true,
-      "desc": "Tier-2 Priority-Encoded Zero-Skipping only"
+      "desc": "Tier-2 Priority-Encoded Zero-Skipping only",
+      "p_stat_mw": 16.383,
+      "p_dyn_mw": 2.475,
+      "harness_energy_nj": 0.4895,
+      "saif_cov_pct": 93
     },
     "oi": {
       "sel": 1,
@@ -98,7 +106,11 @@
       "tier1_oi": true,
       "tier1_cg": false,
       "tier2_zs": false,
-      "desc": "Tier-1 Operand Isolation (8'h00 input clamping)"
+      "desc": "Tier-1 Operand Isolation (8'h00 input clamping)",
+      "p_stat_mw": 16.383,
+      "p_dyn_mw": 2.38,
+      "harness_energy_nj": 0.6188,
+      "saif_cov_pct": 94
     },
     "cg": {
       "sel": 2,
@@ -112,7 +124,11 @@
       "tier1_oi": false,
       "tier1_cg": true,
       "tier2_zs": false,
-      "desc": "Tier-1 Clock-Enable Accumulator Gating"
+      "desc": "Tier-1 Clock-Enable Accumulator Gating",
+      "p_stat_mw": 16.383,
+      "p_dyn_mw": 2.024,
+      "harness_energy_nj": 0.5262,
+      "saif_cov_pct": 93
     },
     "zs_cg": {
       "sel": 6,
@@ -126,7 +142,11 @@
       "tier1_oi": false,
       "tier1_cg": true,
       "tier2_zs": true,
-      "desc": "Tier-2 Zero-Skipping + Tier-1 Clock-Enable Gating"
+      "desc": "Tier-2 Zero-Skipping + Tier-1 Clock-Enable Gating",
+      "p_stat_mw": 16.383,
+      "p_dyn_mw": 2.503,
+      "harness_energy_nj": 0.495,
+      "saif_cov_pct": 93
     },
     "oi_cg": {
       "sel": 7,
@@ -140,7 +160,11 @@
       "tier1_oi": true,
       "tier1_cg": true,
       "tier2_zs": false,
-      "desc": "Tier-1 Compound Gating (Operand Isolation + Clock Gating)"
+      "desc": "Tier-1 Compound Gating (Operand Isolation + Clock Gating)",
+      "p_stat_mw": 16.383,
+      "p_dyn_mw": 2.024,
+      "harness_energy_nj": 0.5262,
+      "saif_cov_pct": 93
     },
     "zs_oi": {
       "sel": 5,
@@ -154,7 +178,11 @@
       "tier1_oi": true,
       "tier1_cg": false,
       "tier2_zs": true,
-      "desc": "Tier-2 Zero-Skipping + Tier-1 Operand Isolation"
+      "desc": "Tier-2 Zero-Skipping + Tier-1 Operand Isolation",
+      "p_stat_mw": 16.383,
+      "p_dyn_mw": 2.495,
+      "harness_energy_nj": 0.4935,
+      "saif_cov_pct": 93
     },
     "combined": {
       "sel": 4,
@@ -168,7 +196,11 @@
       "tier1_oi": true,
       "tier1_cg": true,
       "tier2_zs": true,
-      "desc": "Proposed Full Tri-Optimization (ZS + OI + CG)"
+      "desc": "Proposed Full Tri-Optimization (ZS + OI + CG)",
+      "p_stat_mw": 16.383,
+      "p_dyn_mw": 2.503,
+      "harness_energy_nj": 0.495,
+      "saif_cov_pct": 93
     },
     "static_sobel": {
       "sel": 8,
@@ -182,1175 +214,1341 @@
       "tier1_oi": false,
       "tier1_cg": false,
       "tier2_zs": false,
-      "desc": "Hardwired Sobel baseline (static 6-cycle non-zero taps)"
+      "desc": "Hardwired Sobel baseline (static 6-cycle non-zero taps)",
+      "p_stat_mw": 16.383,
+      "p_dyn_mw": 1.834,
+      "harness_energy_nj": 0.3668,
+      "saif_cov_pct": 93
     }
   },
   "ablation_by_image": {
     "image1": {
       "baseline": {
-        "design": "baseline",
-        "DESIGN_SELECT": 0,
-        "bitstream_file": "conv2d_benchmark_baseline.bit",
-        "bitstream_sha256": "9b917cb1913e57aef98f43f12299ee83da1ff19ce19deb780b2ada2c6ceaa390",
-        "image_file": "image1.jpg",
-        "image_sha256": "9c180e81312a0bad4b534a9de29012a652407bb74f98a7002cf2b2410a98c162",
-        "patches": 11648,
-        "com_port": "COM17",
-        "baud": 115200,
-        "host_start_iso": "2026-11-03T12:16:14.872795+00:00",
-        "host_end_iso": "2026-11-03T12:19:21.266388+00:00",
-        "total_host_time_s": 186.39350449999984,
-        "patches_per_second": 62.491448032192615,
-        "per_patch_round_trip_s": {
-          "mean": 0.015759489895277975,
-          "median": 0.015773449998960132,
-          "p95": 0.016114894999009265,
-          "max": 0.032448999998450745
+        "physical_run": {
+          "design": "baseline",
+          "DESIGN_SELECT": 0,
+          "bitstream_file": "conv2d_benchmark_baseline.bit",
+          "bitstream_sha256": "9b917cb1913e57aef98f43f12299ee83da1ff19ce19deb780b2ada2c6ceaa390",
+          "image_file": "image1.jpg",
+          "image_sha256": "9c180e81312a0bad4b534a9de29012a652407bb74f98a7002cf2b2410a98c162",
+          "patches": 11648,
+          "com_port": "COM17",
+          "baud": 115200,
+          "host_start_iso": "2026-11-03T12:16:14.872795+00:00",
+          "host_end_iso": "2026-11-03T12:19:21.266388+00:00",
+          "total_host_time_s": 186.39350449999984,
+          "patches_per_second": 62.491448032192615,
+          "per_patch_round_trip_s": {
+            "mean": 0.015759489895277975,
+            "median": 0.015773449998960132,
+            "p95": 0.016114894999009265,
+            "max": 0.032448999998450745
+          },
+          "total_compute_cycles": 104832,
+          "mean_compute_cycles_per_patch": 9.0,
+          "min_compute_cycles_per_patch": 9,
+          "max_compute_cycles_per_patch": 9,
+          "total_skip_count": 0,
+          "mean_skip_count_per_patch": 0.0,
+          "mismatch_counts": {
+            "sum_mismatches": 0,
+            "cycles_mismatches": 0,
+            "skips_mismatches": 0
+          },
+          "output_image_comparison": {
+            "differing_pixels": 0,
+            "max_abs_diff": 0,
+            "bit_identical": true
+          },
+          "uart_metrics": {
+            "timeouts": 0,
+            "retries": 0,
+            "partial_frames": 0
+          },
+          "ftdi_latency_timer_ms": null
         },
-        "total_compute_cycles": 104832,
-        "mean_compute_cycles_per_patch": 9.0,
-        "min_compute_cycles_per_patch": 9,
-        "max_compute_cycles_per_patch": 9,
-        "total_skip_count": 0,
-        "mean_skip_count_per_patch": 0.0,
-        "mismatch_counts": {
-          "sum_mismatches": 0,
-          "cycles_mismatches": 0,
-          "skips_mismatches": 0
-        },
-        "output_image_comparison": {
-          "differing_pixels": 0,
-          "max_abs_diff": 0,
-          "bit_identical": true
-        },
-        "uart_metrics": {
-          "timeouts": 0,
-          "retries": 0,
-          "partial_frames": 0
-        },
-        "ftdi_latency_timer_ms": null
+        "cycles": 104832,
+        "dynamic_power_mw": 2.061,
+        "dynamic_energy_uj": 4.32117504,
+        "energy_per_patch_nj": 0.37098000000000003
       },
       "zs": {
-        "design": "zs",
-        "DESIGN_SELECT": 3,
-        "bitstream_file": "conv2d_benchmark_zs.bit",
-        "bitstream_sha256": "0a7279c4147f0d6dda9f22c22510d4300290112f9fd83d7c3aebea0f496d984c",
-        "image_file": "image1.jpg",
-        "image_sha256": "9c180e81312a0bad4b534a9de29012a652407bb74f98a7002cf2b2410a98c162",
-        "patches": 11648,
-        "com_port": "COM17",
-        "baud": 115200,
-        "host_start_iso": "2026-11-03T12:32:20.274984+00:00",
-        "host_end_iso": "2026-11-03T12:35:26.650892+00:00",
-        "total_host_time_s": 186.37603810000002,
-        "patches_per_second": 62.49730447510784,
-        "per_patch_round_trip_s": {
-          "mean": 0.0157564337139421,
-          "median": 0.015777099999979782,
-          "p95": 0.01605223000001672,
-          "max": 0.0261887999999999
+        "physical_run": {
+          "design": "zs",
+          "DESIGN_SELECT": 3,
+          "bitstream_file": "conv2d_benchmark_zs.bit",
+          "bitstream_sha256": "0a7279c4147f0d6dda9f22c22510d4300290112f9fd83d7c3aebea0f496d984c",
+          "image_file": "image1.jpg",
+          "image_sha256": "9c180e81312a0bad4b534a9de29012a652407bb74f98a7002cf2b2410a98c162",
+          "patches": 11648,
+          "com_port": "COM17",
+          "baud": 115200,
+          "host_start_iso": "2026-11-03T12:32:20.274984+00:00",
+          "host_end_iso": "2026-11-03T12:35:26.650892+00:00",
+          "total_host_time_s": 186.37603810000002,
+          "patches_per_second": 62.49730447510784,
+          "per_patch_round_trip_s": {
+            "mean": 0.0157564337139421,
+            "median": 0.015777099999979782,
+            "p95": 0.01605223000001672,
+            "max": 0.0261887999999999
+          },
+          "total_compute_cycles": 68436,
+          "mean_compute_cycles_per_patch": 5.875343406593407,
+          "min_compute_cycles_per_patch": 2,
+          "max_compute_cycles_per_patch": 6,
+          "total_skip_count": 36396,
+          "mean_skip_count_per_patch": 3.1246565934065935,
+          "mismatch_counts": {
+            "sum_mismatches": 0,
+            "cycles_mismatches": 0,
+            "skips_mismatches": 0
+          },
+          "output_image_comparison": {
+            "differing_pixels": 0,
+            "max_abs_diff": 0,
+            "bit_identical": true
+          },
+          "uart_metrics": {
+            "timeouts": 0,
+            "retries": 0,
+            "partial_frames": 0
+          },
+          "ftdi_latency_timer_ms": null
         },
-        "total_compute_cycles": 68436,
-        "mean_compute_cycles_per_patch": 5.875343406593407,
-        "min_compute_cycles_per_patch": 2,
-        "max_compute_cycles_per_patch": 6,
-        "total_skip_count": 36396,
-        "mean_skip_count_per_patch": 3.1246565934065935,
-        "mismatch_counts": {
-          "sum_mismatches": 0,
-          "cycles_mismatches": 0,
-          "skips_mismatches": 0
-        },
-        "output_image_comparison": {
-          "differing_pixels": 0,
-          "max_abs_diff": 0,
-          "bit_identical": true
-        },
-        "uart_metrics": {
-          "timeouts": 0,
-          "retries": 0,
-          "partial_frames": 0
-        },
-        "ftdi_latency_timer_ms": null
+        "cycles": 68436,
+        "dynamic_power_mw": 2.475,
+        "dynamic_energy_uj": 3.3875820000000005,
+        "energy_per_patch_nj": 0.29082949862637364
       },
       "oi": {
-        "design": "oi",
-        "DESIGN_SELECT": 1,
-        "bitstream_file": "conv2d_benchmark_oi.bit",
-        "bitstream_sha256": "55936817a35d361ca34772d34c114687be02aa1bc18934f174e9da7cee97a200",
-        "image_file": "image1.jpg",
-        "image_sha256": "9c180e81312a0bad4b534a9de29012a652407bb74f98a7002cf2b2410a98c162",
-        "patches": 11648,
-        "com_port": "COM17",
-        "baud": 115200,
-        "host_start_iso": "2026-11-03T12:44:34.557904+00:00",
-        "host_end_iso": "2026-11-03T12:47:40.916280+00:00",
-        "total_host_time_s": 186.35805960000005,
-        "patches_per_second": 62.503333770491764,
-        "per_patch_round_trip_s": {
-          "mean": 0.01574490997596175,
-          "median": 0.015768899999898167,
-          "p95": 0.016063364999945408,
-          "max": 0.023050200000170662
+        "physical_run": {
+          "design": "oi",
+          "DESIGN_SELECT": 1,
+          "bitstream_file": "conv2d_benchmark_oi.bit",
+          "bitstream_sha256": "55936817a35d361ca34772d34c114687be02aa1bc18934f174e9da7cee97a200",
+          "image_file": "image1.jpg",
+          "image_sha256": "9c180e81312a0bad4b534a9de29012a652407bb74f98a7002cf2b2410a98c162",
+          "patches": 11648,
+          "com_port": "COM17",
+          "baud": 115200,
+          "host_start_iso": "2026-11-03T12:44:34.557904+00:00",
+          "host_end_iso": "2026-11-03T12:47:40.916280+00:00",
+          "total_host_time_s": 186.35805960000005,
+          "patches_per_second": 62.503333770491764,
+          "per_patch_round_trip_s": {
+            "mean": 0.01574490997596175,
+            "median": 0.015768899999898167,
+            "p95": 0.016063364999945408,
+            "max": 0.023050200000170662
+          },
+          "total_compute_cycles": 104832,
+          "mean_compute_cycles_per_patch": 9.0,
+          "min_compute_cycles_per_patch": 9,
+          "max_compute_cycles_per_patch": 9,
+          "total_skip_count": 36396,
+          "mean_skip_count_per_patch": 3.1246565934065935,
+          "mismatch_counts": {
+            "sum_mismatches": 0,
+            "cycles_mismatches": 0,
+            "skips_mismatches": 0
+          },
+          "output_image_comparison": {
+            "differing_pixels": 0,
+            "max_abs_diff": 0,
+            "bit_identical": true
+          },
+          "uart_metrics": {
+            "timeouts": 0,
+            "retries": 0,
+            "partial_frames": 0
+          },
+          "ftdi_latency_timer_ms": null
         },
-        "total_compute_cycles": 104832,
-        "mean_compute_cycles_per_patch": 9.0,
-        "min_compute_cycles_per_patch": 9,
-        "max_compute_cycles_per_patch": 9,
-        "total_skip_count": 36396,
-        "mean_skip_count_per_patch": 3.1246565934065935,
-        "mismatch_counts": {
-          "sum_mismatches": 0,
-          "cycles_mismatches": 0,
-          "skips_mismatches": 0
-        },
-        "output_image_comparison": {
-          "differing_pixels": 0,
-          "max_abs_diff": 0,
-          "bit_identical": true
-        },
-        "uart_metrics": {
-          "timeouts": 0,
-          "retries": 0,
-          "partial_frames": 0
-        },
-        "ftdi_latency_timer_ms": null
+        "cycles": 104832,
+        "dynamic_power_mw": 2.38,
+        "dynamic_energy_uj": 4.9900032,
+        "energy_per_patch_nj": 0.4284
       },
       "cg": {
-        "design": "cg",
-        "DESIGN_SELECT": 2,
-        "bitstream_file": "conv2d_benchmark_cg.bit",
-        "bitstream_sha256": "230ec452e640b2e38a0a4002536895821c1d897f122555f970ce58c808e76bdd",
-        "image_file": "image1.jpg",
-        "image_sha256": "9c180e81312a0bad4b534a9de29012a652407bb74f98a7002cf2b2410a98c162",
-        "patches": 11648,
-        "com_port": "COM17",
-        "baud": 115200,
-        "host_start_iso": "2026-11-03T12:56:22.433387+00:00",
-        "host_end_iso": "2026-11-03T12:59:28.795946+00:00",
-        "total_host_time_s": 186.3627653000001,
-        "patches_per_second": 62.501755547839544,
-        "per_patch_round_trip_s": {
-          "mean": 0.0157424446514412,
-          "median": 0.015765399999963847,
-          "p95": 0.016048029999979008,
-          "max": 0.020592800000031275
+        "physical_run": {
+          "design": "cg",
+          "DESIGN_SELECT": 2,
+          "bitstream_file": "conv2d_benchmark_cg.bit",
+          "bitstream_sha256": "230ec452e640b2e38a0a4002536895821c1d897f122555f970ce58c808e76bdd",
+          "image_file": "image1.jpg",
+          "image_sha256": "9c180e81312a0bad4b534a9de29012a652407bb74f98a7002cf2b2410a98c162",
+          "patches": 11648,
+          "com_port": "COM17",
+          "baud": 115200,
+          "host_start_iso": "2026-11-03T12:56:22.433387+00:00",
+          "host_end_iso": "2026-11-03T12:59:28.795946+00:00",
+          "total_host_time_s": 186.3627653000001,
+          "patches_per_second": 62.501755547839544,
+          "per_patch_round_trip_s": {
+            "mean": 0.0157424446514412,
+            "median": 0.015765399999963847,
+            "p95": 0.016048029999979008,
+            "max": 0.020592800000031275
+          },
+          "total_compute_cycles": 104832,
+          "mean_compute_cycles_per_patch": 9.0,
+          "min_compute_cycles_per_patch": 9,
+          "max_compute_cycles_per_patch": 9,
+          "total_skip_count": 36396,
+          "mean_skip_count_per_patch": 3.1246565934065935,
+          "mismatch_counts": {
+            "sum_mismatches": 0,
+            "cycles_mismatches": 0,
+            "skips_mismatches": 0
+          },
+          "output_image_comparison": {
+            "differing_pixels": 0,
+            "max_abs_diff": 0,
+            "bit_identical": true
+          },
+          "uart_metrics": {
+            "timeouts": 0,
+            "retries": 0,
+            "partial_frames": 0
+          },
+          "ftdi_latency_timer_ms": null
         },
-        "total_compute_cycles": 104832,
-        "mean_compute_cycles_per_patch": 9.0,
-        "min_compute_cycles_per_patch": 9,
-        "max_compute_cycles_per_patch": 9,
-        "total_skip_count": 36396,
-        "mean_skip_count_per_patch": 3.1246565934065935,
-        "mismatch_counts": {
-          "sum_mismatches": 0,
-          "cycles_mismatches": 0,
-          "skips_mismatches": 0
-        },
-        "output_image_comparison": {
-          "differing_pixels": 0,
-          "max_abs_diff": 0,
-          "bit_identical": true
-        },
-        "uart_metrics": {
-          "timeouts": 0,
-          "retries": 0,
-          "partial_frames": 0
-        },
-        "ftdi_latency_timer_ms": null
+        "cycles": 104832,
+        "dynamic_power_mw": 2.024,
+        "dynamic_energy_uj": 4.24359936,
+        "energy_per_patch_nj": 0.36432000000000003
       },
       "zs_cg": {
-        "design": "zs_cg",
-        "DESIGN_SELECT": 6,
-        "bitstream_file": "conv2d_benchmark_zs_cg.bit",
-        "bitstream_sha256": "dfabdc51f3f195a5a64fafbfa4702db7cda0680e164dda1666f0e6e11d4d468f",
-        "image_file": "image1.jpg",
-        "image_sha256": "9c180e81312a0bad4b534a9de29012a652407bb74f98a7002cf2b2410a98c162",
-        "patches": 11648,
-        "com_port": "COM17",
-        "baud": 115200,
-        "host_start_iso": "2026-11-03T13:08:36.618938+00:00",
-        "host_end_iso": "2026-11-03T13:11:42.978699+00:00",
-        "total_host_time_s": 186.35975000000008,
-        "patches_per_second": 62.5027668259911,
-        "per_patch_round_trip_s": {
-          "mean": 0.01574249999999939,
-          "median": 0.015770049999900948,
-          "p95": 0.0160054000002674,
-          "max": 0.027331599999797618
+        "physical_run": {
+          "design": "zs_cg",
+          "DESIGN_SELECT": 6,
+          "bitstream_file": "conv2d_benchmark_zs_cg.bit",
+          "bitstream_sha256": "dfabdc51f3f195a5a64fafbfa4702db7cda0680e164dda1666f0e6e11d4d468f",
+          "image_file": "image1.jpg",
+          "image_sha256": "9c180e81312a0bad4b534a9de29012a652407bb74f98a7002cf2b2410a98c162",
+          "patches": 11648,
+          "com_port": "COM17",
+          "baud": 115200,
+          "host_start_iso": "2026-11-03T13:08:36.618938+00:00",
+          "host_end_iso": "2026-11-03T13:11:42.978699+00:00",
+          "total_host_time_s": 186.35975000000008,
+          "patches_per_second": 62.5027668259911,
+          "per_patch_round_trip_s": {
+            "mean": 0.01574249999999939,
+            "median": 0.015770049999900948,
+            "p95": 0.0160054000002674,
+            "max": 0.027331599999797618
+          },
+          "total_compute_cycles": 68436,
+          "mean_compute_cycles_per_patch": 5.875343406593407,
+          "min_compute_cycles_per_patch": 2,
+          "max_compute_cycles_per_patch": 6,
+          "total_skip_count": 36396,
+          "mean_skip_count_per_patch": 3.1246565934065935,
+          "mismatch_counts": {
+            "sum_mismatches": 0,
+            "cycles_mismatches": 0,
+            "skips_mismatches": 0
+          },
+          "output_image_comparison": {
+            "differing_pixels": 0,
+            "max_abs_diff": 0,
+            "bit_identical": true
+          },
+          "uart_metrics": {
+            "timeouts": 0,
+            "retries": 0,
+            "partial_frames": 0
+          },
+          "ftdi_latency_timer_ms": null
         },
-        "total_compute_cycles": 68436,
-        "mean_compute_cycles_per_patch": 5.875343406593407,
-        "min_compute_cycles_per_patch": 2,
-        "max_compute_cycles_per_patch": 6,
-        "total_skip_count": 36396,
-        "mean_skip_count_per_patch": 3.1246565934065935,
-        "mismatch_counts": {
-          "sum_mismatches": 0,
-          "cycles_mismatches": 0,
-          "skips_mismatches": 0
-        },
-        "output_image_comparison": {
-          "differing_pixels": 0,
-          "max_abs_diff": 0,
-          "bit_identical": true
-        },
-        "uart_metrics": {
-          "timeouts": 0,
-          "retries": 0,
-          "partial_frames": 0
-        },
-        "ftdi_latency_timer_ms": null
+        "cycles": 68436,
+        "dynamic_power_mw": 2.503,
+        "dynamic_energy_uj": 3.4259061600000007,
+        "energy_per_patch_nj": 0.294119690934066
       },
       "oi_cg": {
-        "design": "oi_cg",
-        "DESIGN_SELECT": 7,
-        "bitstream_file": "conv2d_benchmark_oi_cg.bit",
-        "bitstream_sha256": "50cf380e53f4efb8e86bea5b38c6db9eac5673b44db1d9da21e35581838ff6ca",
-        "image_file": "image1.jpg",
-        "image_sha256": "9c180e81312a0bad4b534a9de29012a652407bb74f98a7002cf2b2410a98c162",
-        "patches": 11648,
-        "com_port": "COM17",
-        "baud": 115200,
-        "host_start_iso": "2026-11-03T13:19:51.780955+00:00",
-        "host_end_iso": "2026-11-03T13:22:58.150989+00:00",
-        "total_host_time_s": 186.37059309999995,
-        "patches_per_second": 62.49913039526622,
-        "per_patch_round_trip_s": {
-          "mean": 0.015752556207076877,
-          "median": 0.01577160000033473,
-          "p95": 0.01607819999981075,
-          "max": 0.02690070000016931
+        "physical_run": {
+          "design": "oi_cg",
+          "DESIGN_SELECT": 7,
+          "bitstream_file": "conv2d_benchmark_oi_cg.bit",
+          "bitstream_sha256": "50cf380e53f4efb8e86bea5b38c6db9eac5673b44db1d9da21e35581838ff6ca",
+          "image_file": "image1.jpg",
+          "image_sha256": "9c180e81312a0bad4b534a9de29012a652407bb74f98a7002cf2b2410a98c162",
+          "patches": 11648,
+          "com_port": "COM17",
+          "baud": 115200,
+          "host_start_iso": "2026-11-03T13:19:51.780955+00:00",
+          "host_end_iso": "2026-11-03T13:22:58.150989+00:00",
+          "total_host_time_s": 186.37059309999995,
+          "patches_per_second": 62.49913039526622,
+          "per_patch_round_trip_s": {
+            "mean": 0.015752556207076877,
+            "median": 0.01577160000033473,
+            "p95": 0.01607819999981075,
+            "max": 0.02690070000016931
+          },
+          "total_compute_cycles": 104832,
+          "mean_compute_cycles_per_patch": 9.0,
+          "min_compute_cycles_per_patch": 9,
+          "max_compute_cycles_per_patch": 9,
+          "total_skip_count": 36396,
+          "mean_skip_count_per_patch": 3.1246565934065935,
+          "mismatch_counts": {
+            "sum_mismatches": 0,
+            "cycles_mismatches": 0,
+            "skips_mismatches": 0
+          },
+          "output_image_comparison": {
+            "differing_pixels": 0,
+            "max_abs_diff": 0,
+            "bit_identical": true
+          },
+          "uart_metrics": {
+            "timeouts": 0,
+            "retries": 0,
+            "partial_frames": 0
+          },
+          "ftdi_latency_timer_ms": null
         },
-        "total_compute_cycles": 104832,
-        "mean_compute_cycles_per_patch": 9.0,
-        "min_compute_cycles_per_patch": 9,
-        "max_compute_cycles_per_patch": 9,
-        "total_skip_count": 36396,
-        "mean_skip_count_per_patch": 3.1246565934065935,
-        "mismatch_counts": {
-          "sum_mismatches": 0,
-          "cycles_mismatches": 0,
-          "skips_mismatches": 0
-        },
-        "output_image_comparison": {
-          "differing_pixels": 0,
-          "max_abs_diff": 0,
-          "bit_identical": true
-        },
-        "uart_metrics": {
-          "timeouts": 0,
-          "retries": 0,
-          "partial_frames": 0
-        },
-        "ftdi_latency_timer_ms": null
+        "cycles": 104832,
+        "dynamic_power_mw": 2.024,
+        "dynamic_energy_uj": 4.24359936,
+        "energy_per_patch_nj": 0.36432000000000003
       },
       "zs_oi": {
-        "design": "zs_oi",
-        "DESIGN_SELECT": 5,
-        "bitstream_file": "conv2d_benchmark_zs_oi.bit",
-        "bitstream_sha256": "356395aa73d0bcf1b317b66db5d185349d51b125b53b9f7962a9fe761a0d6737",
-        "image_file": "image1.jpg",
-        "image_sha256": "9c180e81312a0bad4b534a9de29012a652407bb74f98a7002cf2b2410a98c162",
-        "patches": 11648,
-        "com_port": "COM17",
-        "baud": 115200,
-        "host_start_iso": "2026-11-03T13:31:13.717860+00:00",
-        "host_end_iso": "2026-11-03T13:34:20.105681+00:00",
-        "total_host_time_s": 186.38721750000013,
-        "patches_per_second": 62.49355592209531,
-        "per_patch_round_trip_s": {
-          "mean": 0.015749881842378712,
-          "median": 0.01576840000006996,
-          "p95": 0.016044565000038348,
-          "max": 0.031293800000185
+        "physical_run": {
+          "design": "zs_oi",
+          "DESIGN_SELECT": 5,
+          "bitstream_file": "conv2d_benchmark_zs_oi.bit",
+          "bitstream_sha256": "356395aa73d0bcf1b317b66db5d185349d51b125b53b9f7962a9fe761a0d6737",
+          "image_file": "image1.jpg",
+          "image_sha256": "9c180e81312a0bad4b534a9de29012a652407bb74f98a7002cf2b2410a98c162",
+          "patches": 11648,
+          "com_port": "COM17",
+          "baud": 115200,
+          "host_start_iso": "2026-11-03T13:31:13.717860+00:00",
+          "host_end_iso": "2026-11-03T13:34:20.105681+00:00",
+          "total_host_time_s": 186.38721750000013,
+          "patches_per_second": 62.49355592209531,
+          "per_patch_round_trip_s": {
+            "mean": 0.015749881842378712,
+            "median": 0.01576840000006996,
+            "p95": 0.016044565000038348,
+            "max": 0.031293800000185
+          },
+          "total_compute_cycles": 68436,
+          "mean_compute_cycles_per_patch": 5.875343406593407,
+          "min_compute_cycles_per_patch": 2,
+          "max_compute_cycles_per_patch": 6,
+          "total_skip_count": 36396,
+          "mean_skip_count_per_patch": 3.1246565934065935,
+          "mismatch_counts": {
+            "sum_mismatches": 0,
+            "cycles_mismatches": 0,
+            "skips_mismatches": 0
+          },
+          "output_image_comparison": {
+            "differing_pixels": 0,
+            "max_abs_diff": 0,
+            "bit_identical": true
+          },
+          "uart_metrics": {
+            "timeouts": 0,
+            "retries": 0,
+            "partial_frames": 0
+          },
+          "ftdi_latency_timer_ms": null
         },
-        "total_compute_cycles": 68436,
-        "mean_compute_cycles_per_patch": 5.875343406593407,
-        "min_compute_cycles_per_patch": 2,
-        "max_compute_cycles_per_patch": 6,
-        "total_skip_count": 36396,
-        "mean_skip_count_per_patch": 3.1246565934065935,
-        "mismatch_counts": {
-          "sum_mismatches": 0,
-          "cycles_mismatches": 0,
-          "skips_mismatches": 0
-        },
-        "output_image_comparison": {
-          "differing_pixels": 0,
-          "max_abs_diff": 0,
-          "bit_identical": true
-        },
-        "uart_metrics": {
-          "timeouts": 0,
-          "retries": 0,
-          "partial_frames": 0
-        },
-        "ftdi_latency_timer_ms": null
+        "cycles": 68436,
+        "dynamic_power_mw": 2.495,
+        "dynamic_energy_uj": 3.4149564000000003,
+        "energy_per_patch_nj": 0.29317963598901103
       },
       "combined": {
-        "design": "combined",
-        "DESIGN_SELECT": 4,
-        "bitstream_file": "conv2d_benchmark_combined.bit",
-        "bitstream_sha256": "3df733f2839108968b3bb9a55acc364585b18f28e9f0d8f924cecf50bf34a4e9",
-        "image_file": "image1.jpg",
-        "image_sha256": "9c180e81312a0bad4b534a9de29012a652407bb74f98a7002cf2b2410a98c162",
-        "patches": 11648,
-        "com_port": "COM17",
-        "baud": 115200,
-        "host_start_iso": "2026-11-03T13:49:17.724762+00:00",
-        "host_end_iso": "2026-11-03T13:52:24.093186+00:00",
-        "total_host_time_s": 186.3680390999998,
-        "patches_per_second": 62.49998688750496,
-        "per_patch_round_trip_s": {
-          "mean": 0.015753098145602152,
-          "median": 0.015769449999879726,
-          "p95": 0.016095364999409868,
-          "max": 0.023498599999584258
+        "physical_run": {
+          "design": "combined",
+          "DESIGN_SELECT": 4,
+          "bitstream_file": "conv2d_benchmark_combined.bit",
+          "bitstream_sha256": "3df733f2839108968b3bb9a55acc364585b18f28e9f0d8f924cecf50bf34a4e9",
+          "image_file": "image1.jpg",
+          "image_sha256": "9c180e81312a0bad4b534a9de29012a652407bb74f98a7002cf2b2410a98c162",
+          "patches": 11648,
+          "com_port": "COM17",
+          "baud": 115200,
+          "host_start_iso": "2026-11-03T13:49:17.724762+00:00",
+          "host_end_iso": "2026-11-03T13:52:24.093186+00:00",
+          "total_host_time_s": 186.3680390999998,
+          "patches_per_second": 62.49998688750496,
+          "per_patch_round_trip_s": {
+            "mean": 0.015753098145602152,
+            "median": 0.015769449999879726,
+            "p95": 0.016095364999409868,
+            "max": 0.023498599999584258
+          },
+          "total_compute_cycles": 68436,
+          "mean_compute_cycles_per_patch": 5.875343406593407,
+          "min_compute_cycles_per_patch": 2,
+          "max_compute_cycles_per_patch": 6,
+          "total_skip_count": 36396,
+          "mean_skip_count_per_patch": 3.1246565934065935,
+          "mismatch_counts": {
+            "sum_mismatches": 0,
+            "cycles_mismatches": 0,
+            "skips_mismatches": 0
+          },
+          "output_image_comparison": {
+            "differing_pixels": 0,
+            "max_abs_diff": 0,
+            "bit_identical": true
+          },
+          "uart_metrics": {
+            "timeouts": 0,
+            "retries": 0,
+            "partial_frames": 0
+          },
+          "ftdi_latency_timer_ms": null
         },
-        "total_compute_cycles": 68436,
-        "mean_compute_cycles_per_patch": 5.875343406593407,
-        "min_compute_cycles_per_patch": 2,
-        "max_compute_cycles_per_patch": 6,
-        "total_skip_count": 36396,
-        "mean_skip_count_per_patch": 3.1246565934065935,
-        "mismatch_counts": {
-          "sum_mismatches": 0,
-          "cycles_mismatches": 0,
-          "skips_mismatches": 0
-        },
-        "output_image_comparison": {
-          "differing_pixels": 0,
-          "max_abs_diff": 0,
-          "bit_identical": true
-        },
-        "uart_metrics": {
-          "timeouts": 0,
-          "retries": 0,
-          "partial_frames": 0
-        },
-        "ftdi_latency_timer_ms": null
+        "cycles": 68436,
+        "dynamic_power_mw": 2.503,
+        "dynamic_energy_uj": 3.4259061600000007,
+        "energy_per_patch_nj": 0.294119690934066
       },
       "static_sobel": {
-        "design": "static_sobel",
-        "DESIGN_SELECT": 8,
-        "bitstream_file": "conv2d_benchmark_static_sobel.bit",
-        "bitstream_sha256": "cc3a1733b687f9152d449b521314ea6911a44be8fd03e9bbc6c6c6dce8ee76ef",
-        "image_file": "image1.jpg",
-        "image_sha256": "9c180e81312a0bad4b534a9de29012a652407bb74f98a7002cf2b2410a98c162",
-        "patches": 11648,
-        "com_port": "COM17",
-        "baud": 115200,
-        "host_start_iso": "2026-11-03T14:00:36.447869+00:00",
-        "host_end_iso": "2026-11-03T14:03:43.354164+00:00",
-        "total_host_time_s": 186.9065154,
-        "patches_per_second": 62.31992488368868,
-        "per_patch_round_trip_s": {
-          "mean": 0.015652735044644282,
-          "median": 0.015696999999818217,
-          "p95": 0.016097629999694617,
-          "max": 0.018732900000031805
+        "physical_run": {
+          "design": "static_sobel",
+          "DESIGN_SELECT": 8,
+          "bitstream_file": "conv2d_benchmark_static_sobel.bit",
+          "bitstream_sha256": "cc3a1733b687f9152d449b521314ea6911a44be8fd03e9bbc6c6c6dce8ee76ef",
+          "image_file": "image1.jpg",
+          "image_sha256": "9c180e81312a0bad4b534a9de29012a652407bb74f98a7002cf2b2410a98c162",
+          "patches": 11648,
+          "com_port": "COM17",
+          "baud": 115200,
+          "host_start_iso": "2026-11-03T14:00:36.447869+00:00",
+          "host_end_iso": "2026-11-03T14:03:43.354164+00:00",
+          "total_host_time_s": 186.9065154,
+          "patches_per_second": 62.31992488368868,
+          "per_patch_round_trip_s": {
+            "mean": 0.015652735044644282,
+            "median": 0.015696999999818217,
+            "p95": 0.016097629999694617,
+            "max": 0.018732900000031805
+          },
+          "total_compute_cycles": 69888,
+          "mean_compute_cycles_per_patch": 6.0,
+          "min_compute_cycles_per_patch": 6,
+          "max_compute_cycles_per_patch": 6,
+          "total_skip_count": 0,
+          "mean_skip_count_per_patch": 0.0,
+          "mismatch_counts": {
+            "sum_mismatches": 0,
+            "cycles_mismatches": 0,
+            "skips_mismatches": 0
+          },
+          "output_image_comparison": {
+            "differing_pixels": 0,
+            "max_abs_diff": 0,
+            "bit_identical": true
+          },
+          "uart_metrics": {
+            "timeouts": 0,
+            "retries": 0,
+            "partial_frames": 0
+          },
+          "ftdi_latency_timer_ms": null
         },
-        "total_compute_cycles": 69888,
-        "mean_compute_cycles_per_patch": 6.0,
-        "min_compute_cycles_per_patch": 6,
-        "max_compute_cycles_per_patch": 6,
-        "total_skip_count": 0,
-        "mean_skip_count_per_patch": 0.0,
-        "mismatch_counts": {
-          "sum_mismatches": 0,
-          "cycles_mismatches": 0,
-          "skips_mismatches": 0
-        },
-        "output_image_comparison": {
-          "differing_pixels": 0,
-          "max_abs_diff": 0,
-          "bit_identical": true
-        },
-        "uart_metrics": {
-          "timeouts": 0,
-          "retries": 0,
-          "partial_frames": 0
-        },
-        "ftdi_latency_timer_ms": null
+        "cycles": 69888,
+        "dynamic_power_mw": 1.834,
+        "dynamic_energy_uj": 2.56349184,
+        "energy_per_patch_nj": 0.22008000000000003
       }
     },
     "image2": {
       "baseline": {
-        "design": "baseline",
-        "DESIGN_SELECT": 0,
-        "bitstream_file": "conv2d_benchmark_baseline.bit",
-        "bitstream_sha256": "9b917cb1913e57aef98f43f12299ee83da1ff19ce19deb780b2ada2c6ceaa390",
-        "image_file": "image2.jpg",
-        "image_sha256": "ac25488a1f3fdd0316684f960d42d93688634115b143c587af6a1812c42f9fd9",
-        "patches": 12288,
-        "com_port": "COM17",
-        "baud": 115200,
-        "host_start_iso": "2026-11-03T12:19:24.993382+00:00",
-        "host_end_iso": "2026-11-03T12:22:43.903852+00:00",
-        "total_host_time_s": 198.9096993000021,
-        "patches_per_second": 61.77677631228449,
-        "per_patch_round_trip_s": {
-          "mean": 0.015908518025711398,
-          "median": 0.015764100000524195,
-          "p95": 0.016108900001745495,
-          "max": 0.12141700000211131
+        "physical_run": {
+          "design": "baseline",
+          "DESIGN_SELECT": 0,
+          "bitstream_file": "conv2d_benchmark_baseline.bit",
+          "bitstream_sha256": "9b917cb1913e57aef98f43f12299ee83da1ff19ce19deb780b2ada2c6ceaa390",
+          "image_file": "image2.jpg",
+          "image_sha256": "ac25488a1f3fdd0316684f960d42d93688634115b143c587af6a1812c42f9fd9",
+          "patches": 12288,
+          "com_port": "COM17",
+          "baud": 115200,
+          "host_start_iso": "2026-11-03T12:19:24.993382+00:00",
+          "host_end_iso": "2026-11-03T12:22:43.903852+00:00",
+          "total_host_time_s": 198.9096993000021,
+          "patches_per_second": 61.77677631228449,
+          "per_patch_round_trip_s": {
+            "mean": 0.015908518025711398,
+            "median": 0.015764100000524195,
+            "p95": 0.016108900001745495,
+            "max": 0.12141700000211131
+          },
+          "total_compute_cycles": 110592,
+          "mean_compute_cycles_per_patch": 9.0,
+          "min_compute_cycles_per_patch": 9,
+          "max_compute_cycles_per_patch": 9,
+          "total_skip_count": 0,
+          "mean_skip_count_per_patch": 0.0,
+          "mismatch_counts": {
+            "sum_mismatches": 0,
+            "cycles_mismatches": 0,
+            "skips_mismatches": 0
+          },
+          "output_image_comparison": {
+            "differing_pixels": 0,
+            "max_abs_diff": 0,
+            "bit_identical": true
+          },
+          "uart_metrics": {
+            "timeouts": 0,
+            "retries": 0,
+            "partial_frames": 0
+          },
+          "ftdi_latency_timer_ms": null
         },
-        "total_compute_cycles": 110592,
-        "mean_compute_cycles_per_patch": 9.0,
-        "min_compute_cycles_per_patch": 9,
-        "max_compute_cycles_per_patch": 9,
-        "total_skip_count": 0,
-        "mean_skip_count_per_patch": 0.0,
-        "mismatch_counts": {
-          "sum_mismatches": 0,
-          "cycles_mismatches": 0,
-          "skips_mismatches": 0
-        },
-        "output_image_comparison": {
-          "differing_pixels": 0,
-          "max_abs_diff": 0,
-          "bit_identical": true
-        },
-        "uart_metrics": {
-          "timeouts": 0,
-          "retries": 0,
-          "partial_frames": 0
-        },
-        "ftdi_latency_timer_ms": null
+        "cycles": 110592,
+        "dynamic_power_mw": 2.061,
+        "dynamic_energy_uj": 4.55860224,
+        "energy_per_patch_nj": 0.37098000000000003
       },
       "zs": {
-        "design": "zs",
-        "DESIGN_SELECT": 3,
-        "bitstream_file": "conv2d_benchmark_zs.bit",
-        "bitstream_sha256": "0a7279c4147f0d6dda9f22c22510d4300290112f9fd83d7c3aebea0f496d984c",
-        "image_file": "image2.jpg",
-        "image_sha256": "ac25488a1f3fdd0316684f960d42d93688634115b143c587af6a1812c42f9fd9",
-        "patches": 12288,
-        "com_port": "COM17",
-        "baud": 115200,
-        "host_start_iso": "2026-11-03T12:35:47.774327+00:00",
-        "host_end_iso": "2026-11-03T12:39:04.373918+00:00",
-        "total_host_time_s": 196.60038800000007,
-        "patches_per_second": 62.50241988332188,
-        "per_patch_round_trip_s": {
-          "mean": 0.015757468595377327,
-          "median": 0.015772649999973964,
-          "p95": 0.016092895000008413,
-          "max": 0.019906400000081703
+        "physical_run": {
+          "design": "zs",
+          "DESIGN_SELECT": 3,
+          "bitstream_file": "conv2d_benchmark_zs.bit",
+          "bitstream_sha256": "0a7279c4147f0d6dda9f22c22510d4300290112f9fd83d7c3aebea0f496d984c",
+          "image_file": "image2.jpg",
+          "image_sha256": "ac25488a1f3fdd0316684f960d42d93688634115b143c587af6a1812c42f9fd9",
+          "patches": 12288,
+          "com_port": "COM17",
+          "baud": 115200,
+          "host_start_iso": "2026-11-03T12:35:47.774327+00:00",
+          "host_end_iso": "2026-11-03T12:39:04.373918+00:00",
+          "total_host_time_s": 196.60038800000007,
+          "patches_per_second": 62.50241988332188,
+          "per_patch_round_trip_s": {
+            "mean": 0.015757468595377327,
+            "median": 0.015772649999973964,
+            "p95": 0.016092895000008413,
+            "max": 0.019906400000081703
+          },
+          "total_compute_cycles": 72456,
+          "mean_compute_cycles_per_patch": 5.896484375,
+          "min_compute_cycles_per_patch": 2,
+          "max_compute_cycles_per_patch": 6,
+          "total_skip_count": 38136,
+          "mean_skip_count_per_patch": 3.103515625,
+          "mismatch_counts": {
+            "sum_mismatches": 0,
+            "cycles_mismatches": 0,
+            "skips_mismatches": 0
+          },
+          "output_image_comparison": {
+            "differing_pixels": 0,
+            "max_abs_diff": 0,
+            "bit_identical": true
+          },
+          "uart_metrics": {
+            "timeouts": 0,
+            "retries": 0,
+            "partial_frames": 0
+          },
+          "ftdi_latency_timer_ms": null
         },
-        "total_compute_cycles": 72456,
-        "mean_compute_cycles_per_patch": 5.896484375,
-        "min_compute_cycles_per_patch": 2,
-        "max_compute_cycles_per_patch": 6,
-        "total_skip_count": 38136,
-        "mean_skip_count_per_patch": 3.103515625,
-        "mismatch_counts": {
-          "sum_mismatches": 0,
-          "cycles_mismatches": 0,
-          "skips_mismatches": 0
-        },
-        "output_image_comparison": {
-          "differing_pixels": 0,
-          "max_abs_diff": 0,
-          "bit_identical": true
-        },
-        "uart_metrics": {
-          "timeouts": 0,
-          "retries": 0,
-          "partial_frames": 0
-        },
-        "ftdi_latency_timer_ms": null
+        "cycles": 72456,
+        "dynamic_power_mw": 2.475,
+        "dynamic_energy_uj": 3.5865720000000003,
+        "energy_per_patch_nj": 0.29187597656250003
       },
       "oi": {
-        "design": "oi",
-        "DESIGN_SELECT": 1,
-        "bitstream_file": "conv2d_benchmark_oi.bit",
-        "bitstream_sha256": "55936817a35d361ca34772d34c114687be02aa1bc18934f174e9da7cee97a200",
-        "image_file": "image2.jpg",
-        "image_sha256": "ac25488a1f3fdd0316684f960d42d93688634115b143c587af6a1812c42f9fd9",
-        "patches": 12288,
-        "com_port": "COM17",
-        "baud": 115200,
-        "host_start_iso": "2026-11-03T12:47:56.510887+00:00",
-        "host_end_iso": "2026-11-03T12:51:13.136800+00:00",
-        "total_host_time_s": 196.6257435,
-        "patches_per_second": 62.494360002254744,
-        "per_patch_round_trip_s": {
-          "mean": 0.015744989648437718,
-          "median": 0.01576840000006996,
-          "p95": 0.016051454999978888,
-          "max": 0.028837999999950625
+        "physical_run": {
+          "design": "oi",
+          "DESIGN_SELECT": 1,
+          "bitstream_file": "conv2d_benchmark_oi.bit",
+          "bitstream_sha256": "55936817a35d361ca34772d34c114687be02aa1bc18934f174e9da7cee97a200",
+          "image_file": "image2.jpg",
+          "image_sha256": "ac25488a1f3fdd0316684f960d42d93688634115b143c587af6a1812c42f9fd9",
+          "patches": 12288,
+          "com_port": "COM17",
+          "baud": 115200,
+          "host_start_iso": "2026-11-03T12:47:56.510887+00:00",
+          "host_end_iso": "2026-11-03T12:51:13.136800+00:00",
+          "total_host_time_s": 196.6257435,
+          "patches_per_second": 62.494360002254744,
+          "per_patch_round_trip_s": {
+            "mean": 0.015744989648437718,
+            "median": 0.01576840000006996,
+            "p95": 0.016051454999978888,
+            "max": 0.028837999999950625
+          },
+          "total_compute_cycles": 110592,
+          "mean_compute_cycles_per_patch": 9.0,
+          "min_compute_cycles_per_patch": 9,
+          "max_compute_cycles_per_patch": 9,
+          "total_skip_count": 38136,
+          "mean_skip_count_per_patch": 3.103515625,
+          "mismatch_counts": {
+            "sum_mismatches": 0,
+            "cycles_mismatches": 0,
+            "skips_mismatches": 0
+          },
+          "output_image_comparison": {
+            "differing_pixels": 0,
+            "max_abs_diff": 0,
+            "bit_identical": true
+          },
+          "uart_metrics": {
+            "timeouts": 0,
+            "retries": 0,
+            "partial_frames": 0
+          },
+          "ftdi_latency_timer_ms": null
         },
-        "total_compute_cycles": 110592,
-        "mean_compute_cycles_per_patch": 9.0,
-        "min_compute_cycles_per_patch": 9,
-        "max_compute_cycles_per_patch": 9,
-        "total_skip_count": 38136,
-        "mean_skip_count_per_patch": 3.103515625,
-        "mismatch_counts": {
-          "sum_mismatches": 0,
-          "cycles_mismatches": 0,
-          "skips_mismatches": 0
-        },
-        "output_image_comparison": {
-          "differing_pixels": 0,
-          "max_abs_diff": 0,
-          "bit_identical": true
-        },
-        "uart_metrics": {
-          "timeouts": 0,
-          "retries": 0,
-          "partial_frames": 0
-        },
-        "ftdi_latency_timer_ms": null
+        "cycles": 110592,
+        "dynamic_power_mw": 2.38,
+        "dynamic_energy_uj": 5.2641792,
+        "energy_per_patch_nj": 0.42839999999999995
       },
       "cg": {
-        "design": "cg",
-        "DESIGN_SELECT": 2,
-        "bitstream_file": "conv2d_benchmark_cg.bit",
-        "bitstream_sha256": "230ec452e640b2e38a0a4002536895821c1d897f122555f970ce58c808e76bdd",
-        "image_file": "image2.jpg",
-        "image_sha256": "ac25488a1f3fdd0316684f960d42d93688634115b143c587af6a1812c42f9fd9",
-        "patches": 12288,
-        "com_port": "COM17",
-        "baud": 115200,
-        "host_start_iso": "2026-11-03T12:59:33.251441+00:00",
-        "host_end_iso": "2026-11-03T13:02:49.872890+00:00",
-        "total_host_time_s": 196.6218593000001,
-        "patches_per_second": 62.49559455773081,
-        "per_patch_round_trip_s": {
-          "mean": 0.015740693701172148,
-          "median": 0.015768699999966884,
-          "p95": 0.01606796499995653,
-          "max": 0.029067200000099547
+        "physical_run": {
+          "design": "cg",
+          "DESIGN_SELECT": 2,
+          "bitstream_file": "conv2d_benchmark_cg.bit",
+          "bitstream_sha256": "230ec452e640b2e38a0a4002536895821c1d897f122555f970ce58c808e76bdd",
+          "image_file": "image2.jpg",
+          "image_sha256": "ac25488a1f3fdd0316684f960d42d93688634115b143c587af6a1812c42f9fd9",
+          "patches": 12288,
+          "com_port": "COM17",
+          "baud": 115200,
+          "host_start_iso": "2026-11-03T12:59:33.251441+00:00",
+          "host_end_iso": "2026-11-03T13:02:49.872890+00:00",
+          "total_host_time_s": 196.6218593000001,
+          "patches_per_second": 62.49559455773081,
+          "per_patch_round_trip_s": {
+            "mean": 0.015740693701172148,
+            "median": 0.015768699999966884,
+            "p95": 0.01606796499995653,
+            "max": 0.029067200000099547
+          },
+          "total_compute_cycles": 110592,
+          "mean_compute_cycles_per_patch": 9.0,
+          "min_compute_cycles_per_patch": 9,
+          "max_compute_cycles_per_patch": 9,
+          "total_skip_count": 38136,
+          "mean_skip_count_per_patch": 3.103515625,
+          "mismatch_counts": {
+            "sum_mismatches": 0,
+            "cycles_mismatches": 0,
+            "skips_mismatches": 0
+          },
+          "output_image_comparison": {
+            "differing_pixels": 0,
+            "max_abs_diff": 0,
+            "bit_identical": true
+          },
+          "uart_metrics": {
+            "timeouts": 0,
+            "retries": 0,
+            "partial_frames": 0
+          },
+          "ftdi_latency_timer_ms": null
         },
-        "total_compute_cycles": 110592,
-        "mean_compute_cycles_per_patch": 9.0,
-        "min_compute_cycles_per_patch": 9,
-        "max_compute_cycles_per_patch": 9,
-        "total_skip_count": 38136,
-        "mean_skip_count_per_patch": 3.103515625,
-        "mismatch_counts": {
-          "sum_mismatches": 0,
-          "cycles_mismatches": 0,
-          "skips_mismatches": 0
-        },
-        "output_image_comparison": {
-          "differing_pixels": 0,
-          "max_abs_diff": 0,
-          "bit_identical": true
-        },
-        "uart_metrics": {
-          "timeouts": 0,
-          "retries": 0,
-          "partial_frames": 0
-        },
-        "ftdi_latency_timer_ms": null
+        "cycles": 110592,
+        "dynamic_power_mw": 2.024,
+        "dynamic_energy_uj": 4.47676416,
+        "energy_per_patch_nj": 0.36432000000000003
       },
       "zs_cg": {
-        "design": "zs_cg",
-        "DESIGN_SELECT": 6,
-        "bitstream_file": "conv2d_benchmark_zs_cg.bit",
-        "bitstream_sha256": "dfabdc51f3f195a5a64fafbfa4702db7cda0680e164dda1666f0e6e11d4d468f",
-        "image_file": "image2.jpg",
-        "image_sha256": "ac25488a1f3fdd0316684f960d42d93688634115b143c587af6a1812c42f9fd9",
-        "patches": 12288,
-        "com_port": "COM17",
-        "baud": 115200,
-        "host_start_iso": "2026-11-03T13:11:49.510070+00:00",
-        "host_end_iso": "2026-11-03T13:15:06.117648+00:00",
-        "total_host_time_s": 196.60754110000016,
-        "patches_per_second": 62.50014588072171,
-        "per_patch_round_trip_s": {
-          "mean": 0.015748180737304624,
-          "median": 0.01576935000002777,
-          "p95": 0.01609029000007922,
-          "max": 0.02518529999997554
+        "physical_run": {
+          "design": "zs_cg",
+          "DESIGN_SELECT": 6,
+          "bitstream_file": "conv2d_benchmark_zs_cg.bit",
+          "bitstream_sha256": "dfabdc51f3f195a5a64fafbfa4702db7cda0680e164dda1666f0e6e11d4d468f",
+          "image_file": "image2.jpg",
+          "image_sha256": "ac25488a1f3fdd0316684f960d42d93688634115b143c587af6a1812c42f9fd9",
+          "patches": 12288,
+          "com_port": "COM17",
+          "baud": 115200,
+          "host_start_iso": "2026-11-03T13:11:49.510070+00:00",
+          "host_end_iso": "2026-11-03T13:15:06.117648+00:00",
+          "total_host_time_s": 196.60754110000016,
+          "patches_per_second": 62.50014588072171,
+          "per_patch_round_trip_s": {
+            "mean": 0.015748180737304624,
+            "median": 0.01576935000002777,
+            "p95": 0.01609029000007922,
+            "max": 0.02518529999997554
+          },
+          "total_compute_cycles": 72456,
+          "mean_compute_cycles_per_patch": 5.896484375,
+          "min_compute_cycles_per_patch": 2,
+          "max_compute_cycles_per_patch": 6,
+          "total_skip_count": 38136,
+          "mean_skip_count_per_patch": 3.103515625,
+          "mismatch_counts": {
+            "sum_mismatches": 0,
+            "cycles_mismatches": 0,
+            "skips_mismatches": 0
+          },
+          "output_image_comparison": {
+            "differing_pixels": 0,
+            "max_abs_diff": 0,
+            "bit_identical": true
+          },
+          "uart_metrics": {
+            "timeouts": 0,
+            "retries": 0,
+            "partial_frames": 0
+          },
+          "ftdi_latency_timer_ms": null
         },
-        "total_compute_cycles": 72456,
-        "mean_compute_cycles_per_patch": 5.896484375,
-        "min_compute_cycles_per_patch": 2,
-        "max_compute_cycles_per_patch": 6,
-        "total_skip_count": 38136,
-        "mean_skip_count_per_patch": 3.103515625,
-        "mismatch_counts": {
-          "sum_mismatches": 0,
-          "cycles_mismatches": 0,
-          "skips_mismatches": 0
-        },
-        "output_image_comparison": {
-          "differing_pixels": 0,
-          "max_abs_diff": 0,
-          "bit_identical": true
-        },
-        "uart_metrics": {
-          "timeouts": 0,
-          "retries": 0,
-          "partial_frames": 0
-        },
-        "ftdi_latency_timer_ms": null
+        "cycles": 72456,
+        "dynamic_power_mw": 2.503,
+        "dynamic_energy_uj": 3.62714736,
+        "energy_per_patch_nj": 0.2951780078125
       },
       "oi_cg": {
-        "design": "oi_cg",
-        "DESIGN_SELECT": 7,
-        "bitstream_file": "conv2d_benchmark_oi_cg.bit",
-        "bitstream_sha256": "50cf380e53f4efb8e86bea5b38c6db9eac5673b44db1d9da21e35581838ff6ca",
-        "image_file": "image2.jpg",
-        "image_sha256": "ac25488a1f3fdd0316684f960d42d93688634115b143c587af6a1812c42f9fd9",
-        "patches": 12288,
-        "com_port": "COM17",
-        "baud": 115200,
-        "host_start_iso": "2026-11-03T13:23:02.646867+00:00",
-        "host_end_iso": "2026-11-03T13:26:19.850602+00:00",
-        "total_host_time_s": 197.20290539999996,
-        "patches_per_second": 62.31145517392566,
-        "per_patch_round_trip_s": {
-          "mean": 0.015793544970702067,
-          "median": 0.0157680999996046,
-          "p95": 0.016077494999785814,
-          "max": 0.05647559999988516
+        "physical_run": {
+          "design": "oi_cg",
+          "DESIGN_SELECT": 7,
+          "bitstream_file": "conv2d_benchmark_oi_cg.bit",
+          "bitstream_sha256": "50cf380e53f4efb8e86bea5b38c6db9eac5673b44db1d9da21e35581838ff6ca",
+          "image_file": "image2.jpg",
+          "image_sha256": "ac25488a1f3fdd0316684f960d42d93688634115b143c587af6a1812c42f9fd9",
+          "patches": 12288,
+          "com_port": "COM17",
+          "baud": 115200,
+          "host_start_iso": "2026-11-03T13:23:02.646867+00:00",
+          "host_end_iso": "2026-11-03T13:26:19.850602+00:00",
+          "total_host_time_s": 197.20290539999996,
+          "patches_per_second": 62.31145517392566,
+          "per_patch_round_trip_s": {
+            "mean": 0.015793544970702067,
+            "median": 0.0157680999996046,
+            "p95": 0.016077494999785814,
+            "max": 0.05647559999988516
+          },
+          "total_compute_cycles": 110592,
+          "mean_compute_cycles_per_patch": 9.0,
+          "min_compute_cycles_per_patch": 9,
+          "max_compute_cycles_per_patch": 9,
+          "total_skip_count": 38136,
+          "mean_skip_count_per_patch": 3.103515625,
+          "mismatch_counts": {
+            "sum_mismatches": 0,
+            "cycles_mismatches": 0,
+            "skips_mismatches": 0
+          },
+          "output_image_comparison": {
+            "differing_pixels": 0,
+            "max_abs_diff": 0,
+            "bit_identical": true
+          },
+          "uart_metrics": {
+            "timeouts": 0,
+            "retries": 0,
+            "partial_frames": 0
+          },
+          "ftdi_latency_timer_ms": null
         },
-        "total_compute_cycles": 110592,
-        "mean_compute_cycles_per_patch": 9.0,
-        "min_compute_cycles_per_patch": 9,
-        "max_compute_cycles_per_patch": 9,
-        "total_skip_count": 38136,
-        "mean_skip_count_per_patch": 3.103515625,
-        "mismatch_counts": {
-          "sum_mismatches": 0,
-          "cycles_mismatches": 0,
-          "skips_mismatches": 0
-        },
-        "output_image_comparison": {
-          "differing_pixels": 0,
-          "max_abs_diff": 0,
-          "bit_identical": true
-        },
-        "uart_metrics": {
-          "timeouts": 0,
-          "retries": 0,
-          "partial_frames": 0
-        },
-        "ftdi_latency_timer_ms": null
+        "cycles": 110592,
+        "dynamic_power_mw": 2.024,
+        "dynamic_energy_uj": 4.47676416,
+        "energy_per_patch_nj": 0.36432000000000003
       },
       "zs_oi": {
-        "design": "zs_oi",
-        "DESIGN_SELECT": 5,
-        "bitstream_file": "conv2d_benchmark_zs_oi.bit",
-        "bitstream_sha256": "356395aa73d0bcf1b317b66db5d185349d51b125b53b9f7962a9fe761a0d6737",
-        "image_file": "image2.jpg",
-        "image_sha256": "ac25488a1f3fdd0316684f960d42d93688634115b143c587af6a1812c42f9fd9",
-        "patches": 12288,
-        "com_port": "COM17",
-        "baud": 115200,
-        "host_start_iso": "2026-11-03T13:34:23.398194+00:00",
-        "host_end_iso": "2026-11-03T13:37:40.049926+00:00",
-        "total_host_time_s": 196.65123900000026,
-        "patches_per_second": 62.48625771434872,
-        "per_patch_round_trip_s": {
-          "mean": 0.015757972737630983,
-          "median": 0.015771900000117967,
-          "p95": 0.016079695000166795,
-          "max": 0.04778069999974832
+        "physical_run": {
+          "design": "zs_oi",
+          "DESIGN_SELECT": 5,
+          "bitstream_file": "conv2d_benchmark_zs_oi.bit",
+          "bitstream_sha256": "356395aa73d0bcf1b317b66db5d185349d51b125b53b9f7962a9fe761a0d6737",
+          "image_file": "image2.jpg",
+          "image_sha256": "ac25488a1f3fdd0316684f960d42d93688634115b143c587af6a1812c42f9fd9",
+          "patches": 12288,
+          "com_port": "COM17",
+          "baud": 115200,
+          "host_start_iso": "2026-11-03T13:34:23.398194+00:00",
+          "host_end_iso": "2026-11-03T13:37:40.049926+00:00",
+          "total_host_time_s": 196.65123900000026,
+          "patches_per_second": 62.48625771434872,
+          "per_patch_round_trip_s": {
+            "mean": 0.015757972737630983,
+            "median": 0.015771900000117967,
+            "p95": 0.016079695000166795,
+            "max": 0.04778069999974832
+          },
+          "total_compute_cycles": 72456,
+          "mean_compute_cycles_per_patch": 5.896484375,
+          "min_compute_cycles_per_patch": 2,
+          "max_compute_cycles_per_patch": 6,
+          "total_skip_count": 38136,
+          "mean_skip_count_per_patch": 3.103515625,
+          "mismatch_counts": {
+            "sum_mismatches": 0,
+            "cycles_mismatches": 0,
+            "skips_mismatches": 0
+          },
+          "output_image_comparison": {
+            "differing_pixels": 0,
+            "max_abs_diff": 0,
+            "bit_identical": true
+          },
+          "uart_metrics": {
+            "timeouts": 0,
+            "retries": 0,
+            "partial_frames": 0
+          },
+          "ftdi_latency_timer_ms": null
         },
-        "total_compute_cycles": 72456,
-        "mean_compute_cycles_per_patch": 5.896484375,
-        "min_compute_cycles_per_patch": 2,
-        "max_compute_cycles_per_patch": 6,
-        "total_skip_count": 38136,
-        "mean_skip_count_per_patch": 3.103515625,
-        "mismatch_counts": {
-          "sum_mismatches": 0,
-          "cycles_mismatches": 0,
-          "skips_mismatches": 0
-        },
-        "output_image_comparison": {
-          "differing_pixels": 0,
-          "max_abs_diff": 0,
-          "bit_identical": true
-        },
-        "uart_metrics": {
-          "timeouts": 0,
-          "retries": 0,
-          "partial_frames": 0
-        },
-        "ftdi_latency_timer_ms": null
+        "cycles": 72456,
+        "dynamic_power_mw": 2.495,
+        "dynamic_energy_uj": 3.6155544,
+        "energy_per_patch_nj": 0.2942345703125
       },
       "combined": {
-        "design": "combined",
-        "DESIGN_SELECT": 4,
-        "bitstream_file": "conv2d_benchmark_combined.bit",
-        "bitstream_sha256": "3df733f2839108968b3bb9a55acc364585b18f28e9f0d8f924cecf50bf34a4e9",
-        "image_file": "image2.jpg",
-        "image_sha256": "ac25488a1f3fdd0316684f960d42d93688634115b143c587af6a1812c42f9fd9",
-        "patches": 12288,
-        "com_port": "COM17",
-        "baud": 115200,
-        "host_start_iso": "2026-11-03T13:52:33.403081+00:00",
-        "host_end_iso": "2026-11-03T13:55:50.039792+00:00",
-        "total_host_time_s": 196.63660919999984,
-        "patches_per_second": 62.490906703450264,
-        "per_patch_round_trip_s": {
-          "mean": 0.015758424820961014,
-          "median": 0.015773450000324374,
-          "p95": 0.016080600000032065,
-          "max": 0.04071860000021843
+        "physical_run": {
+          "design": "combined",
+          "DESIGN_SELECT": 4,
+          "bitstream_file": "conv2d_benchmark_combined.bit",
+          "bitstream_sha256": "3df733f2839108968b3bb9a55acc364585b18f28e9f0d8f924cecf50bf34a4e9",
+          "image_file": "image2.jpg",
+          "image_sha256": "ac25488a1f3fdd0316684f960d42d93688634115b143c587af6a1812c42f9fd9",
+          "patches": 12288,
+          "com_port": "COM17",
+          "baud": 115200,
+          "host_start_iso": "2026-11-03T13:52:33.403081+00:00",
+          "host_end_iso": "2026-11-03T13:55:50.039792+00:00",
+          "total_host_time_s": 196.63660919999984,
+          "patches_per_second": 62.490906703450264,
+          "per_patch_round_trip_s": {
+            "mean": 0.015758424820961014,
+            "median": 0.015773450000324374,
+            "p95": 0.016080600000032065,
+            "max": 0.04071860000021843
+          },
+          "total_compute_cycles": 72456,
+          "mean_compute_cycles_per_patch": 5.896484375,
+          "min_compute_cycles_per_patch": 2,
+          "max_compute_cycles_per_patch": 6,
+          "total_skip_count": 38136,
+          "mean_skip_count_per_patch": 3.103515625,
+          "mismatch_counts": {
+            "sum_mismatches": 0,
+            "cycles_mismatches": 0,
+            "skips_mismatches": 0
+          },
+          "output_image_comparison": {
+            "differing_pixels": 0,
+            "max_abs_diff": 0,
+            "bit_identical": true
+          },
+          "uart_metrics": {
+            "timeouts": 0,
+            "retries": 0,
+            "partial_frames": 0
+          },
+          "ftdi_latency_timer_ms": null
         },
-        "total_compute_cycles": 72456,
-        "mean_compute_cycles_per_patch": 5.896484375,
-        "min_compute_cycles_per_patch": 2,
-        "max_compute_cycles_per_patch": 6,
-        "total_skip_count": 38136,
-        "mean_skip_count_per_patch": 3.103515625,
-        "mismatch_counts": {
-          "sum_mismatches": 0,
-          "cycles_mismatches": 0,
-          "skips_mismatches": 0
-        },
-        "output_image_comparison": {
-          "differing_pixels": 0,
-          "max_abs_diff": 0,
-          "bit_identical": true
-        },
-        "uart_metrics": {
-          "timeouts": 0,
-          "retries": 0,
-          "partial_frames": 0
-        },
-        "ftdi_latency_timer_ms": null
+        "cycles": 72456,
+        "dynamic_power_mw": 2.503,
+        "dynamic_energy_uj": 3.62714736,
+        "energy_per_patch_nj": 0.2951780078125
       },
       "static_sobel": {
-        "design": "static_sobel",
-        "DESIGN_SELECT": 8,
-        "bitstream_file": "conv2d_benchmark_static_sobel.bit",
-        "bitstream_sha256": "cc3a1733b687f9152d449b521314ea6911a44be8fd03e9bbc6c6c6dce8ee76ef",
-        "image_file": "image2.jpg",
-        "image_sha256": "ac25488a1f3fdd0316684f960d42d93688634115b143c587af6a1812c42f9fd9",
-        "patches": 12288,
-        "com_port": "COM17",
-        "baud": 115200,
-        "host_start_iso": "2026-11-03T14:04:01.906811+00:00",
-        "host_end_iso": "2026-11-03T14:07:19.132666+00:00",
-        "total_host_time_s": 197.2256277000006,
-        "patches_per_second": 62.30427629157427,
-        "per_patch_round_trip_s": {
-          "mean": 0.01565227159830762,
-          "median": 0.015698749999955908,
-          "p95": 0.016079500000159896,
-          "max": 0.054275999999845226
+        "physical_run": {
+          "design": "static_sobel",
+          "DESIGN_SELECT": 8,
+          "bitstream_file": "conv2d_benchmark_static_sobel.bit",
+          "bitstream_sha256": "cc3a1733b687f9152d449b521314ea6911a44be8fd03e9bbc6c6c6dce8ee76ef",
+          "image_file": "image2.jpg",
+          "image_sha256": "ac25488a1f3fdd0316684f960d42d93688634115b143c587af6a1812c42f9fd9",
+          "patches": 12288,
+          "com_port": "COM17",
+          "baud": 115200,
+          "host_start_iso": "2026-11-03T14:04:01.906811+00:00",
+          "host_end_iso": "2026-11-03T14:07:19.132666+00:00",
+          "total_host_time_s": 197.2256277000006,
+          "patches_per_second": 62.30427629157427,
+          "per_patch_round_trip_s": {
+            "mean": 0.01565227159830762,
+            "median": 0.015698749999955908,
+            "p95": 0.016079500000159896,
+            "max": 0.054275999999845226
+          },
+          "total_compute_cycles": 73728,
+          "mean_compute_cycles_per_patch": 6.0,
+          "min_compute_cycles_per_patch": 6,
+          "max_compute_cycles_per_patch": 6,
+          "total_skip_count": 0,
+          "mean_skip_count_per_patch": 0.0,
+          "mismatch_counts": {
+            "sum_mismatches": 0,
+            "cycles_mismatches": 0,
+            "skips_mismatches": 0
+          },
+          "output_image_comparison": {
+            "differing_pixels": 0,
+            "max_abs_diff": 0,
+            "bit_identical": true
+          },
+          "uart_metrics": {
+            "timeouts": 0,
+            "retries": 0,
+            "partial_frames": 0
+          },
+          "ftdi_latency_timer_ms": null
         },
-        "total_compute_cycles": 73728,
-        "mean_compute_cycles_per_patch": 6.0,
-        "min_compute_cycles_per_patch": 6,
-        "max_compute_cycles_per_patch": 6,
-        "total_skip_count": 0,
-        "mean_skip_count_per_patch": 0.0,
-        "mismatch_counts": {
-          "sum_mismatches": 0,
-          "cycles_mismatches": 0,
-          "skips_mismatches": 0
-        },
-        "output_image_comparison": {
-          "differing_pixels": 0,
-          "max_abs_diff": 0,
-          "bit_identical": true
-        },
-        "uart_metrics": {
-          "timeouts": 0,
-          "retries": 0,
-          "partial_frames": 0
-        },
-        "ftdi_latency_timer_ms": null
+        "cycles": 73728,
+        "dynamic_power_mw": 1.834,
+        "dynamic_energy_uj": 2.70434304,
+        "energy_per_patch_nj": 0.22007999999999997
       }
     },
     "image3": {
       "baseline": {
-        "design": "baseline",
-        "DESIGN_SELECT": 0,
-        "bitstream_file": "conv2d_benchmark_baseline.bit",
-        "bitstream_sha256": "9b917cb1913e57aef98f43f12299ee83da1ff19ce19deb780b2ada2c6ceaa390",
-        "image_file": "image3.jpg",
-        "image_sha256": "0c16afd445da43ab0ba7b8d57ecc9819f74257316a2daec650fe29dad97e00b6",
-        "patches": 9216,
-        "com_port": "COM17",
-        "baud": 115200,
-        "host_start_iso": "2026-11-03T12:23:13.335388+00:00",
-        "host_end_iso": "2026-11-03T12:25:41.584598+00:00",
-        "total_host_time_s": 148.2487629999996,
-        "patches_per_second": 62.16578009490727,
-        "per_patch_round_trip_s": {
-          "mean": 0.01578276981338236,
-          "median": 0.015762099999847123,
-          "p95": 0.01609517499946378,
-          "max": 0.08674990000145044
+        "physical_run": {
+          "design": "baseline",
+          "DESIGN_SELECT": 0,
+          "bitstream_file": "conv2d_benchmark_baseline.bit",
+          "bitstream_sha256": "9b917cb1913e57aef98f43f12299ee83da1ff19ce19deb780b2ada2c6ceaa390",
+          "image_file": "image3.jpg",
+          "image_sha256": "0c16afd445da43ab0ba7b8d57ecc9819f74257316a2daec650fe29dad97e00b6",
+          "patches": 9216,
+          "com_port": "COM17",
+          "baud": 115200,
+          "host_start_iso": "2026-11-03T12:23:13.335388+00:00",
+          "host_end_iso": "2026-11-03T12:25:41.584598+00:00",
+          "total_host_time_s": 148.2487629999996,
+          "patches_per_second": 62.16578009490727,
+          "per_patch_round_trip_s": {
+            "mean": 0.01578276981338236,
+            "median": 0.015762099999847123,
+            "p95": 0.01609517499946378,
+            "max": 0.08674990000145044
+          },
+          "total_compute_cycles": 82944,
+          "mean_compute_cycles_per_patch": 9.0,
+          "min_compute_cycles_per_patch": 9,
+          "max_compute_cycles_per_patch": 9,
+          "total_skip_count": 0,
+          "mean_skip_count_per_patch": 0.0,
+          "mismatch_counts": {
+            "sum_mismatches": 0,
+            "cycles_mismatches": 0,
+            "skips_mismatches": 0
+          },
+          "output_image_comparison": {
+            "differing_pixels": 0,
+            "max_abs_diff": 0,
+            "bit_identical": true
+          },
+          "uart_metrics": {
+            "timeouts": 0,
+            "retries": 0,
+            "partial_frames": 0
+          },
+          "ftdi_latency_timer_ms": null
         },
-        "total_compute_cycles": 82944,
-        "mean_compute_cycles_per_patch": 9.0,
-        "min_compute_cycles_per_patch": 9,
-        "max_compute_cycles_per_patch": 9,
-        "total_skip_count": 0,
-        "mean_skip_count_per_patch": 0.0,
-        "mismatch_counts": {
-          "sum_mismatches": 0,
-          "cycles_mismatches": 0,
-          "skips_mismatches": 0
-        },
-        "output_image_comparison": {
-          "differing_pixels": 0,
-          "max_abs_diff": 0,
-          "bit_identical": true
-        },
-        "uart_metrics": {
-          "timeouts": 0,
-          "retries": 0,
-          "partial_frames": 0
-        },
-        "ftdi_latency_timer_ms": null
+        "cycles": 82944,
+        "dynamic_power_mw": 2.061,
+        "dynamic_energy_uj": 3.4189516799999997,
+        "energy_per_patch_nj": 0.37098
       },
       "zs": {
-        "design": "zs",
-        "DESIGN_SELECT": 3,
-        "bitstream_file": "conv2d_benchmark_zs.bit",
-        "bitstream_sha256": "0a7279c4147f0d6dda9f22c22510d4300290112f9fd83d7c3aebea0f496d984c",
-        "image_file": "image3.jpg",
-        "image_sha256": "0c16afd445da43ab0ba7b8d57ecc9819f74257316a2daec650fe29dad97e00b6",
-        "patches": 9216,
-        "com_port": "COM17",
-        "baud": 115200,
-        "host_start_iso": "2026-11-03T12:39:19.532420+00:00",
-        "host_end_iso": "2026-11-03T12:41:47.006780+00:00",
-        "total_host_time_s": 147.4739942000001,
-        "patches_per_second": 62.49237399443809,
-        "per_patch_round_trip_s": {
-          "mean": 0.015747018066405636,
-          "median": 0.01576809999994566,
-          "p95": 0.016080400000078043,
-          "max": 0.029156200000102217
+        "physical_run": {
+          "design": "zs",
+          "DESIGN_SELECT": 3,
+          "bitstream_file": "conv2d_benchmark_zs.bit",
+          "bitstream_sha256": "0a7279c4147f0d6dda9f22c22510d4300290112f9fd83d7c3aebea0f496d984c",
+          "image_file": "image3.jpg",
+          "image_sha256": "0c16afd445da43ab0ba7b8d57ecc9819f74257316a2daec650fe29dad97e00b6",
+          "patches": 9216,
+          "com_port": "COM17",
+          "baud": 115200,
+          "host_start_iso": "2026-11-03T12:39:19.532420+00:00",
+          "host_end_iso": "2026-11-03T12:41:47.006780+00:00",
+          "total_host_time_s": 147.4739942000001,
+          "patches_per_second": 62.49237399443809,
+          "per_patch_round_trip_s": {
+            "mean": 0.015747018066405636,
+            "median": 0.01576809999994566,
+            "p95": 0.016080400000078043,
+            "max": 0.029156200000102217
+          },
+          "total_compute_cycles": 54242,
+          "mean_compute_cycles_per_patch": 5.885633680555555,
+          "min_compute_cycles_per_patch": 2,
+          "max_compute_cycles_per_patch": 6,
+          "total_skip_count": 28702,
+          "mean_skip_count_per_patch": 3.1143663194444446,
+          "mismatch_counts": {
+            "sum_mismatches": 0,
+            "cycles_mismatches": 0,
+            "skips_mismatches": 0
+          },
+          "output_image_comparison": {
+            "differing_pixels": 0,
+            "max_abs_diff": 0,
+            "bit_identical": true
+          },
+          "uart_metrics": {
+            "timeouts": 0,
+            "retries": 0,
+            "partial_frames": 0
+          },
+          "ftdi_latency_timer_ms": null
         },
-        "total_compute_cycles": 54242,
-        "mean_compute_cycles_per_patch": 5.885633680555555,
-        "min_compute_cycles_per_patch": 2,
-        "max_compute_cycles_per_patch": 6,
-        "total_skip_count": 28702,
-        "mean_skip_count_per_patch": 3.1143663194444446,
-        "mismatch_counts": {
-          "sum_mismatches": 0,
-          "cycles_mismatches": 0,
-          "skips_mismatches": 0
-        },
-        "output_image_comparison": {
-          "differing_pixels": 0,
-          "max_abs_diff": 0,
-          "bit_identical": true
-        },
-        "uart_metrics": {
-          "timeouts": 0,
-          "retries": 0,
-          "partial_frames": 0
-        },
-        "ftdi_latency_timer_ms": null
+        "cycles": 54242,
+        "dynamic_power_mw": 2.475,
+        "dynamic_energy_uj": 2.6849790000000007,
+        "energy_per_patch_nj": 0.2913388671875001
       },
       "oi": {
-        "design": "oi",
-        "DESIGN_SELECT": 1,
-        "bitstream_file": "conv2d_benchmark_oi.bit",
-        "bitstream_sha256": "55936817a35d361ca34772d34c114687be02aa1bc18934f174e9da7cee97a200",
-        "image_file": "image3.jpg",
-        "image_sha256": "0c16afd445da43ab0ba7b8d57ecc9819f74257316a2daec650fe29dad97e00b6",
-        "patches": 9216,
-        "com_port": "COM17",
-        "baud": 115200,
-        "host_start_iso": "2026-11-03T12:51:19.023854+00:00",
-        "host_end_iso": "2026-11-03T12:53:46.474596+00:00",
-        "total_host_time_s": 147.45025520000013,
-        "patches_per_second": 62.502435058518586,
-        "per_patch_round_trip_s": {
-          "mean": 0.015742196354165024,
-          "median": 0.015766600000006292,
-          "p95": 0.01605419999998503,
-          "max": 0.02208810000001904
+        "physical_run": {
+          "design": "oi",
+          "DESIGN_SELECT": 1,
+          "bitstream_file": "conv2d_benchmark_oi.bit",
+          "bitstream_sha256": "55936817a35d361ca34772d34c114687be02aa1bc18934f174e9da7cee97a200",
+          "image_file": "image3.jpg",
+          "image_sha256": "0c16afd445da43ab0ba7b8d57ecc9819f74257316a2daec650fe29dad97e00b6",
+          "patches": 9216,
+          "com_port": "COM17",
+          "baud": 115200,
+          "host_start_iso": "2026-11-03T12:51:19.023854+00:00",
+          "host_end_iso": "2026-11-03T12:53:46.474596+00:00",
+          "total_host_time_s": 147.45025520000013,
+          "patches_per_second": 62.502435058518586,
+          "per_patch_round_trip_s": {
+            "mean": 0.015742196354165024,
+            "median": 0.015766600000006292,
+            "p95": 0.01605419999998503,
+            "max": 0.02208810000001904
+          },
+          "total_compute_cycles": 82944,
+          "mean_compute_cycles_per_patch": 9.0,
+          "min_compute_cycles_per_patch": 9,
+          "max_compute_cycles_per_patch": 9,
+          "total_skip_count": 28702,
+          "mean_skip_count_per_patch": 3.1143663194444446,
+          "mismatch_counts": {
+            "sum_mismatches": 0,
+            "cycles_mismatches": 0,
+            "skips_mismatches": 0
+          },
+          "output_image_comparison": {
+            "differing_pixels": 0,
+            "max_abs_diff": 0,
+            "bit_identical": true
+          },
+          "uart_metrics": {
+            "timeouts": 0,
+            "retries": 0,
+            "partial_frames": 0
+          },
+          "ftdi_latency_timer_ms": null
         },
-        "total_compute_cycles": 82944,
-        "mean_compute_cycles_per_patch": 9.0,
-        "min_compute_cycles_per_patch": 9,
-        "max_compute_cycles_per_patch": 9,
-        "total_skip_count": 28702,
-        "mean_skip_count_per_patch": 3.1143663194444446,
-        "mismatch_counts": {
-          "sum_mismatches": 0,
-          "cycles_mismatches": 0,
-          "skips_mismatches": 0
-        },
-        "output_image_comparison": {
-          "differing_pixels": 0,
-          "max_abs_diff": 0,
-          "bit_identical": true
-        },
-        "uart_metrics": {
-          "timeouts": 0,
-          "retries": 0,
-          "partial_frames": 0
-        },
-        "ftdi_latency_timer_ms": null
+        "cycles": 82944,
+        "dynamic_power_mw": 2.38,
+        "dynamic_energy_uj": 3.9481344,
+        "energy_per_patch_nj": 0.4284
       },
       "cg": {
-        "design": "cg",
-        "DESIGN_SELECT": 2,
-        "bitstream_file": "conv2d_benchmark_cg.bit",
-        "bitstream_sha256": "230ec452e640b2e38a0a4002536895821c1d897f122555f970ce58c808e76bdd",
-        "image_file": "image3.jpg",
-        "image_sha256": "0c16afd445da43ab0ba7b8d57ecc9819f74257316a2daec650fe29dad97e00b6",
-        "patches": 9216,
-        "com_port": "COM17",
-        "baud": 115200,
-        "host_start_iso": "2026-11-03T13:04:01.958117+00:00",
-        "host_end_iso": "2026-11-03T13:06:29.434693+00:00",
-        "total_host_time_s": 147.47577509999974,
-        "patches_per_second": 62.49161934392855,
-        "per_patch_round_trip_s": {
-          "mean": 0.015747014898005673,
-          "median": 0.015767700000196783,
-          "p95": 0.01605455000026268,
-          "max": 0.029264599999805796
+        "physical_run": {
+          "design": "cg",
+          "DESIGN_SELECT": 2,
+          "bitstream_file": "conv2d_benchmark_cg.bit",
+          "bitstream_sha256": "230ec452e640b2e38a0a4002536895821c1d897f122555f970ce58c808e76bdd",
+          "image_file": "image3.jpg",
+          "image_sha256": "0c16afd445da43ab0ba7b8d57ecc9819f74257316a2daec650fe29dad97e00b6",
+          "patches": 9216,
+          "com_port": "COM17",
+          "baud": 115200,
+          "host_start_iso": "2026-11-03T13:04:01.958117+00:00",
+          "host_end_iso": "2026-11-03T13:06:29.434693+00:00",
+          "total_host_time_s": 147.47577509999974,
+          "patches_per_second": 62.49161934392855,
+          "per_patch_round_trip_s": {
+            "mean": 0.015747014898005673,
+            "median": 0.015767700000196783,
+            "p95": 0.01605455000026268,
+            "max": 0.029264599999805796
+          },
+          "total_compute_cycles": 82944,
+          "mean_compute_cycles_per_patch": 9.0,
+          "min_compute_cycles_per_patch": 9,
+          "max_compute_cycles_per_patch": 9,
+          "total_skip_count": 28702,
+          "mean_skip_count_per_patch": 3.1143663194444446,
+          "mismatch_counts": {
+            "sum_mismatches": 0,
+            "cycles_mismatches": 0,
+            "skips_mismatches": 0
+          },
+          "output_image_comparison": {
+            "differing_pixels": 0,
+            "max_abs_diff": 0,
+            "bit_identical": true
+          },
+          "uart_metrics": {
+            "timeouts": 0,
+            "retries": 0,
+            "partial_frames": 0
+          },
+          "ftdi_latency_timer_ms": null
         },
-        "total_compute_cycles": 82944,
-        "mean_compute_cycles_per_patch": 9.0,
-        "min_compute_cycles_per_patch": 9,
-        "max_compute_cycles_per_patch": 9,
-        "total_skip_count": 28702,
-        "mean_skip_count_per_patch": 3.1143663194444446,
-        "mismatch_counts": {
-          "sum_mismatches": 0,
-          "cycles_mismatches": 0,
-          "skips_mismatches": 0
-        },
-        "output_image_comparison": {
-          "differing_pixels": 0,
-          "max_abs_diff": 0,
-          "bit_identical": true
-        },
-        "uart_metrics": {
-          "timeouts": 0,
-          "retries": 0,
-          "partial_frames": 0
-        },
-        "ftdi_latency_timer_ms": null
+        "cycles": 82944,
+        "dynamic_power_mw": 2.024,
+        "dynamic_energy_uj": 3.35757312,
+        "energy_per_patch_nj": 0.36432
       },
       "zs_cg": {
-        "design": "zs_cg",
-        "DESIGN_SELECT": 6,
-        "bitstream_file": "conv2d_benchmark_zs_cg.bit",
-        "bitstream_sha256": "dfabdc51f3f195a5a64fafbfa4702db7cda0680e164dda1666f0e6e11d4d468f",
-        "image_file": "image3.jpg",
-        "image_sha256": "0c16afd445da43ab0ba7b8d57ecc9819f74257316a2daec650fe29dad97e00b6",
-        "patches": 9216,
-        "com_port": "COM17",
-        "baud": 115200,
-        "host_start_iso": "2026-11-03T13:37:47.574041+00:00",
-        "host_end_iso": "2026-11-03T13:40:15.029996+00:00",
-        "total_host_time_s": 147.455876,
-        "patches_per_second": 62.50005255809542,
-        "per_patch_round_trip_s": {
-          "mean": 0.015755532020399404,
-          "median": 0.01577110000016546,
-          "p95": 0.016090199999780452,
-          "max": 0.02284589999999298
+        "physical_run": {
+          "design": "zs_cg",
+          "DESIGN_SELECT": 6,
+          "bitstream_file": "conv2d_benchmark_zs_cg.bit",
+          "bitstream_sha256": "dfabdc51f3f195a5a64fafbfa4702db7cda0680e164dda1666f0e6e11d4d468f",
+          "image_file": "image3.jpg",
+          "image_sha256": "0c16afd445da43ab0ba7b8d57ecc9819f74257316a2daec650fe29dad97e00b6",
+          "patches": 9216,
+          "com_port": "COM17",
+          "baud": 115200,
+          "host_start_iso": "2026-11-03T13:37:47.574041+00:00",
+          "host_end_iso": "2026-11-03T13:40:15.029996+00:00",
+          "total_host_time_s": 147.455876,
+          "patches_per_second": 62.50005255809542,
+          "per_patch_round_trip_s": {
+            "mean": 0.015755532020399404,
+            "median": 0.01577110000016546,
+            "p95": 0.016090199999780452,
+            "max": 0.02284589999999298
+          },
+          "total_compute_cycles": 54242,
+          "mean_compute_cycles_per_patch": 5.885633680555555,
+          "min_compute_cycles_per_patch": 2,
+          "max_compute_cycles_per_patch": 6,
+          "total_skip_count": 28702,
+          "mean_skip_count_per_patch": 3.1143663194444446,
+          "mismatch_counts": {
+            "sum_mismatches": 0,
+            "cycles_mismatches": 0,
+            "skips_mismatches": 0
+          },
+          "output_image_comparison": {
+            "differing_pixels": 0,
+            "max_abs_diff": 0,
+            "bit_identical": true
+          },
+          "uart_metrics": {
+            "timeouts": 0,
+            "retries": 0,
+            "partial_frames": 0
+          },
+          "ftdi_latency_timer_ms": null
         },
-        "total_compute_cycles": 54242,
-        "mean_compute_cycles_per_patch": 5.885633680555555,
-        "min_compute_cycles_per_patch": 2,
-        "max_compute_cycles_per_patch": 6,
-        "total_skip_count": 28702,
-        "mean_skip_count_per_patch": 3.1143663194444446,
-        "mismatch_counts": {
-          "sum_mismatches": 0,
-          "cycles_mismatches": 0,
-          "skips_mismatches": 0
-        },
-        "output_image_comparison": {
-          "differing_pixels": 0,
-          "max_abs_diff": 0,
-          "bit_identical": true
-        },
-        "uart_metrics": {
-          "timeouts": 0,
-          "retries": 0,
-          "partial_frames": 0
-        },
-        "ftdi_latency_timer_ms": null
+        "cycles": 54242,
+        "dynamic_power_mw": 2.503,
+        "dynamic_energy_uj": 2.71535452,
+        "energy_per_patch_nj": 0.29463482204861113
       },
       "oi_cg": {
-        "design": "oi_cg",
-        "DESIGN_SELECT": 7,
-        "bitstream_file": "conv2d_benchmark_oi_cg.bit",
-        "bitstream_sha256": "50cf380e53f4efb8e86bea5b38c6db9eac5673b44db1d9da21e35581838ff6ca",
-        "image_file": "image3.jpg",
-        "image_sha256": "0c16afd445da43ab0ba7b8d57ecc9819f74257316a2daec650fe29dad97e00b6",
-        "patches": 9216,
-        "com_port": "COM17",
-        "baud": 115200,
-        "host_start_iso": "2026-11-03T13:26:23.117260+00:00",
-        "host_end_iso": "2026-11-03T13:28:50.590502+00:00",
-        "total_host_time_s": 147.4722896000003,
-        "patches_per_second": 62.49309633014595,
-        "per_patch_round_trip_s": {
-          "mean": 0.0157456532226571,
-          "median": 0.015767200000027515,
-          "p95": 0.016092825000100675,
-          "max": 0.02857399999993504
+        "physical_run": {
+          "design": "oi_cg",
+          "DESIGN_SELECT": 7,
+          "bitstream_file": "conv2d_benchmark_oi_cg.bit",
+          "bitstream_sha256": "50cf380e53f4efb8e86bea5b38c6db9eac5673b44db1d9da21e35581838ff6ca",
+          "image_file": "image3.jpg",
+          "image_sha256": "0c16afd445da43ab0ba7b8d57ecc9819f74257316a2daec650fe29dad97e00b6",
+          "patches": 9216,
+          "com_port": "COM17",
+          "baud": 115200,
+          "host_start_iso": "2026-11-03T13:26:23.117260+00:00",
+          "host_end_iso": "2026-11-03T13:28:50.590502+00:00",
+          "total_host_time_s": 147.4722896000003,
+          "patches_per_second": 62.49309633014595,
+          "per_patch_round_trip_s": {
+            "mean": 0.0157456532226571,
+            "median": 0.015767200000027515,
+            "p95": 0.016092825000100675,
+            "max": 0.02857399999993504
+          },
+          "total_compute_cycles": 82944,
+          "mean_compute_cycles_per_patch": 9.0,
+          "min_compute_cycles_per_patch": 9,
+          "max_compute_cycles_per_patch": 9,
+          "total_skip_count": 28702,
+          "mean_skip_count_per_patch": 3.1143663194444446,
+          "mismatch_counts": {
+            "sum_mismatches": 0,
+            "cycles_mismatches": 0,
+            "skips_mismatches": 0
+          },
+          "output_image_comparison": {
+            "differing_pixels": 0,
+            "max_abs_diff": 0,
+            "bit_identical": true
+          },
+          "uart_metrics": {
+            "timeouts": 0,
+            "retries": 0,
+            "partial_frames": 0
+          },
+          "ftdi_latency_timer_ms": null
         },
-        "total_compute_cycles": 82944,
-        "mean_compute_cycles_per_patch": 9.0,
-        "min_compute_cycles_per_patch": 9,
-        "max_compute_cycles_per_patch": 9,
-        "total_skip_count": 28702,
-        "mean_skip_count_per_patch": 3.1143663194444446,
-        "mismatch_counts": {
-          "sum_mismatches": 0,
-          "cycles_mismatches": 0,
-          "skips_mismatches": 0
-        },
-        "output_image_comparison": {
-          "differing_pixels": 0,
-          "max_abs_diff": 0,
-          "bit_identical": true
-        },
-        "uart_metrics": {
-          "timeouts": 0,
-          "retries": 0,
-          "partial_frames": 0
-        },
-        "ftdi_latency_timer_ms": null
+        "cycles": 82944,
+        "dynamic_power_mw": 2.024,
+        "dynamic_energy_uj": 3.35757312,
+        "energy_per_patch_nj": 0.36432
       },
       "zs_oi": {
-        "design": "zs_oi",
-        "DESIGN_SELECT": 5,
-        "bitstream_file": "conv2d_benchmark_zs_oi.bit",
-        "bitstream_sha256": "356395aa73d0bcf1b317b66db5d185349d51b125b53b9f7962a9fe761a0d6737",
-        "image_file": "image3.jpg",
-        "image_sha256": "0c16afd445da43ab0ba7b8d57ecc9819f74257316a2daec650fe29dad97e00b6",
-        "patches": 9216,
-        "com_port": "COM17",
-        "baud": 115200,
-        "host_start_iso": "2026-11-03T13:44:46.774635+00:00",
-        "host_end_iso": "2026-11-03T13:47:14.289846+00:00",
-        "total_host_time_s": 147.51549559999967,
-        "patches_per_second": 62.47479264815635,
-        "per_patch_round_trip_s": {
-          "mean": 0.015755292643231736,
-          "median": 0.01576629999999568,
-          "p95": 0.016071125000053144,
-          "max": 0.05888349999986531
+        "physical_run": {
+          "design": "zs_oi",
+          "DESIGN_SELECT": 5,
+          "bitstream_file": "conv2d_benchmark_zs_oi.bit",
+          "bitstream_sha256": "356395aa73d0bcf1b317b66db5d185349d51b125b53b9f7962a9fe761a0d6737",
+          "image_file": "image3.jpg",
+          "image_sha256": "0c16afd445da43ab0ba7b8d57ecc9819f74257316a2daec650fe29dad97e00b6",
+          "patches": 9216,
+          "com_port": "COM17",
+          "baud": 115200,
+          "host_start_iso": "2026-11-03T13:44:46.774635+00:00",
+          "host_end_iso": "2026-11-03T13:47:14.289846+00:00",
+          "total_host_time_s": 147.51549559999967,
+          "patches_per_second": 62.47479264815635,
+          "per_patch_round_trip_s": {
+            "mean": 0.015755292643231736,
+            "median": 0.01576629999999568,
+            "p95": 0.016071125000053144,
+            "max": 0.05888349999986531
+          },
+          "total_compute_cycles": 54242,
+          "mean_compute_cycles_per_patch": 5.885633680555555,
+          "min_compute_cycles_per_patch": 2,
+          "max_compute_cycles_per_patch": 6,
+          "total_skip_count": 28702,
+          "mean_skip_count_per_patch": 3.1143663194444446,
+          "mismatch_counts": {
+            "sum_mismatches": 0,
+            "cycles_mismatches": 0,
+            "skips_mismatches": 0
+          },
+          "output_image_comparison": {
+            "differing_pixels": 0,
+            "max_abs_diff": 0,
+            "bit_identical": true
+          },
+          "uart_metrics": {
+            "timeouts": 0,
+            "retries": 0,
+            "partial_frames": 0
+          },
+          "ftdi_latency_timer_ms": null
         },
-        "total_compute_cycles": 54242,
-        "mean_compute_cycles_per_patch": 5.885633680555555,
-        "min_compute_cycles_per_patch": 2,
-        "max_compute_cycles_per_patch": 6,
-        "total_skip_count": 28702,
-        "mean_skip_count_per_patch": 3.1143663194444446,
-        "mismatch_counts": {
-          "sum_mismatches": 0,
-          "cycles_mismatches": 0,
-          "skips_mismatches": 0
-        },
-        "output_image_comparison": {
-          "differing_pixels": 0,
-          "max_abs_diff": 0,
-          "bit_identical": true
-        },
-        "uart_metrics": {
-          "timeouts": 0,
-          "retries": 0,
-          "partial_frames": 0
-        },
-        "ftdi_latency_timer_ms": null
+        "cycles": 54242,
+        "dynamic_power_mw": 2.495,
+        "dynamic_energy_uj": 2.7066758,
+        "energy_per_patch_nj": 0.29369312065972225
       },
       "combined": {
-        "design": "combined",
-        "DESIGN_SELECT": 4,
-        "bitstream_file": "conv2d_benchmark_combined.bit",
-        "bitstream_sha256": "3df733f2839108968b3bb9a55acc364585b18f28e9f0d8f924cecf50bf34a4e9",
-        "image_file": "image3.jpg",
-        "image_sha256": "0c16afd445da43ab0ba7b8d57ecc9819f74257316a2daec650fe29dad97e00b6",
-        "patches": 9216,
-        "com_port": "COM17",
-        "baud": 115200,
-        "host_start_iso": "2026-11-03T13:55:57.356895+00:00",
-        "host_end_iso": "2026-11-03T13:58:25.273365+00:00",
-        "total_host_time_s": 147.9165320000002,
-        "patches_per_second": 62.30540883692425,
-        "per_patch_round_trip_s": {
-          "mean": 0.015703354361985628,
-          "median": 0.015735899999526737,
-          "p95": 0.01607572500029164,
-          "max": 0.2008616000002803
+        "physical_run": {
+          "design": "combined",
+          "DESIGN_SELECT": 4,
+          "bitstream_file": "conv2d_benchmark_combined.bit",
+          "bitstream_sha256": "3df733f2839108968b3bb9a55acc364585b18f28e9f0d8f924cecf50bf34a4e9",
+          "image_file": "image3.jpg",
+          "image_sha256": "0c16afd445da43ab0ba7b8d57ecc9819f74257316a2daec650fe29dad97e00b6",
+          "patches": 9216,
+          "com_port": "COM17",
+          "baud": 115200,
+          "host_start_iso": "2026-11-03T13:55:57.356895+00:00",
+          "host_end_iso": "2026-11-03T13:58:25.273365+00:00",
+          "total_host_time_s": 147.9165320000002,
+          "patches_per_second": 62.30540883692425,
+          "per_patch_round_trip_s": {
+            "mean": 0.015703354361985628,
+            "median": 0.015735899999526737,
+            "p95": 0.01607572500029164,
+            "max": 0.2008616000002803
+          },
+          "total_compute_cycles": 54242,
+          "mean_compute_cycles_per_patch": 5.885633680555555,
+          "min_compute_cycles_per_patch": 2,
+          "max_compute_cycles_per_patch": 6,
+          "total_skip_count": 28702,
+          "mean_skip_count_per_patch": 3.1143663194444446,
+          "mismatch_counts": {
+            "sum_mismatches": 0,
+            "cycles_mismatches": 0,
+            "skips_mismatches": 0
+          },
+          "output_image_comparison": {
+            "differing_pixels": 0,
+            "max_abs_diff": 0,
+            "bit_identical": true
+          },
+          "uart_metrics": {
+            "timeouts": 0,
+            "retries": 0,
+            "partial_frames": 0
+          },
+          "ftdi_latency_timer_ms": null
         },
-        "total_compute_cycles": 54242,
-        "mean_compute_cycles_per_patch": 5.885633680555555,
-        "min_compute_cycles_per_patch": 2,
-        "max_compute_cycles_per_patch": 6,
-        "total_skip_count": 28702,
-        "mean_skip_count_per_patch": 3.1143663194444446,
-        "mismatch_counts": {
-          "sum_mismatches": 0,
-          "cycles_mismatches": 0,
-          "skips_mismatches": 0
-        },
-        "output_image_comparison": {
-          "differing_pixels": 0,
-          "max_abs_diff": 0,
-          "bit_identical": true
-        },
-        "uart_metrics": {
-          "timeouts": 0,
-          "retries": 0,
-          "partial_frames": 0
-        },
-        "ftdi_latency_timer_ms": null
+        "cycles": 54242,
+        "dynamic_power_mw": 2.503,
+        "dynamic_energy_uj": 2.71535452,
+        "energy_per_patch_nj": 0.29463482204861113
       },
       "static_sobel": {
-        "design": "static_sobel",
-        "DESIGN_SELECT": 8,
-        "bitstream_file": "conv2d_benchmark_static_sobel.bit",
-        "bitstream_sha256": "cc3a1733b687f9152d449b521314ea6911a44be8fd03e9bbc6c6c6dce8ee76ef",
-        "image_file": "image3.jpg",
-        "image_sha256": "0c16afd445da43ab0ba7b8d57ecc9819f74257316a2daec650fe29dad97e00b6",
-        "patches": 9216,
-        "com_port": "COM17",
-        "baud": 115200,
-        "host_start_iso": "2026-11-03T14:07:23.482560+00:00",
-        "host_end_iso": "2026-11-03T14:09:51.411857+00:00",
-        "total_host_time_s": 147.92958249999992,
-        "patches_per_second": 62.299912189639315,
-        "per_patch_round_trip_s": {
-          "mean": 0.015640244021267513,
-          "median": 0.01568875000020853,
-          "p95": 0.016078424999932395,
-          "max": 0.0220156000004863
+        "physical_run": {
+          "design": "static_sobel",
+          "DESIGN_SELECT": 8,
+          "bitstream_file": "conv2d_benchmark_static_sobel.bit",
+          "bitstream_sha256": "cc3a1733b687f9152d449b521314ea6911a44be8fd03e9bbc6c6c6dce8ee76ef",
+          "image_file": "image3.jpg",
+          "image_sha256": "0c16afd445da43ab0ba7b8d57ecc9819f74257316a2daec650fe29dad97e00b6",
+          "patches": 9216,
+          "com_port": "COM17",
+          "baud": 115200,
+          "host_start_iso": "2026-11-03T14:07:23.482560+00:00",
+          "host_end_iso": "2026-11-03T14:09:51.411857+00:00",
+          "total_host_time_s": 147.92958249999992,
+          "patches_per_second": 62.299912189639315,
+          "per_patch_round_trip_s": {
+            "mean": 0.015640244021267513,
+            "median": 0.01568875000020853,
+            "p95": 0.016078424999932395,
+            "max": 0.0220156000004863
+          },
+          "total_compute_cycles": 55296,
+          "mean_compute_cycles_per_patch": 6.0,
+          "min_compute_cycles_per_patch": 6,
+          "max_compute_cycles_per_patch": 6,
+          "total_skip_count": 0,
+          "mean_skip_count_per_patch": 0.0,
+          "mismatch_counts": {
+            "sum_mismatches": 0,
+            "cycles_mismatches": 0,
+            "skips_mismatches": 0
+          },
+          "output_image_comparison": {
+            "differing_pixels": 0,
+            "max_abs_diff": 0,
+            "bit_identical": true
+          },
+          "uart_metrics": {
+            "timeouts": 0,
+            "retries": 0,
+            "partial_frames": 0
+          },
+          "ftdi_latency_timer_ms": null
         },
-        "total_compute_cycles": 55296,
-        "mean_compute_cycles_per_patch": 6.0,
-        "min_compute_cycles_per_patch": 6,
-        "max_compute_cycles_per_patch": 6,
-        "total_skip_count": 0,
-        "mean_skip_count_per_patch": 0.0,
-        "mismatch_counts": {
-          "sum_mismatches": 0,
-          "cycles_mismatches": 0,
-          "skips_mismatches": 0
-        },
-        "output_image_comparison": {
-          "differing_pixels": 0,
-          "max_abs_diff": 0,
-          "bit_identical": true
-        },
-        "uart_metrics": {
-          "timeouts": 0,
-          "retries": 0,
-          "partial_frames": 0
-        },
-        "ftdi_latency_timer_ms": null
+        "cycles": 55296,
+        "dynamic_power_mw": 1.834,
+        "dynamic_energy_uj": 2.02825728,
+        "energy_per_patch_nj": 0.22008
       }
     }
   },
@@ -1365,6 +1563,12 @@
       "mean_skips_per_patch": 0.0,
       "total_host_time_s": 533.5519668000015,
       "avg_round_trip_ms": 15.816925911457242,
+      "dynamic_power_mw": 2.061,
+      "static_power_mw": 16.383,
+      "total_onchip_power_mw": 18.444,
+      "compute_dynamic_energy_uj": 12.29872896,
+      "compute_energy_per_patch_nj": 0.37098,
+      "harness_energy_per_patch_nj": 0.5359,
       "sum_mismatches": 0,
       "cycle_mismatches": 0,
       "skip_mismatches": 0,
@@ -1372,7 +1576,10 @@
       "uart_errors": 0,
       "status": "PASS",
       "cycles_saved_vs_baseline": 0,
-      "pct_cycle_reduction": 0.0
+      "pct_cycle_reduction": 0.0,
+      "energy_saved_uj": 0.0,
+      "pct_compute_energy_reduction": 0.0,
+      "pct_harness_energy_reduction": 0.0
     },
     "zs": {
       "variant_name": "zs",
@@ -1384,6 +1591,12 @@
       "mean_skips_per_patch": 3.113959942084942,
       "total_host_time_s": 530.4504203000001,
       "avg_round_trip_ms": 15.753640125241688,
+      "dynamic_power_mw": 2.475,
+      "static_power_mw": 16.383,
+      "total_onchip_power_mw": 18.858,
+      "compute_dynamic_energy_uj": 9.659133,
+      "compute_energy_per_patch_nj": 0.2913589828667954,
+      "harness_energy_per_patch_nj": 0.4895,
       "sum_mismatches": 0,
       "cycle_mismatches": 0,
       "skip_mismatches": 0,
@@ -1391,7 +1604,10 @@
       "uart_errors": 0,
       "status": "PASS",
       "cycles_saved_vs_baseline": 103234,
-      "pct_cycle_reduction": 34.59955491205491
+      "pct_cycle_reduction": 34.59955491205491,
+      "energy_saved_uj": 2.6395959599999994,
+      "pct_compute_energy_reduction": 21.462347601812663,
+      "pct_harness_energy_reduction": 8.658331778316859
     },
     "oi": {
       "variant_name": "oi",
@@ -1403,6 +1619,12 @@
       "mean_skips_per_patch": 3.113959942084942,
       "total_host_time_s": 530.4340583000002,
       "avg_round_trip_ms": 15.744031992854827,
+      "dynamic_power_mw": 2.38,
+      "static_power_mw": 16.383,
+      "total_onchip_power_mw": 18.762999999999998,
+      "compute_dynamic_energy_uj": 14.2023168,
+      "compute_energy_per_patch_nj": 0.4284,
+      "harness_energy_per_patch_nj": 0.6188,
       "sum_mismatches": 0,
       "cycle_mismatches": 0,
       "skip_mismatches": 0,
@@ -1410,7 +1632,10 @@
       "uart_errors": 0,
       "status": "PASS",
       "cycles_saved_vs_baseline": 0,
-      "pct_cycle_reduction": 0.0
+      "pct_cycle_reduction": 0.0,
+      "energy_saved_uj": -1.9035878400000001,
+      "pct_compute_energy_reduction": -15.477923338185349,
+      "pct_harness_energy_reduction": -15.469303974622125
     },
     "cg": {
       "variant_name": "cg",
@@ -1422,6 +1647,12 @@
       "mean_skips_per_patch": 3.113959942084942,
       "total_host_time_s": 530.4603996999999,
       "avg_round_trip_ms": 15.743384416873008,
+      "dynamic_power_mw": 2.024,
+      "static_power_mw": 16.383,
+      "total_onchip_power_mw": 18.407,
+      "compute_dynamic_energy_uj": 12.077936640000003,
+      "compute_energy_per_patch_nj": 0.3643200000000001,
+      "harness_energy_per_patch_nj": 0.5262,
       "sum_mismatches": 0,
       "cycle_mismatches": 0,
       "skip_mismatches": 0,
@@ -1429,7 +1660,10 @@
       "uart_errors": 0,
       "status": "PASS",
       "cycles_saved_vs_baseline": 0,
-      "pct_cycle_reduction": 0.0
+      "pct_cycle_reduction": 0.0,
+      "energy_saved_uj": 0.2207923199999975,
+      "pct_compute_energy_reduction": 1.7952450266860542,
+      "pct_harness_energy_reduction": 1.8100391864153835
     },
     "zs_cg": {
       "variant_name": "zs_cg",
@@ -1441,6 +1675,12 @@
       "mean_skips_per_patch": 3.113959942084942,
       "total_host_time_s": 530.4231671000002,
       "avg_round_trip_ms": 15.748737585901143,
+      "dynamic_power_mw": 2.503,
+      "static_power_mw": 16.383,
+      "total_onchip_power_mw": 18.886,
+      "compute_dynamic_energy_uj": 9.76840804,
+      "compute_energy_per_patch_nj": 0.29465516529922786,
+      "harness_energy_per_patch_nj": 0.495,
       "sum_mismatches": 0,
       "cycle_mismatches": 0,
       "skip_mismatches": 0,
@@ -1448,7 +1688,10 @@
       "uart_errors": 0,
       "status": "PASS",
       "cycles_saved_vs_baseline": 103234,
-      "pct_cycle_reduction": 34.59955491205491
+      "pct_cycle_reduction": 34.59955491205491,
+      "energy_saved_uj": 2.5303209199999994,
+      "pct_compute_energy_reduction": 20.573840827206908,
+      "pct_harness_energy_reduction": 7.6320208994215415
     },
     "oi_cg": {
       "variant_name": "oi_cg",
@@ -1460,6 +1703,12 @@
       "mean_skips_per_patch": 3.113959942084942,
       "total_host_time_s": 531.0457881000002,
       "avg_round_trip_ms": 15.76391813347868,
+      "dynamic_power_mw": 2.024,
+      "static_power_mw": 16.383,
+      "total_onchip_power_mw": 18.407,
+      "compute_dynamic_energy_uj": 12.077936640000003,
+      "compute_energy_per_patch_nj": 0.3643200000000001,
+      "harness_energy_per_patch_nj": 0.5262,
       "sum_mismatches": 0,
       "cycle_mismatches": 0,
       "skip_mismatches": 0,
@@ -1467,7 +1716,10 @@
       "uart_errors": 0,
       "status": "PASS",
       "cycles_saved_vs_baseline": 0,
-      "pct_cycle_reduction": 0.0
+      "pct_cycle_reduction": 0.0,
+      "energy_saved_uj": 0.2207923199999975,
+      "pct_compute_energy_reduction": 1.7952450266860542,
+      "pct_harness_energy_reduction": 1.8100391864153835
     },
     "zs_oi": {
       "variant_name": "zs_oi",
@@ -1479,6 +1731,12 @@
       "mean_skips_per_patch": 3.113959942084942,
       "total_host_time_s": 530.5539521000001,
       "avg_round_trip_ms": 15.754382407747142,
+      "dynamic_power_mw": 2.495,
+      "static_power_mw": 16.383,
+      "total_onchip_power_mw": 18.878,
+      "compute_dynamic_energy_uj": 9.7371866,
+      "compute_energy_per_patch_nj": 0.2937133988899614,
+      "harness_energy_per_patch_nj": 0.4935,
       "sum_mismatches": 0,
       "cycle_mismatches": 0,
       "skip_mismatches": 0,
@@ -1486,7 +1744,10 @@
       "uart_errors": 0,
       "status": "PASS",
       "cycles_saved_vs_baseline": 103234,
-      "pct_cycle_reduction": 34.59955491205491
+      "pct_cycle_reduction": 34.59955491205491,
+      "energy_saved_uj": 2.5615423600000007,
+      "pct_compute_energy_reduction": 20.827699905665707,
+      "pct_harness_energy_reduction": 7.911923866392992
     },
     "combined": {
       "variant_name": "combined",
@@ -1498,6 +1759,12 @@
       "mean_skips_per_patch": 3.113959942084942,
       "total_host_time_s": 530.9211802999998,
       "avg_round_trip_ms": 15.738292442849595,
+      "dynamic_power_mw": 2.503,
+      "static_power_mw": 16.383,
+      "total_onchip_power_mw": 18.886,
+      "compute_dynamic_energy_uj": 9.76840804,
+      "compute_energy_per_patch_nj": 0.29465516529922786,
+      "harness_energy_per_patch_nj": 0.495,
       "sum_mismatches": 0,
       "cycle_mismatches": 0,
       "skip_mismatches": 0,
@@ -1505,7 +1772,10 @@
       "uart_errors": 0,
       "status": "PASS",
       "cycles_saved_vs_baseline": 103234,
-      "pct_cycle_reduction": 34.59955491205491
+      "pct_cycle_reduction": 34.59955491205491,
+      "energy_saved_uj": 2.5303209199999994,
+      "pct_compute_energy_reduction": 20.573840827206908,
+      "pct_harness_energy_reduction": 7.6320208994215415
     },
     "static_sobel": {
       "variant_name": "static_sobel",
@@ -1517,6 +1787,12 @@
       "mean_skips_per_patch": 0.0,
       "total_host_time_s": 532.0617256000005,
       "avg_round_trip_ms": 15.648416888073138,
+      "dynamic_power_mw": 1.834,
+      "static_power_mw": 16.383,
+      "total_onchip_power_mw": 18.217,
+      "compute_dynamic_energy_uj": 7.296092160000001,
+      "compute_energy_per_patch_nj": 0.22008000000000003,
+      "harness_energy_per_patch_nj": 0.3668,
       "sum_mismatches": 0,
       "cycle_mismatches": 0,
       "skip_mismatches": 0,
@@ -1524,7 +1800,10 @@
       "uart_errors": 0,
       "status": "PASS",
       "cycles_saved_vs_baseline": 99456,
-      "pct_cycle_reduction": 33.33333333333333
+      "pct_cycle_reduction": 33.33333333333333,
+      "energy_saved_uj": 5.002636799999999,
+      "pct_compute_energy_reduction": 40.67604722626556,
+      "pct_harness_energy_reduction": 31.554394476581454
     }
   },
   "all_27_runs_raw": {
